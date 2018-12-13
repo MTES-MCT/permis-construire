@@ -45,7 +45,7 @@ def enable_project(env_name, deployment_directory):
     
     # warmup cache
     with cd(deployment_directory):
-        run('npm install')
+        run('yarn')
         run('composer install --optimize-autoloader')
         run('chmod a+w var/ -R')
         run('bin/console cache:clear --env=dev --no-debug')
@@ -53,14 +53,14 @@ def enable_project(env_name, deployment_directory):
         run('bin/console cache:warmup --env=dev --no-debug')
         run('bin/console cache:warmup --env=prod --no-debug')
         run('chmod a+w var/ -R')
-        run('bin/console doctrine:migrations:migrate --no-interaction')
-        run('cp assets/static public/build/static -R')
+        #run('bin/console doctrine:migrations:migrate --no-interaction')
+        #run('cp assets/static public/build/static -R')
 
     # Create symlink
     run('ln -sfn %s /var/www/pc-%s' % (deployment_directory, env_name))
-    run('ln -sfn /var/www/upload-%s %s/public/build/declarations' % (env_name, deployment_directory))
+    #run('ln -sfn /var/www/upload-%s %s/public/build/declarations' % (env_name, deployment_directory))
     # Restart the necessary services
-    run('service php7.2-fpm restart')
+    run('service php7.3-fpm restart')
     run('service nginx restart')
 
 def list_releases(env_name):
@@ -71,7 +71,7 @@ def set_release(env_name, release):
     # Create symlink
     deployment_directory='/home/deploy/%s/releases/%s' % (env_name, release)
  
-    run('ln -sfn %s /var/www/aeris-%s' % (deployment_directory, env_name))
+    run('ln -sfn %s /var/www/pc-%s' % (deployment_directory, env_name))
     # Restart the necessary services
-    run('service php7.2-fpm restart')
+    run('service php7.3-fpm restart')
     run('service nginx restart')

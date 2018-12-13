@@ -10,7 +10,7 @@ La documentation se trouve dans le répertoire [documentation](./documentation).
  - des informations techniques: installation du projet, outils utilisés, modélisation du domaine métier...
  - des informations fonctionnelles, sur le problème que nous cherchons à résoudre à l'aide d'un outil informatique, un glossaire, etc.
 
-## Installing Aeris
+## Installing Permis de construire facile
 
 Before trying to run **Permis de construire facile**, make sure you have already installed:
 
@@ -23,7 +23,7 @@ Here are all the command you'll need to run **Permis de construire facile** righ
 
 ```
 # Download the code
-git clone git@github.com:MTES-MCT/aeris.git
+git clone git@github.com:MTES-MCT/permis-construire.git
 # Fetch the PHP and JS dependencies
 cd app
 composer install
