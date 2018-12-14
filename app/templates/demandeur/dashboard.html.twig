@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Mes demandes{% endblock title %}
+
+{% block breadcrumb %}
+    <li class="is-active"><a href="{{ path("route_demandeur_dashboard") }}" aria-current="page">Mes demandes</a></li>
+{% endblock breadcrumb %}
+
+{% block content %}
+<div class="columns is-centered">
+    <div class="column is-half">
+          <a class="button is-primary is-large" href="../depot.html">Déposer une nouvelle demande</a>
+    </div>
+</div>
+<h2 class="title is-2">Demandes en cours</h2>
+
+<div class="columns">
+    <div class="column ">
+      <div class="box">
+          <h3 class="title is-3">Demande 42</h3>
+
+          <table class="table">
+              <tbody>
+                <tr>
+                  <th>Lieu</th>
+                  <td>Saint-Malo</td>
+                </tr>
+                <tr>
+                  <th>Date de dépot</th>
+                  <td>10 déc. 2018</td>
+                </tr>
+
+                <tr>
+                  <th>Date de validation tacite</th>
+                  <td>10 fév. 2018</td>
+                </tr>
+
+                <tr>
+                  <th>Status</th>
+                  <td><span class="tag is-link is-normal">En attente de retours</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="{{ path("route_demandeur_voir_demande") }}" class="button is-info is-large">Voir cette demande</a>
+
+      </div>
+    </div>
+</div>
+
+{% endblock content %}

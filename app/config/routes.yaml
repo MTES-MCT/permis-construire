@@ -1,10 +1,14 @@
-index:
+route_index:
     path: /
     controller: App\Controller\StaticController::homepage
 
-route_dashboard_demandeur:
-    path: /dashboard-demandeur
+route_demandeur_dashboard:
+    path: /demandeur-dashboard
     controller: App\Controller\DemandeurController::dashboard
+
+route_demandeur_voir_demande:
+    path: /demandeur-voir-demande
+    controller: App\Controller\DemandeurController::voirDemande
 
 route_dashboard_instructeur:
     path: /dashboard-instructeur

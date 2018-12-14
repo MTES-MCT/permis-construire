@@ -22,18 +22,18 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token_name)
     {
-        $redirection = $this->router->generate('route_dashboard_demandeur');
+        $redirectionUrl = $this->router->generate('route_demandeur_dashboard');
         foreach($token_name->getRoles() as $role) {
             if($role->getRole() == 'ROLE_INSTRUCTEUR') {
-                $redirection = $this->router->generate('route_dashboard_instructeur');
+                $redirectionUrl = $this->router->generate('route_instructeur_dashboard');
                 break;
             }
 
             if($role->getRole() == 'ROLE_MAIRIE') {
-                $redirection = $this->router->generate('route_dashboard_mairie');
+                $redirectionUrl = $this->router->generate('route_mairie_dashboard');
                 break;
             }
         }
-        return new RedirectResponse($redirection);
+        return new RedirectResponse($redirectionUrl);
     }
 }
