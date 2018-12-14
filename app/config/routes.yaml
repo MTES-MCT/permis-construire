@@ -26,5 +26,9 @@ route_mairie_dashboard:
     path: /mairie-dashboard
     controller: App\Controller\MairieController::dashboard
 
+route_mairie_voir_demande:
+    path: /mairie-voir-demande
+    controller: App\Controller\MairieController::voirDemande
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

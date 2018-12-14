@@ -7,6 +7,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class MairieController extends AbstractController
 {
     public function dashboard() {
-        return $this->render("dashboard-mairie.html");
+        return $this->render("mairie/dashboard.html.twig");
+    }
+
+    public function voirDemande() {
+        return $this->render("mairie/voir-demande.html.twig");
     }
 }
