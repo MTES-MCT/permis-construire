@@ -13,4 +13,8 @@ class DemandeurController extends AbstractController
     public function voirDemande() {
         return $this->render("demandeur/voir-demande.html.twig");
     }
+
+    public function depotAldau() {
+        return $this->render("demandeur/depot-aldau.html.twig");
+    }
 }

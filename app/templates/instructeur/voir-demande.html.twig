@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dossier 42</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-  <body>
-  <section class="section">
+{% extends "base.html.twig" %}
 
-    <div class="container">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-          <ul>
-            <li><a href="#">Construire-facile</a></li>
-            <li><a href="instructeur/dashboard-instructeur.html">Mes dossiers</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Demande 42</a></li>
-          </ul>
-        </nav>
+{% block title %}Dossier 42{% endblock title %}
+
+{% block breadcrumb %}
+  <li><a href="{{ path("route_instructeur_dashboard") }}">Mes dossiers</a></li>
+  <li class="is-active"><a href="#" aria-current="page">Demande 42</a></li>
+{% endblock breadcrumb %}
+
+{% block content %}
 
 
         <h2 class="title is-2">Demande 42</h2>
@@ -933,9 +923,4 @@
         <button class="button is-info is-large">Informer demandeur</button>
       </div>
     </div>
-
-
-    </div>
-  </section>
-  </body>
-</html>
+{% endblock content %}

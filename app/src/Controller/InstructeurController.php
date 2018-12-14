@@ -7,6 +7,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class InstructeurController extends AbstractController
 {
     public function dashboard() {
-        return $this->render("dashboard-instructeur.html");
+        return $this->render("instructeur/dashboard.html.twig");
+    }
+
+    public function voirDemande() {
+        return $this->render("instructeur/voir-demande.html.twig");
     }
 }

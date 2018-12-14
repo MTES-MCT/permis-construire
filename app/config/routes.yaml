@@ -10,12 +10,20 @@ route_demandeur_voir_demande:
     path: /demandeur-voir-demande
     controller: App\Controller\DemandeurController::voirDemande
 
-route_dashboard_instructeur:
-    path: /dashboard-instructeur
+route_demandeur_depot_aldau:
+    path: /demandeur-depot-aldau
+    controller: App\Controller\DemandeurController::depotAldau
+
+route_instructeur_dashboard:
+    path: /instructeur-dashboard
     controller: App\Controller\InstructeurController::dashboard
 
-route_dashboard_mairie:
-    path: /dashboard-mairie
+route_instructeur_voir_demande:
+    path: /instructeur-voir-demande
+    controller: App\Controller\InstructeurController::voirDemande
+
+route_mairie_dashboard:
+    path: /mairie-dashboard
     controller: App\Controller\MairieController::dashboard
 
 fos_user:
