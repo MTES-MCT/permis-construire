@@ -2,5 +2,17 @@ index:
     path: /
     controller: App\Controller\StaticController::homepage
 
+route_dashboard_demandeur:
+    path: /dashboard-demandeur
+    controller: App\Controller\DemandeurController::dashboard
+
+route_dashboard_instructeur:
+    path: /dashboard-instructeur
+    controller: App\Controller\InstructeurController::dashboard
+
+route_dashboard_mairie:
+    path: /dashboard-mairie
+    controller: App\Controller\MairieController::dashboard
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
