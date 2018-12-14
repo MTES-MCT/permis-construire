@@ -1,3 +1,6 @@
 index:
     path: /
     controller: App\Controller\StaticController::homepage
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
