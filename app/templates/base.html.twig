@@ -11,6 +11,21 @@
 <body>
     <section class="section">
         <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-light" href="{{ path("fos_user_security_logout") }}">
+                                    Déconnection
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
             <nav class="breadcrumb" aria-label="breadcrumbs">
                 <ul>
                     <li><a href="{{ path("route_index") }}">Permis de construire facile</a></li>
