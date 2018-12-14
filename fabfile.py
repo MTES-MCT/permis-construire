@@ -57,7 +57,7 @@ def enable_project(env_name, deployment_directory):
         #run('cp assets/static public/build/static -R')
 
     # Create symlink
-    run('ln -sfn %s /var/www/pc-%s' % (deployment_directory, env_name))
+    run('ln -sfn %s /var/www/pc-%s/' % (deployment_directory, env_name))
     #run('ln -sfn /var/www/upload-%s %s/public/build/declarations' % (env_name, deployment_directory))
     # Restart the necessary services
     run('service php7.3-fpm restart')
