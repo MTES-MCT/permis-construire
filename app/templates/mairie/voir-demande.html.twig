@@ -1,0 +1,911 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Dossier 42{% endblock title %}
+
+{% block breadcrumb %}
+  <li><a href="{{ path("route_mairie_dashboard") }}">Mes demandes</a></li>
+  <li class="is-active"><a href="#" aria-current="page">Demande 42</a></li>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <h2 class="title is-2">Demande 42</h2>
+    <section class="section">
+      <h3 class="title is3">Identité du déclarant</h3>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Civilité</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-normal" type="text" disabled="disabled" value="Mr">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Nom</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-normal" type="text" disabled="disabled" value="DURAND">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Prénom</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-normal" type="text" disabled="disabled" value="Marc">
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      
+    <section class="section">
+    <h3 class="title is3">Date et lieu de naissance du déclarant</h3>
+    
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Date de naissance</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="10/12/1982">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Commune de naissance</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="Lyon">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Département de naissance</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="69 - Rhône">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Pays de naissance</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="France">
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="section">
+
+
+    <section class="section">
+    <h3 class="title is-3">Coordonnées du déclarant</h3>
+    <h4 class="title is-4">Email</h4>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Email</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="bidou@plop.com">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Téléphone</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="0607123456">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h4 class="title is-4">Echanges papier</h4>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Numéro de voie</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="10">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Voie</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="place de la république">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Lieu dit</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Commune</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="Paris">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Code postal</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="75009">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Boite postale</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">CEDEX</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Habitez-vous à l'étranger&nbsp;?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer">
+              Oui
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer">
+              Non
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3 class="title is-3">Le terrain</h3>
+    <h4 class="title is-4">Adresse du (ou des) terrain(s)</h4>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Numéro de voie</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="10">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Voie</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="place de la république">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Lieu dit</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Commune</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="Paris">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Code postal</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="75009">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Boite postale</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">CEDEX</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="title is-4">Référence(s) cadastrale(s)</h4>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Référence cadastrale</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" disabled="disabled" value="0607123456">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" disabled="disabled" value="0607123456">
+          </div>
+        </div>
+        
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" disabled="disabled" value="0607123456">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Superficie de la parcelle cadastrale (m2)</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Superficie totale du terrain (m2)</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h3 class="title is-3">Le projet</h3>
+    <h4 class="title is-4">Nature du projet</h4>
+
+    <ul>
+      <li class="box">
+        <label class="checkbox">
+          <input type="checkbox"> Nouvelle construction
+        </label>
+        <p>Type d'annexe créée</p>
+        <ul>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox"> Piscine
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox"> Garage
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox"> Véranda
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox"> Abri de jardin
+            </label>
+          </li>
+        </ul>
+      </li>
+      <li class="box">
+        <label class="checkbox">
+          <input type="checkbox"> Travaux sur une construction existante
+        </label>
+        <ul>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox"> Extension
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox"> Surélévation
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox"> Création de niveaux supplémentaires
+            </label>
+          </li>
+        </ul>
+      </li>
+      <li class="box">
+        <label class="checkbox">
+          <input type="checkbox"> Cloture
+        </label>
+      </li>
+    </ul>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Courte description de votre projet</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="On ajoute une piscine à l'arrière de la maison">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>Ce projet concerne</p>
+    <ul>
+      <li>
+        <label class="checkbox">
+          <input type="checkbox"> votre résidence principale
+        </label>
+      </li>
+      <li>
+        <label class="checkbox">
+          <input type="checkbox">
+  votre résidence secondaire
+        </label>
+      </li>
+    </ul>
+
+
+    <h4 class="title is-4">Surfaces de plancher</h4>
+    <p>Si votre projet modifie la surface de plancher, indiquez :</p>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Surface de plancher existante (m2)</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Surface de plancher créée (m2)</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Surface de plancher supprimée (m2)</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+  <section class="section">
+    <h3 class="title is-3">Application d'une législation connexe</h3>
+    <p></p>
+    <ul>
+      <li>
+        <label class="checkbox">
+          <input type="checkbox">
+  Le projet se situe dans le <strong>périmètre d'un site patrimonial remarquable</strong>
+        </label>
+      </li>
+      <li>
+        <label class="checkbox">
+          <input type="checkbox">
+  Le projet se situe dans les <strong>abords d'un monument historique</strong>
+        </label>
+      </li>
+    </ul>
+  </section>
+  <section class="section">
+    <h3 class="title is-3">Pièces jointes</h3>
+    <ul>
+      <li><a href="#"><i class="fas fa-download"></i>&nbsp;DP1&nbsp;: <strong>Plan de situation</strong></a></li>
+      <li><a href="#"><i class="fas fa-download"></i>&nbsp;DP2&nbsp;: <strong>Plan de masse</strong></a></li>
+      <li><a href="#"><i class="fas fa-download"></i>&nbsp;DP3&nbsp;: <strong>Plan en coupe</strong></a></li>
+      <li><a href="#"><i class="fas fa-download"></i>&nbsp;DP6&nbsp;: <strong>Document graphique</strong> permettant d'apprécier l'insertion du projet dans son environnement</a></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h3 class="title is-3">Renseignement concernant les constructions ou les aménagements</h3>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Surface taxable totale créée de la ou les constructions, hormis les surfacts de stationnement closes et couvertes (m2)</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Surface taxable créée des locaux clos et couverts à usage de stationnement (m2)</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <h4 class="title is-4">Destination des constructions</h4>
+    <h5 class="title is-5">Création de locaux destinés à l’habitation</h5>
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="2">Dont :</th>
+          <th>Nombre de logements créés</th>
+          <th>Surfaces créées hormis les surfaces de stationnement closes et couvertes</th>
+          <th>Surfaces créées pour le stationnement clos et couvert</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="4">Locaux à usage d’habitation
+principale et leurs annexes </th>
+          <td>Ne bénéficiant pas de prêt aidé (3)</td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bénéficiant d’un PLAI ou LLTS (4)</td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bénéficiant d’un prêt à taux zéro plus (PTZ+) (5)</td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Bénéficiant d’autres prêts aidés (PLUS, LES, PSLA, PLS, LLS) (6)</td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">Locaux à usage d’habitation
+secondaire et leurs annexes </th>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <div class="control">
+                <input class="input is-normal" type="text" disabled="disabled" value="14">
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h5 class="title is-5">Extension (8) de l’habitation principale, création d’un bâtiment annexe à cette habitation ou d’un garage clos et
+couvert</h5>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Pour la réalisation des ces travaux, bénéficiez-vous d’un prêt aidé ?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer">
+              Oui
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer">
+              Non
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Si oui, lequel ?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Quelle est la surface taxable existante conservée ?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Quel est le nombre de logements existants ?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="title is-5">Création d’abris de jardin, de pigeonniers et colombiers</h5>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Quelle est la surface taxable créée ?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h5 class="title is-5">Autres éléments créés soumis à la taxe d’aménagement</h5>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Nombre de places de stationnement non couvertes ou non closes</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Superficie du bassin intérieur ou extérieur de la piscine, créée par le projet</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Superficie des panneaux photovoltaïques posés au sol</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h5 class="title is-5">Redevance d’archéologie préventive</h5>
+    <p>
+      Veuillez préciser la profondeur du(des) terrasement(s) nécessaire(s) à la réalisation de votre projet
+    </p>
+
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">au titre des locaux</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">au titre de la piscine</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">au titre des emplacements de stationnement</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <input class="input is-normal" type="text" disabled="disabled" value="14">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="title is-5">Cas particuliers</h5>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">Les travaux projetés sont-ils réalisés suite à des prescriptions résultant d’un Plan de Prévention des Risques naturels,
+technologiques ou miniers ?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer">
+              Oui
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer">
+              Non
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label is-normal">
+        <label class="label">La construction projetée concerne t-elle un immeuble classé parmi les monuments historiques ou inscrit à l’inventaire
+des monuments historiques ?</label>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer">
+              Oui
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer">
+              Non
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+{% endblock content %}
