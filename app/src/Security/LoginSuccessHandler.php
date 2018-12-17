@@ -22,15 +22,16 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token_name)
     {
+        $roleMapping = [
+            'ROLE_INSTRUCTEUR' => 'route_instructeur_dashboard',
+            'ROLE_MAIRIE' => 'route_mairie_dashboard',
+            'ROLE_ADMIN' => 'easyadmin',
+        ];
+
         $redirectionUrl = $this->router->generate('route_demandeur_dashboard');
         foreach($token_name->getRoles() as $role) {
-            if($role->getRole() == 'ROLE_INSTRUCTEUR') {
-                $redirectionUrl = $this->router->generate('route_instructeur_dashboard');
-                break;
-            }
-
-            if($role->getRole() == 'ROLE_MAIRIE') {
-                $redirectionUrl = $this->router->generate('route_mairie_dashboard');
+            if(array_key_exists($role->getRole(), $roleMapping)) {
+                $redirectionUrl = $this->router->generate($roleMapping[$role->getRole()]);
                 break;
             }
         }
