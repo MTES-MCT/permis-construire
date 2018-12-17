@@ -2,6 +2,7 @@ from fabric.api import *
 from fabric.contrib.files import exists
 from fabric.contrib.project import *
 from time import time
+from datetime import datetime
 from sys import exit
 
 env.hosts = [
@@ -18,8 +19,8 @@ def check_environment(env_name):
 
 def deploy(env_name):
     check_environment(env_name)
-    
-    deploy_timestamp="%(time).0f" % {'time':time()}
+
+    deploy_timestamp = datetime.utcfromtimestamp(int(time())).strftime('%Y-%b-%d-at-%H:%M:%S')
 
     deployment_directory='/home/deploy/%s/releases/release-%s' % (env_name, deploy_timestamp)
     
@@ -45,19 +46,21 @@ def enable_project(env_name, deployment_directory):
     
     # warmup cache
     with cd(deployment_directory):
-        run('yarn')
-        run('composer install --optimize-autoloader')
+        #run('yarn')
+        run('time composer install --optimize-autoloader')
         run('chmod a+w var/ -R')
-        run('bin/console cache:clear --env=dev --no-debug')
-        run('bin/console cache:clear --env=prod --no-debug')
-        run('bin/console cache:warmup --env=dev --no-debug')
-        run('bin/console cache:warmup --env=prod --no-debug')
+        if env_name == "staging":
+            run('bin/console cache:clear --env=dev --no-debug')
+            run('bin/console cache:warmup --env=dev --no-debug')
+        else:
+            run('bin/console cache:clear --env=prod --no-debug')
+            run('bin/console cache:warmup --env=prod --no-debug')
         run('chmod a+w var/ -R')
-        #run('bin/console doctrine:migrations:migrate --no-interaction')
-        #run('cp assets/static public/build/static -R')
+        run('time bin/console doctrine:migrations:migrate --no-interaction')
+        run('cp assets/static public/build/static -R')
 
     # Create symlink
-    run('ln -sfn %s /var/www/pc-%s/' % (deployment_directory, env_name))
+    run('ln -sfn %s /var/www/pc-%s' % (deployment_directory, env_name))
     #run('ln -sfn /var/www/upload-%s %s/public/build/declarations' % (env_name, deployment_directory))
     # Restart the necessary services
     run('service php7.3-fpm restart')
