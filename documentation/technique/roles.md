@@ -1,6 +1,6 @@
 # Roles
 
-Il y a 3 types de roles: 
+Il y a 3 types de roles métier: 
     
  - demandeur
     - il peut déposer un dossier
@@ -12,6 +12,8 @@ Il y a 3 types de roles:
  - mairie
    - il peut consulter les dossiers associés à l'ensemble des communes
 
+Un autre type de compte, admin, permet d'avoir accès au backoffice de gestion de l'application
+
 Voici comment créer quelques utilisateurs de test en ligne de commande:
 
     bin/console fos:user:create demandeur demandeur@gmail.com demandeur
@@ -19,5 +21,7 @@ Voici comment créer quelques utilisateurs de test en ligne de commande:
     bin/console fos:user:create mairie mairie@gmail.com mairie
     bin/console fos:user:promote demandeur ROLE_DEMANDEUR
     bin/console fos:user:promote instructeur ROLE_INSTRUCTEUR
-    bin/console fos:user:promote mairie ROLE_MAIRIE   
-  
+    bin/console fos:user:promote mairie ROLE_MAIRIE
+    # Un compte administrateur peut également avoir accès au backoffice de gestion   
+    bin/console fos:user:create admin admin@gmail.com admin
+    bin/console fos:user:promote admin ROLE_ADMIN
