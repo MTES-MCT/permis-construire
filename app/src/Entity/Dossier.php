@@ -24,9 +24,17 @@ class Dossier
      */
     private $statut;
 
+    /**
+     * Un dossier est associé à un projet
+     * @ORM\OneToOne(targetEntity="Projet")
+     * @ORM\JoinColumn(name="projet_id", referencedColumnName="id")
+     */
+    private $projet;
+
     public function __construct()
     {
         $this->setStatut(self::STATUS_BROUILLON);
+        $this->setProjet(new Projet());
     }
 
     public function getId(): ?int
@@ -43,6 +51,17 @@ class Dossier
     {
         $this->statut = $statut;
 
+        return $this;
+    }
+
+    public function getProjet(): Projet
+    {
+        return $this->projet;
+    }
+
+    public function setProjet(Projet $projet)
+    {
+        $this->projet = $projet;
         return $this;
     }
 }
