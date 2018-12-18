@@ -33,7 +33,7 @@ class ReferenceCadastrale
     private $numero;
 
     /**
-     * @ORM\Column(type="float", default=0)
+     * @ORM\Column(type="float")
      */
     private $superficie;
 
