@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} - Votre demande préalable de travaux{% endblock %}
+
+{% block content %}
+
+    <main id="skip-to-main">
+
+        <section class="section-color">
+            <div class="aerate-content">
+
+
+
+                <h5>Attention</h5>
+
+                <p>Pour vous assurer d'obtenir votre attestation dans les meilleurs délais, lorsque vous allez remplir votre formulaire soyez attentifs à bien respecter les préconisations suivantes :</p>
+
+                <ul>
+                    <li>Pour les plans qu'il vous sera demandé de fournir, vérifiez bien :</li>
+                    <ul>
+                        <li>la qualité globale du plan</li>
+                        <li>la présence des côtes</li>
+                        <li>la présence de l'échelle</li>
+                        <li>la présence du nord</li>
+                        <li>la qualité d'impression</li>
+                    </ul>
+                    <li>Pour les autres types de documents :</li>
+                    <ul>
+                        <li>Fournissez des photos nettes et lisibles</li>
+                        <li>Vérifiez bien qu'il n'y a pas d'erreur dans les références cadastrales (une faute d'orthographe est vite arrivée)</li>
+                        <li>matérialisation unité foncière vs emprise projet</li>
+                    </ul>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="section-white">
+            <div class="aerate-content">
+
+                <div class="notification">
+                    <p>En cliquant ci-dessous, vous allez être redirigé vers le site <b>Démarches simplifiées</b> sur lequel vous allez :</p>
+                    <ul>
+                        <li>créer un compte qui vous permettra de formuler de nouvelles demandes</li>
+                        <li>finaliser votre demande d'autorisation de travaux en y déposant votre demande, accompagnée des documents demandés</li>
+                    </ul>
+                    <p>Extrait des <a href="https://demarches-simplifiees.gitbook.io/demarches-simplifiees/cgu#realisation-d'une-demarche-en-ligne" target="_blank"><abbr title="Conditions générales d'utilisation">CGU</abbr> de demarches-simplifiees.fr</a> : L'usager remplit en ligne le formulaire et valide celui-ci […]. La confirmation et <b>la transmission du formulaire par l'usager vaut signature de celui-ci</b>. En utilisant le service, l'usager s'engage sur la véracité des informations transmises lors du dépôt de son dossier.</p>
+                </div>
+
+                <br>
+
+                <p class="center">
+                    <a id="button_redirect_ds" class="btn" href="#">Poursuivre votre demande sur <b>Démarches simplifiées</b></a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

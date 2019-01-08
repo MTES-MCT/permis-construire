@@ -1,46 +1,64 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Faites votre demande d&apos;autorisation de travail en ligne avec Work In France. Work In France est un service de l&apos;Etat pour les entreprises ou les étudiants étrangers, en contrat d&apos;alternance, en contrat d&apos;apprentissage, ou en contrat de professionnalisation">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
     <title>{% block title %}Permis de construire facile{% endblock %}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    {% block stylesheets %}{% endblock %}
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="/build/static/css/bundle.css?bust=4" type="text/css">
+    {% block head %}{% endblock %}
 </head>
 <body>
-    {% block body %}
-    <section class="section">
-        <div class="container">
-            <nav class="navbar" role="navigation" aria-label="main navigation">
 
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="button is-light" href="{{ path("fos_user_security_logout") }}">
-                                    Déconnection
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+<nav aria-label="page" id="skip-links">
+    <a href="#skip-to-main">Contenu principal</a>
+    <a href="#skip-to-footer">Pied de page</a>
+</nav>
 
-            <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ul>
-                    <li><a href="{{ path("route_index") }}">Permis de construire facile</a></li>
-                {% block breadcrumb %}
-
-                {% endblock breadcrumb %}
-                </ul>
-
-            </nav>
-        {% block content %}
-        {% endblock content %}
+<header class="site-header">
+    <nav>
+        <div class="site-header-logos">
+            <img src="/build/static/img/gouv.svg" alt="" width="80">
+            <a class="site-logo" href="/">Permis de construire facile</a>
         </div>
-    </section>
-    {% endblock body %}
-    {% block javascripts %}{% endblock %}
+    </nav>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer id="skip-to-footer" class="site-footer">
+    <div class="site-footer-content">
+        <ul>
+            <li>
+                <img src="/build/static/img/gouv.svg" alt="" width="100">
+            </li>
+            <li>
+
+                Ce service est <a href="https://beta.gouv.fr/startups/permis-de-construire-facile.html">en cours de conception</a> par une startup d'état affiliée à <a href="beta.gouv.fr">beta.gouv.fr</a>.
+            </li>
+        </ul>
+    </div>
+</footer>
+
+{% block script %}
+    {# Piwik code.
+    <script>
+        var _paq = _paq || [];
+        _paq.push(["setDomains", ["*.work-in-france.beta.gouv.fr", "*.workinfrance.beta.gouv.fr"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//stats.data.gouv.fr/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '46']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><img src="//stats.data.gouv.fr/piwik.php?idsite=46" style="border: 0;" alt=""></noscript>
+    #}
+{% endblock %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </body>
 </html>
