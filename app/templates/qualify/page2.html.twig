@@ -14,9 +14,29 @@
             Vos travaux ont ils lieu dans une zone ABF ?
         </p>
 
-        <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'oui'}) }}">oui</a>
-        <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'non'}) }}">non</a>
-        <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'nsp'}) }}">je ne sais pas</a>
+        <ul class="steps">
+            <li class="steps-item">
+                <p>
+                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'oui'}) }}">Oui</a>
+                </p>
+            </li>
+            <li class="steps-item">
+                <p>
+                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'non'}) }}">Non</a>
+                </p>
+            </li>
+            <li class="steps-item">
+                <p>
+                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'nsp'}) }}">Je ne sais pas</a>
+                </p>
+            </li>
+        </ul>
+
+        <p>Vous pouvez trouver cette information:</p>
+        <ul>
+            <li>Dans les documents d'achat du bien</li>
+            <li>Dans le <a href="{{ ville.urlPlu }}">PLU de votre ville</a></li>
+        </ul>
     </section>
 
 </main>
