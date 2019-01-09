@@ -34,6 +34,11 @@ class Ville
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
+    private $url_fenetres;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $url_plu;
 
     public function getId(): ?int
@@ -85,6 +90,18 @@ class Ville
     public function setUrlPlu(?string $url_plu): self
     {
         $this->url_plu = $url_plu;
+
+        return $this;
+    }
+
+    public function getUrlFenetres(): ?string
+    {
+        return $this->url_fenetres;
+    }
+
+    public function setUrlFenetres(?string $url_fenetres): self
+    {
+        $this->url_fenetres = $url_fenetres;
 
         return $this;
     }

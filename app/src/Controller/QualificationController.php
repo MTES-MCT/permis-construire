@@ -42,6 +42,11 @@ class QualificationController extends AbstractController
     }
 
     public function resultats(Request $request) {
+        $url = $this->getDSRedirectionUrl($request);
+        if ($url === null) {
+            return $this->redirect($this->generateUrl('route_pas_de_demarche'));
+        }
+
         return $this->render("qualify/resultats.html.twig",
             [
                 'ville_id' => $request->get('ville_id', null),
@@ -52,6 +57,15 @@ class QualificationController extends AbstractController
     }
 
     public function gotods(Request $request) {
+        $url = $this->getDSRedirectionUrl($request);
+
+        if ($url !== null)
+            return $this->redirect($url);
+
+        return $this->redirect($this->generateUrl('route_pas_de_demarche'));
+    }
+
+    private function getDSRedirectionUrl(Request $request){
         /* @var Ville $ville */
         $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
             $request->get('ville_id', null)
@@ -66,11 +80,8 @@ class QualificationController extends AbstractController
         else {
             if ($projet == 'piscine') $url = $ville->getUrlPiscineNonAbf();
         }
-
-        if ($url !== null)
-            return $this->redirect($url);
-
-        return $this->redirect($this->generateUrl('route_pas_de_demarche'));
+        if ($projet == 'changement-fenetres') $url = $ville->getUrlFenetres();
+        return $url;
     }
 
     public function pasdedemarche(Request $request) {
