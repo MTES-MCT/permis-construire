@@ -2,33 +2,53 @@ route_index:
     path: /
     controller: App\Controller\StaticController::homepage
 
-route_demandeur_dashboard:
-    path: /demandeur-dashboard
-    controller: App\Controller\DemandeurController::dashboard
+route_qualify1:
+    path: /qualification-1/
+    controller: App\Controller\QualificationController::qualification1
 
-route_demandeur_voir_demande:
-    path: /demandeur-voir-demande
-    controller: App\Controller\DemandeurController::voirDemande
+route_qualify2:
+    path: /qualification-2/
+    controller: App\Controller\QualificationController::qualification2
 
-route_demandeur_depot_aldau:
-    path: /demandeur-depot-aldau
-    controller: App\Controller\DemandeurController::depotAldau
+route_qualify3:
+    path: /qualification-3/
+    controller: App\Controller\QualificationController::qualification3
 
-route_instructeur_dashboard:
-    path: /instructeur-dashboard
-    controller: App\Controller\InstructeurController::dashboard
+route_resultats:
+    path: /resultats/
+    controller: App\Controller\QualificationController::resultats
 
-route_instructeur_voir_demande:
-    path: /instructeur-voir-demande
-    controller: App\Controller\InstructeurController::voirDemande
+route_gotods:
+    path: /redirection-ds/
+    controller: App\Controller\QualificationController::gotods
 
-route_mairie_dashboard:
-    path: /mairie-dashboard
-    controller: App\Controller\MairieController::dashboard
-
-route_mairie_voir_demande:
-    path: /mairie-voir-demande
-    controller: App\Controller\MairieController::voirDemande
+#route_demandeur_dashboard:
+#    path: /demandeur-dashboard
+#    controller: App\Controller\DemandeurController::dashboard
+#
+#route_demandeur_voir_demande:
+#    path: /demandeur-voir-demande
+#    controller: App\Controller\DemandeurController::voirDemande
+#
+#route_demandeur_depot_aldau:
+#    path: /demandeur-depot-aldau
+#    controller: App\Controller\DemandeurController::depotAldau
+#
+#route_instructeur_dashboard:
+#    path: /instructeur-dashboard
+#    controller: App\Controller\InstructeurController::dashboard
+#
+#route_instructeur_voir_demande:
+#    path: /instructeur-voir-demande
+#    controller: App\Controller\InstructeurController::voirDemande
+#
+#route_mairie_dashboard:
+#    path: /mairie-dashboard
+#    controller: App\Controller\MairieController::dashboard
+#
+#route_mairie_voir_demande:
+#    path: /mairie-voir-demande
+#    controller: App\Controller\MairieController::voirDemande
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

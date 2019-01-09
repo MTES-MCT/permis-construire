@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} - Votre demande préalable de travaux{% endblock %}
+
+{% block content %}
+<main>
+
+    <section class="section-color">
+        <a href="{{ path("route_qualify1") }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
+        <h4>Déclaration préalable de travaux</h4>
+        <h5>Architecte des bâtiments de France</h5>
+
+        <p>
+            Vos travaux ont ils lieu dans une zone ABF ?
+        </p>
+
+        <a href="{{ path("route_qualify3", {ville_id: ville_id, abf:'oui'}) }}">oui</a>
+        <a href="{{ path("route_qualify3", {ville_id: ville_id, abf:'non'}) }}">non</a>
+        <a href="{{ path("route_qualify3", {ville_id: ville_id, abf:'nsp'}) }}">je ne sais pas</a>
+    </section>
+
+</main>
+{% endblock %}
