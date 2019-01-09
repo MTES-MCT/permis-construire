@@ -18,8 +18,16 @@ class QualificationController extends AbstractController
     }
 
     public function qualification2(Request $request) {
+        /* @var Ville $ville */
+        $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
+            $request->get('ville_id', null)
+        );
+        if(!$ville) {
+            return $this->redirect($this->generateUrl('route_pas_de_demarche'));
+        }
+
         return $this->render("qualify/page2.html.twig",
-            ['ville_id' => $request->get('ville_id', null)]
+            ['ville' => $ville]
         );
     }
 
@@ -46,21 +54,28 @@ class QualificationController extends AbstractController
     public function gotods(Request $request) {
         /* @var Ville $ville */
         $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
-            $request->get('ville_id')
+            $request->get('ville_id', null)
         );
 
         $abf = $request->get('abf', null);
         $projet = $request->get('projet', null);
-        $url = 'http://demarches-simplifiees.fr/';
-        if($abf == 1){
-            $url = $ville->getUrlPiscineAbf();
+        $url = null;
+        if($abf == 'oui'){
+            if ($projet == 'piscine') $url = $ville->getUrlPiscineAbf();
         }
         else {
-            $url = $ville->getUrlPiscineNonAbf();
+            if ($projet == 'piscine') $url = $ville->getUrlPiscineNonAbf();
         }
 
         if ($url !== null)
             return $this->redirect($url);
-        return $this->redirect($this->generateUrl('route_index'));
+
+        return $this->redirect($this->generateUrl('route_pas_de_demarche'));
+    }
+
+    public function pasdedemarche(Request $request) {
+        return $this->render(
+            "qualify/pas-de-demarche.html.twig"
+        );
     }
 }

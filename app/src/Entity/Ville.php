@@ -31,6 +31,11 @@ class Ville
      */
     private $url_piscine_non_abf;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $url_plu;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Ville
     public function setUrlPiscineNonAbf(string $url_piscine_non_abf): self
     {
         $this->url_piscine_non_abf = $url_piscine_non_abf;
+
+        return $this;
+    }
+
+    public function getUrlPlu(): ?string
+    {
+        return $this->url_plu;
+    }
+
+    public function setUrlPlu(?string $url_plu): self
+    {
+        $this->url_plu = $url_plu;
 
         return $this;
     }
