@@ -4,19 +4,23 @@ route_index:
 
 route_qualify1:
     path: /qualification-1/
-    controller: App\Controller\StaticController::qualification1
+    controller: App\Controller\QualificationController::qualification1
 
 route_qualify2:
     path: /qualification-2/
-    controller: App\Controller\StaticController::qualification2
+    controller: App\Controller\QualificationController::qualification2
 
 route_qualify3:
     path: /qualification-3/
-    controller: App\Controller\StaticController::qualification3
+    controller: App\Controller\QualificationController::qualification3
 
 route_resultats:
     path: /resultats/
-    controller: App\Controller\StaticController::resultats
+    controller: App\Controller\QualificationController::resultats
+
+route_gotods:
+    path: /redirection-ds/
+    controller: App\Controller\QualificationController::gotods
 
 #route_demandeur_dashboard:
 #    path: /demandeur-dashboard
