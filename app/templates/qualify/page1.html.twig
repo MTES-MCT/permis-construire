@@ -8,19 +8,27 @@
         <section class="section-color">
             <h4>Déclaration préalable de travaux</h4>
             <h5>Localisation du projet</h5>
-            <p>
-                Dans quelle ville allez-vous réaliser des travaux ?
-            </p>
-            <ul>
-                {% for ville in villes %}
-                <li><a href="{{ path("route_qualify2", {ville_id: ville.id}) }}">{{  ville.nom }}</a></li>
-                {% endfor %}
-            </ul>
-            <p>
-            <h5>Votre ville n'est pas dans cette liste ?</h5>
-            Alors, elle n'est pas partenaire pour le moment. Vous pouvez utiliser la voie traditionnelle et déposer en mairie votre déclaration d'urbanisme que vous pourrez imprimer depuis
-            <a href="https://www.service-public.fr/particuliers/vosdroits/F17578">service-public.fr</a>.
-            </p>
+
+            {% if villes != null %}
+                <p>
+                    Dans quelle ville allez-vous réaliser des travaux ?
+                </p>
+                <ul>
+                    {% for ville in villes %}
+                    <li><a href="{{ path("route_qualify2", {ville_id: ville.id}) }}">{{  ville.nom }}</a></li>
+                    {% endfor %}
+                </ul>
+                <p>
+                <h5>Votre ville n'est pas dans cette liste ?</h5>
+                Alors, elle n'est pas partenaire pour le moment. Vous pouvez utiliser la voie traditionnelle et déposer en mairie votre déclaration d'urbanisme que vous pourrez imprimer depuis
+                <a href="https://www.service-public.fr/particuliers/vosdroits/F17578">service-public.fr</a>.
+                </p>
+
+            {% else %}
+                <p>
+                    Il n'y a pas de villes partenaires pour le moment. Revenez dans quelque temps !
+                </p>
+            {% endif %}
         </section>
 
     </main>
