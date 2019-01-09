@@ -21,6 +21,16 @@ class Ville
      */
     private $nom;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $url_piscine_abf;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $url_piscine_non_abf;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -34,6 +44,30 @@ class Ville
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getUrlPiscineAbf(): ?string
+    {
+        return $this->url_piscine_abf;
+    }
+
+    public function setUrlPiscineAbf(string $url_piscine_abf): self
+    {
+        $this->url_piscine_abf = $url_piscine_abf;
+
+        return $this;
+    }
+
+    public function getUrlPiscineNonAbf(): ?string
+    {
+        return $this->url_piscine_non_abf;
+    }
+
+    public function setUrlPiscineNonAbf(string $url_piscine_non_abf): self
+    {
+        $this->url_piscine_non_abf = $url_piscine_non_abf;
 
         return $this;
     }

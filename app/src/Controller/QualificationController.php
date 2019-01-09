@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class QualificationController extends AbstractController
 {
-
     public function qualification1() {
         $villes = $this->getDoctrine()->getRepository(Ville::class)->findAll();
 
@@ -45,6 +44,23 @@ class QualificationController extends AbstractController
     }
 
     public function gotods(Request $request) {
-        return $this->redirect('http://demarches-simplifiees.fr/');
+        /* @var Ville $ville */
+        $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
+            $request->get('ville_id')
+        );
+
+        $abf = $request->get('abf', null);
+        $projet = $request->get('projet', null);
+        $url = 'http://demarches-simplifiees.fr/';
+        if($abf == 1){
+            $url = $ville->getUrlPiscineAbf();
+        }
+        else {
+            $url = $ville->getUrlPiscineNonAbf();
+        }
+
+        if ($url !== null)
+            return $this->redirect($url);
+        return $this->redirect($this->generateUrl('route_index'));
     }
 }
