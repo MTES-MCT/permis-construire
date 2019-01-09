@@ -14,7 +14,9 @@
             Vos travaux ont ils lieu dans une zone ABF ?
         </p>
 
-        <a href="{{ path("route_qualify3") }}">oui/non/je ne sais pas</a>
+        <a href="{{ path("route_qualify3", {ville_id: ville_id, abf:'oui'}) }}">oui</a>
+        <a href="{{ path("route_qualify3", {ville_id: ville_id, abf:'non'}) }}">non</a>
+        <a href="{{ path("route_qualify3", {ville_id: ville_id, abf:'nsp'}) }}">je ne sais pas</a>
     </section>
 
 </main>

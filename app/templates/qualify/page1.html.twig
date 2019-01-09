@@ -12,8 +12,9 @@
                 Dans quelle ville allez-vous réaliser des travaux ?
             </p>
             <ul>
-                <li><a href="{{ path("route_qualify2") }}">Niort</a></li>
-                <li><a href="{{ path("route_qualify2") }}">Saint-Tropez</a></li>
+                {% for ville in villes %}
+                <li><a href="{{ path("route_qualify2", {ville_id: ville.id}) }}">{{  ville.nom }}</a></li>
+                {% endfor %}
             </ul>
             <p>
             <h5>Votre ville n'est pas dans cette liste ?</h5>
