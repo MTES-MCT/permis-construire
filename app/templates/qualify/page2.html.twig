@@ -36,7 +36,11 @@
             <p>Vous pouvez trouver cette information:</p>
             <ul>
                 <li>Dans les documents d'achat du bien</li>
+                {% if ville.urlPlu %}
                 <li>Dans le <a href="{{ ville.urlPlu }}">PLU de votre ville</a></li>
+                {% else %}
+                <li>Dans le PLU de votre ville</li>
+                {% endif %}
             </ul>
         </div>
 
