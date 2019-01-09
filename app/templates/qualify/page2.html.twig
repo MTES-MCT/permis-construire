@@ -7,36 +7,39 @@
 
     <section class="section-color">
         <a href="{{ path("route_qualify1") }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
-        <h4>Déclaration préalable de travaux</h4>
+        <h4>Déclaration préalable de travaux (2/3)</h4>
         <h5>Architecte des bâtiments de France</h5>
 
         <p>
-            Vos travaux ont ils lieu dans une zone ABF ?
+            Vos travaux ont ils lieu dans une zone ABF (Architecte des Bâtiments de France) ?
         </p>
 
         <ul class="steps">
             <li class="steps-item">
                 <p>
-                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'oui'}) }}">Oui</a>
+                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'oui'}) }}"><i class="fa fa-check"></i>&nbsp;Oui</a>
                 </p>
             </li>
             <li class="steps-item">
                 <p>
-                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'non'}) }}">Non</a>
+                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'non'}) }}"><i class="fa fa-times"></i>&nbsp;Non</a>
                 </p>
             </li>
             <li class="steps-item">
                 <p>
-                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'nsp'}) }}">Je ne sais pas</a>
+                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'nsp'}) }}"><i class="fa fa-question"></i>&nbsp;Je ne sais pas</a>
                 </p>
             </li>
         </ul>
 
-        <p>Vous pouvez trouver cette information:</p>
-        <ul>
-            <li>Dans les documents d'achat du bien</li>
-            <li>Dans le <a href="{{ ville.urlPlu }}">PLU de votre ville</a></li>
-        </ul>
+        <div class="notification">
+            <p>Vous pouvez trouver cette information:</p>
+            <ul>
+                <li>Dans les documents d'achat du bien</li>
+                <li>Dans le <a href="{{ ville.urlPlu }}">PLU de votre ville</a></li>
+            </ul>
+        </div>
+
     </section>
 
 </main>
