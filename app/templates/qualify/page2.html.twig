@@ -4,7 +4,12 @@
 
 {% block content %}
 <main>
-
+    <style>
+        .steps-item {
+            margin: 0 10px;
+            max-width: 250px;
+        }
+    </style>
     <section class="section-color">
         <a href="{{ path("route_qualify1") }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
         <h4>Déclaration préalable de travaux (2/3)</h4>
@@ -17,17 +22,17 @@
         <ul class="steps">
             <li class="steps-item">
                 <p>
-                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'oui'}) }}"><i class="fa fa-check"></i>&nbsp;Oui</a>
+                    <a class="btn" href="{{ path("route_qualify3", {ville_id: ville.id, abf:'oui'}) }}"><i class="fa fa-check"></i>&nbsp;Oui</a>
                 </p>
             </li>
             <li class="steps-item">
                 <p>
-                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'non'}) }}"><i class="fa fa-times"></i>&nbsp;Non</a>
+                    <a class="btn" href="{{ path("route_qualify3", {ville_id: ville.id, abf:'non'}) }}"><i class="fa fa-times"></i>&nbsp;Non</a>
                 </p>
             </li>
             <li class="steps-item">
                 <p>
-                    <a href="{{ path("route_qualify3", {ville_id: ville.id, abf:'nsp'}) }}"><i class="fa fa-question"></i>&nbsp;Je ne sais pas</a>
+                    <a class="btn" href="{{ path("route_qualify3", {ville_id: ville.id, abf:'nsp'}) }}"><i class="fa fa-question"></i>&nbsp;Je ne sais pas</a>
                 </p>
             </li>
         </ul>
