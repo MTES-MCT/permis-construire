@@ -10,7 +10,9 @@ use Symfony\Component\HttpFoundation\Request;
 class QualificationController extends AbstractController
 {
     public function qualification1() {
-        $villes = $this->getDoctrine()->getRepository(Ville::class)->findAll();
+        $villes = $this->getDoctrine()
+            ->getRepository(Ville::class)
+            ->findBy([], ['nom' => 'ASC']);
 
         return $this->render("qualify/page1.html.twig",
             ['villes' => $villes]
