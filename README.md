@@ -1,7 +1,7 @@
 Permis de construire facile
 ==============
 
-**Permis de construire facile** a pour but de permettre aux citoyens d'effectuer leurs demandes de 
+**Permis de construire facile** a pour but de permettre aux citoyens d'effectuer leurs demandes de permis de construire en ligne. Pour le moment, le projet se concentre sur le dépot de [demandes préalables de travaux](https://www.service-public.fr/particuliers/vosdroits/F17578).
 
 Plus d'informations sur ce projet sur [beta.gouv.fr](https://beta.gouv.fr/startup/permis-de-construire-facile.html)
 
