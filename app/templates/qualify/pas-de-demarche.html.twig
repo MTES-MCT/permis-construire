@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} - Votre demande préalable de travaux{% endblock %}
+
+{% block content %}
+
+    <main id="skip-to-main">
+
+        <section class="section-color">
+            <div class="aerate-content">
+
+                <h5>Désolé !</h5>
+                <p>Il n'existe pas de démarches en ligne pour la procédure demandée. Vous pouvez:</p>
+                <ul>
+                    <li><a href="{{ path('route_qualify1') }}">Recommencer</a> en cherchant une autre démarche</li>
+                    <li>Utiliser la voie traditionnelle et déposer en mairie votre déclaration d'urbanisme que vous pourrez imprimer depuis
+                        <a href="https://www.service-public.fr/particuliers/vosdroits/F17578">service-public.fr</a>.</li>
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

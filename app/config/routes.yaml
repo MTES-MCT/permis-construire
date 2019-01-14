@@ -22,6 +22,10 @@ route_gotods:
     path: /redirection-ds/
     controller: App\Controller\QualificationController::gotods
 
+route_pas_de_demarche:
+    path: /pas-de-resultats/
+    controller: App\Controller\QualificationController::pasdedemarche
+
 #route_demandeur_dashboard:
 #    path: /demandeur-dashboard
 #    controller: App\Controller\DemandeurController::dashboard
