@@ -67,18 +67,9 @@ class QualificationController extends AbstractController
         $projet = $request->get('projet', null);
         $url = null;
 
-        if ($projet == 'terrassement') $url = $ville->getUrlTerrassement();
-        if ($projet == 'surrelevation') $url = $ville->getUrlSurrelevation();
-        if ($projet == 'changement-fenetres') $url = $ville->getUrlFenetres();
-        if ($projet == 'ravalement-facade') $url = $ville->getUrlRavalement();
-        if ($projet == 'piscine') {
-            if($abf == 'oui'){
-                $url = $ville->getUrlPiscineAbf();
-            }
-            else {
-                $url = $ville->getUrlPiscineNonAbf();
-            }
-        }
+        if ($projet == 'extension') $url = $ville->getUrlExtension();
+        if ($projet == 'modification_exterieur') $url = $ville->getUrlModificationExterieur();
+        if ($projet == 'annexe') $url = $ville->getUrlAnnexe();
         if ($projet == 'cloture') $url = $ville->getUrlCloture();
         return $url;
     }
