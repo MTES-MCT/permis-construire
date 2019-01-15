@@ -3,53 +3,44 @@
 {% block title %}{{ parent() }} - Votre demande préalable de travaux{% endblock %}
 
 {% block content %}
-<main>
+
     <style>
         .steps-item {
             margin: 0 10px;
             max-width: 250px;
         }
     </style>
-    <section class="section-color">
-        <a href="{{ path("route_qualify1") }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
-        <h4>Déclaration préalable de travaux (2/3)</h4>
-        <h5>Architecte des bâtiments de France</h5>
 
-        <p>
-            Vos travaux ont ils lieu dans une zone ABF (Architecte des Bâtiments de France) ?
-        </p>
-
-        <ul class="steps">
-            <li class="steps-item">
-                <p>
-                    <a class="btn" href="{{ path("route_qualify3", {ville_id: ville.id, abf:'oui'}) }}"><i class="fa fa-check"></i>&nbsp;Oui</a>
-                </p>
-            </li>
-            <li class="steps-item">
-                <p>
-                    <a class="btn" href="{{ path("route_qualify3", {ville_id: ville.id, abf:'non'}) }}"><i class="fa fa-times"></i>&nbsp;Non</a>
-                </p>
-            </li>
-            <li class="steps-item">
-                <p>
-                    <a class="btn" href="{{ path("route_qualify3", {ville_id: ville.id, abf:'nsp'}) }}"><i class="fa fa-question"></i>&nbsp;Je ne sais pas</a>
-                </p>
-            </li>
-        </ul>
-
-        <div class="notification">
-            <p>Vous pouvez trouver cette information:</p>
-            <ul>
-                <li>Dans les documents d'achat du bien</li>
-                {% if ville.urlPlu %}
-                <li>Dans le <a href="{{ ville.urlPlu }}">PLU de votre ville</a></li>
-                {% else %}
-                <li>Dans le PLU de votre ville</li>
-                {% endif %}
+    <main>
+        <section class="section-color">
+            <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
+            <h4>Déclaration préalable de travaux (2/2)</h4>
+            <h5>Typologie de travaux</h5>
+            <p>
+                Quel type de travaux souhaitez-vous réaliser ?
+            </p>
+            <ul class="steps">
+                <li class="steps-item">
+                    <p>
+                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
+                    </p>
+                </li>
+                <li class="steps-item">
+                    <p>
+                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'surrelevation'}) }}">Modification d'aspect extérieur</a>
+                    </p>
+                </li>
+                <li class="steps-item">
+                    <p>
+                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'changement-fenetres'}) }}">Annexe de moins de 20m2</a>
+                    </p>
+                </li>
+                <li class="steps-item">
+                    <p>
+                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">Clôture</a>
+                    </p>
+                </li>
             </ul>
-        </div>
-
-    </section>
-
-</main>
+        </section>
+    </main>
 {% endblock %}

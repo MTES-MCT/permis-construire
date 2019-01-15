@@ -33,16 +33,6 @@ class QualificationController extends AbstractController
         );
     }
 
-    public function qualification3(Request $request) {
-        return $this->render(
-            "qualify/page3.html.twig",
-            [
-                'ville_id' => $request->get('ville_id', null),
-                'abf' => $request->get('abf', null),
-            ]
-        );
-    }
-
     public function resultats(Request $request) {
         $url = $this->getDSRedirectionUrl($request);
         if ($url === null) {
