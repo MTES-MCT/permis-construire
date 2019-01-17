@@ -16,15 +16,28 @@
             <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
             <h4>Déclaration préalable de travaux (2/2)</h4>
             <h5>Typologie de travaux</h5>
-            <p>
-                Quel type de travaux souhaitez-vous réaliser ?
-            </p>
-            <ul class="steps">
+                {% if ville.urlExtension is not null
+                and ville.urlExtension is not null
+                and ville.urlExtension is not null
+                and ville.urlExtension is not null
+                %}
+                <p>
+                    Quel type de travaux souhaitez-vous réaliser ?
+                </p>
+                <ul class="steps">
+                {% if ville.urlExtension is not null %}
                 <li class="steps-item">
                     <p>
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
                     </p>
                 </li>
+                {% else %}
+                    <li class="steps-item">
+                        <p>
+                            <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
+                        </p>
+                    </li>
+                {% endif %}
                 <li class="steps-item">
                     <p>
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
@@ -41,6 +54,9 @@
                     </p>
                 </li>
             </ul>
+            {% else %}
+                <p>Aucune démarche dématérialisée n'est possible actuellement. Contactez votre ville pour la mettre à jour !</p>
+            {% endif %}
         </section>
     </main>
 {% endblock %}
