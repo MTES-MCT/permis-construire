@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DoctrineMigrations;
 
@@ -10,10 +12,10 @@ use Doctrine\Migrations\AbstractMigration;
  */
 final class Version20190110073410 extends AbstractMigration
 {
-    public function up(Schema $schema) : void
+    public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
+        $this->abortIf('postgresql' !== $this->connection->getDatabasePlatform()->getName(), 'Migration can only be executed safely on \'postgresql\'.');
 
         $this->addSql('ALTER TABLE ville ADD url_terrassement VARCHAR(255) DEFAULT NULL');
         $this->addSql('ALTER TABLE ville ADD url_surrelevation VARCHAR(255) DEFAULT NULL');
@@ -22,10 +24,10 @@ final class Version20190110073410 extends AbstractMigration
         $this->addSql('ALTER TABLE ville ADD url_geoportail VARCHAR(255) DEFAULT NULL');
     }
 
-    public function down(Schema $schema) : void
+    public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
+        $this->abortIf('postgresql' !== $this->connection->getDatabasePlatform()->getName(), 'Migration can only be executed safely on \'postgresql\'.');
 
         $this->addSql('CREATE SCHEMA public');
         $this->addSql('ALTER TABLE ville DROP url_terrassement');

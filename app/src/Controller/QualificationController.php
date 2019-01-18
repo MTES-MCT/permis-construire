@@ -3,61 +3,66 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
 use App\Entity\Ville;
 use Symfony\Component\HttpFoundation\Request;
 
 class QualificationController extends AbstractController
 {
-    public function qualification1() {
+    public function qualification1()
+    {
         $villes = $this->getDoctrine()
             ->getRepository(Ville::class)
             ->findBy([], ['nom' => 'ASC']);
 
-        return $this->render("qualify/page1.html.twig",
+        return $this->render('qualify/page1.html.twig',
             ['villes' => $villes]
         );
     }
 
-    public function qualification2(Request $request) {
+    public function qualification2(Request $request)
+    {
         /* @var Ville $ville */
         $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
             $request->get('ville_id', null)
         );
-        if(!$ville) {
+        if (!$ville) {
             return $this->redirect($this->generateUrl('route_pas_de_demarche'));
         }
 
-        return $this->render("qualify/page2.html.twig",
+        return $this->render('qualify/page2.html.twig',
             ['ville' => $ville]
         );
     }
 
-    public function resultats(Request $request) {
+    public function resultats(Request $request)
+    {
         $url = $this->getDSRedirectionUrl($request);
-        if ($url === null) {
+        if (null === $url) {
             return $this->redirect($this->generateUrl('route_pas_de_demarche'));
         }
 
-        return $this->render("qualify/resultats.html.twig",
+        return $this->render('qualify/resultats.html.twig',
             [
                 'ville_id' => $request->get('ville_id', null),
                 'abf' => $request->get('abf', null),
-                'projet' => $request->get('projet', null)
+                'projet' => $request->get('projet', null),
             ]
         );
     }
 
-    public function gotods(Request $request) {
+    public function gotods(Request $request)
+    {
         $url = $this->getDSRedirectionUrl($request);
 
-        if ($url !== null)
+        if (null !== $url) {
             return $this->redirect($url);
+        }
 
         return $this->redirect($this->generateUrl('route_pas_de_demarche'));
     }
 
-    private function getDSRedirectionUrl(Request $request){
+    private function getDSRedirectionUrl(Request $request)
+    {
         /* @var Ville $ville */
         $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
             $request->get('ville_id', null)
@@ -67,16 +72,26 @@ class QualificationController extends AbstractController
         $projet = $request->get('projet', null);
         $url = null;
 
-        if ($projet == 'extension') $url = $ville->getUrlExtension();
-        if ($projet == 'modification_exterieur') $url = $ville->getUrlModificationExterieur();
-        if ($projet == 'annexe') $url = $ville->getUrlAnnexe();
-        if ($projet == 'cloture') $url = $ville->getUrlCloture();
+        if ('extension' == $projet) {
+            $url = $ville->getUrlExtension();
+        }
+        if ('modification_exterieur' == $projet) {
+            $url = $ville->getUrlModificationExterieur();
+        }
+        if ('annexe' == $projet) {
+            $url = $ville->getUrlAnnexe();
+        }
+        if ('cloture' == $projet) {
+            $url = $ville->getUrlCloture();
+        }
+
         return $url;
     }
 
-    public function pasdedemarche(Request $request) {
+    public function pasdedemarche(Request $request)
+    {
         return $this->render(
-            "qualify/pas-de-demarche.html.twig"
+            'qualify/pas-de-demarche.html.twig'
         );
     }
 }

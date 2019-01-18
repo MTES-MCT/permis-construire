@@ -137,6 +137,7 @@ class Adresse
     public function setCodePostal(?string $codePostal)
     {
         $this->codePostal = $codePostal;
+
         return $this;
     }
 }

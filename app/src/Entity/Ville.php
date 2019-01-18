@@ -156,5 +156,4 @@ class Ville
 
         return $this;
     }
-
 }

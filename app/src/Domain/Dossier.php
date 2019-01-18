@@ -25,7 +25,8 @@ class Dossier
     private $statut;
 
     /**
-     * Un dossier est associé à un projet
+     * Un dossier est associé à un projet.
+     *
      * @ORM\OneToOne(targetEntity="Projet")
      * @ORM\JoinColumn(name="projet_id", referencedColumnName="id")
      */
@@ -62,6 +63,7 @@ class Dossier
     public function setProjet(Projet $projet)
     {
         $this->projet = $projet;
+
         return $this;
     }
 }

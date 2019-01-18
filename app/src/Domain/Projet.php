@@ -363,11 +363,13 @@ class Projet
 
     /**
      * @param Demandeur $demandeur
+     *
      * @return Projet
      */
     public function setDemandeur(Demandeur $demandeur): Projet
     {
         $this->demandeur = $demandeur;
+
         return $this;
     }
 }

@@ -2,28 +2,29 @@
 
 namespace App\Controller;
 
-
 use App\Domain\Demandeur;
 use App\Domain\Projet;
 use App\Form\ExporterDemandeType;
 use GuzzleHttp\Client;
 use Nette\Neon\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class BackofficeVilleController extends AbstractController
 {
-    public function tableauDeBord() {
+    public function tableauDeBord()
+    {
         $form = $this->creationFormulaireTelechargement();
-        return $this->render("backoffice/ville/tableau-de-bord.html.twig",
-            [ 'form' => $form->createView() ]
+
+        return $this->render('backoffice/ville/tableau-de-bord.html.twig',
+            ['form' => $form->createView()]
         );
     }
 
-    public function telechargerDemande(Request $request) {
+    public function telechargerDemande(Request $request)
+    {
         $form = $this->creationFormulaireTelechargement();
 
         $form->handleRequest($request);
@@ -36,43 +37,45 @@ class BackofficeVilleController extends AbstractController
         }
     }
 
-    private function genererCsv($projet, $demandeId): Response {
-        $response = $this->render('backoffice/ville/demande.csv.twig', ["projet" => $projet]);
+    private function genererCsv($projet, $demandeId): Response
+    {
+        $response = $this->render('backoffice/ville/demande.csv.twig', ['projet' => $projet]);
         $response->headers->set('Content-Type', 'text/csv');
         $response->headers->set('Content-Disposition', sprintf('attachment; filename="demande-%s.csv"', $demandeId));
 
         return $response;
     }
 
-    private function requeteApiDS($demandeId){
+    private function requeteApiDS($demandeId)
+    {
         $user = $this->getUser();
         $ville = $user->getVille();
         $url = "https://www.demarches-simplifiees.fr/api/v1/procedures/12627/dossiers/$demandeId?token=".$ville->getDsApiToken();
 
         $client = new Client();
-        try{
+        try {
             $response = $client->request('GET', $url);
+        } catch (Exception $e) {
         }
-        catch (Exception $e) {
 
-        }
         return $this->parseResponse($response->getBody()->getContents());
     }
 
-    private function parseResponse($jsonContents): Projet {
+    private function parseResponse($jsonContents): Projet
+    {
         $data = json_decode($jsonContents, true);
         $demandeur = new Demandeur();
 
         $champs = $data['dossier']['champs'];
 
-        foreach ($champs as $champ){
-            if ($champ['type_de_champ']['libelle'] === 'Civilité'){
+        foreach ($champs as $champ) {
+            if ('Civilité' === $champ['type_de_champ']['libelle']) {
                 $demandeur->setCivilite($champ['value']);
             }
-            if ($champ['type_de_champ']['libelle'] === 'Nom'){
+            if ('Nom' === $champ['type_de_champ']['libelle']) {
                 $demandeur->setNom($champ['value']);
             }
-            if ($champ['type_de_champ']['libelle'] === 'Prénom'){
+            if ('Prénom' === $champ['type_de_champ']['libelle']) {
                 $demandeur->setPrenom($champ['value']);
             }
         }
@@ -89,8 +92,9 @@ class BackofficeVilleController extends AbstractController
     private function creationFormulaireTelechargement(): FormInterface
     {
         $form = $this->createForm(ExporterDemandeType::class, null, [
-            'action' => $this->generateUrl('route_backoffice_ville_telechargerDemande')
+            'action' => $this->generateUrl('route_backoffice_ville_telechargerDemande'),
         ]);
+
         return $form;
     }
 }
