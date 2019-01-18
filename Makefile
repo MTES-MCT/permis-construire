@@ -3,7 +3,7 @@ up:
 
 build:
 	docker-compose rm -vsf
-	docker-compose down -v --remove-orphans
+	docker-compose down --remove-orphans
 	docker-compose build
 	docker-compose up -d
 
