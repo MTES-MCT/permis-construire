@@ -6,7 +6,9 @@ use App\Form\ExporterDemandeType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use App\Entity\Ville;
+use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class BackofficeVilleController extends AbstractController
 {
@@ -30,7 +32,7 @@ class BackofficeVilleController extends AbstractController
         }
     }
 
-    private function genererCsv($id){
+    private function genererCsv($id): Response {
         $response = $this->render('backoffice/ville/demande.csv.twig', ["id" => $id]);
         $response->headers->set('Content-Type', 'text/csv');
         $response->headers->set('Content-Disposition', 'attachment; filename="demande.csv"');
@@ -39,9 +41,9 @@ class BackofficeVilleController extends AbstractController
     }
 
     /**
-     * @return \Symfony\Component\Form\FormInterface
+     * @return FormInterface
      */
-    private function creationFormulaireTelechargement(): \Symfony\Component\Form\FormInterface
+    private function creationFormulaireTelechargement(): FormInterface
     {
         $form = $this->createForm(ExporterDemandeType::class, null, [
             'action' => $this->generateUrl('route_backoffice_ville_telechargerDemande')
