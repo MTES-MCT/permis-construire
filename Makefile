@@ -26,7 +26,7 @@ stan:
 	docker-compose run php ./vendor/bin/phpstan analyse src tests --level 7
 
 cs-fixer:
-	docker-compose run php ./vendor/bin/php-cs-fixer fix $(FILE)
+	docker-compose run php ./vendor/bin/php-cs-fixer fix src
 
 regenerate-entities:
     docker-compose run php bin/console make:entity --regenerate App
