@@ -20,7 +20,7 @@ sh:
 	docker-compose run php /bin/sh
 
 tests:
-	docker-compose run php ./vendor/bin/phpunit ./tests/
+	docker-compose run php bin/phpunit ./tests/
 
 stan:
 	docker-compose run php ./vendor/bin/phpstan analyse src tests --level 7
@@ -30,3 +30,7 @@ cs-fixer:
 
 regenerate-entities:
     docker-compose run php bin/console make:entity --regenerate App
+
+install:
+	docker-compose run php composer install
+	docker-compose run php bin/console doctrine:migrations:migrate

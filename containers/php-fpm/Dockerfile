@@ -1,8 +1,9 @@
-FROM alpine:3.6
+FROM alpine:3.8
 
 LABEL maintainer="Clement Camin <clement@keiruaprod.fr>"
 
 RUN apk add --update \
+    php7 \
     php7-fpm \
     php7-apcu \
     php7-ctype \
@@ -26,6 +27,7 @@ RUN apk add --update \
     php7-tokenizer \
     php7-session \
     php7-simplexml \
+    php7-xmlwriter  \
     make \
     curl
 
