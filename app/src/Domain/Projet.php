@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Domain;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -16,6 +16,9 @@ class Projet
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /** @var Demandeur */
+    private $demandeur;
 
     /**
      * @ORM\Column(type="boolean")
@@ -347,6 +350,24 @@ class Projet
     {
         $this->surfacePlancherSupprimee = $surfacePlancherSupprimee;
 
+        return $this;
+    }
+
+    /**
+     * @return Demandeur
+     */
+    public function getDemandeur(): Demandeur
+    {
+        return $this->demandeur;
+    }
+
+    /**
+     * @param Demandeur $demandeur
+     * @return Projet
+     */
+    public function setDemandeur(Demandeur $demandeur): Projet
+    {
+        $this->demandeur = $demandeur;
         return $this;
     }
 }

@@ -30,3 +30,6 @@ stan:
 
 cs-fixer:
 	docker-compose run php ./vendor/bin/php-cs-fixer fix $(FILE)
+
+regenerate-entities:
+    docker-compose run php bin/console make:entity --regenerate App
