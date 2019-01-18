@@ -42,22 +42,21 @@
 </footer>
 
 {% block script %}
-    {# Piwik code.
-    <script>
+    <!-- Matomo -->
+    <script type="text/javascript">
         var _paq = _paq || [];
-        _paq.push(["setDomains", ["*.work-in-france.beta.gouv.fr", "*.workinfrance.beta.gouv.fr"]]);
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         (function() {
             var u="//stats.data.gouv.fr/";
             _paq.push(['setTrackerUrl', u+'piwik.php']);
-            _paq.push(['setSiteId', '46']);
+            _paq.push(['setSiteId', '81']);
             var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
             g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
         })();
     </script>
-    <noscript><img src="//stats.data.gouv.fr/piwik.php?idsite=46" style="border: 0;" alt=""></noscript>
-    #}
+    <!-- End Matomo Code -->
 {% endblock %}
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </body>
