@@ -51,6 +51,11 @@ class Ville
      */
     private $urlCloture;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $dsApiToken;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -136,6 +141,18 @@ class Ville
     public function setUrlCloture(?string $urlCloture): self
     {
         $this->urlCloture = $urlCloture;
+
+        return $this;
+    }
+
+    public function getDsApiToken(): ?string
+    {
+        return $this->dsApiToken;
+    }
+
+    public function setDsApiToken(?string $dsApiToken): self
+    {
+        $this->dsApiToken = $dsApiToken;
 
         return $this;
     }
