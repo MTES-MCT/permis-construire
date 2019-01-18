@@ -19,14 +19,11 @@ require-dev:
 sh:
 	docker-compose run php /bin/sh
 
-test:
+tests:
 	docker-compose run php ./vendor/bin/phpunit ./tests/
 
-test-file:
-	docker-compose run php ./vendor/bin/phpunit ./tests/ --group $(FILE)
-
 stan:
-	docker-compose run php ./vendor/bin/phpstan analyse $(FILE) --level 7
+	docker-compose run php ./vendor/bin/phpstan analyse src tests --level 7
 
 cs-fixer:
 	docker-compose run php ./vendor/bin/php-cs-fixer fix $(FILE)
