@@ -3,28 +3,28 @@ route_index:
     controller: App\Controller\StaticController::homepage
 
 route_qualify1:
-    path: /qualification-1/
+    path: /qualification/etape-1/
     controller: App\Controller\QualificationController::qualification1
 
 route_qualify2:
-    path: /qualification-2/
+    path: /qualification/etape-2/
     controller: App\Controller\QualificationController::qualification2
 
-route_qualify3:
-    path: /qualification-3/
-    controller: App\Controller\QualificationController::qualification3
-
 route_resultats:
-    path: /resultats/
+    path: /qualification/resultats/
     controller: App\Controller\QualificationController::resultats
 
 route_gotods:
-    path: /redirection-ds/
+    path: /qualification/redirection-ds/
     controller: App\Controller\QualificationController::gotods
 
 route_pas_de_demarche:
-    path: /pas-de-resultats/
+    path: /qualification/pas-de-resultats/
     controller: App\Controller\QualificationController::pasdedemarche
+
+route_backoffice_ville_dashboard:
+    path: /backoffice/ville/
+    controller: App\Controller\BackofficeVilleController::dashboard
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

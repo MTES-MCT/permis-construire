@@ -1,4 +1,8 @@
 easy_admin:
     entities:
-        - App\Entity\User
-        - App\Entity\Ville
+        User:
+            class: App\Entity\User
+            list:
+                fields: ['username', 'enabled',  'email', 'lastLogin', 'ville_id']
+        Ville:
+            class: App\Entity\Ville

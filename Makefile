@@ -16,7 +16,7 @@ require:
 require-dev:
 	docker-compose run php composer require --dev
 
-jumpin:
+sh:
 	docker-compose run php /bin/sh
 
 test:

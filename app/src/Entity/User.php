@@ -18,6 +18,12 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Ville")
+     * @ORM\JoinColumn(name="ville_id", referencedColumnName="id")
+     */
+    private $ville;
+
     public function __construct()
     {
         parent::__construct();
@@ -26,5 +32,17 @@ class User extends BaseUser
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getVille(): ?Ville
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?Ville $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
     }
 }
