@@ -55,10 +55,10 @@ class BackofficeVilleController extends AbstractController
         $client = new Client();
         try {
             $response = $client->request('GET', $url);
+            return $this->parseResponse($response->getBody()->getContents());
         } catch (Exception $e) {
+            return null;
         }
-
-        return $this->parseResponse($response->getBody()->getContents());
     }
 
     private function parseResponse($jsonContents): Projet

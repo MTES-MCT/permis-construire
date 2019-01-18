@@ -44,7 +44,6 @@ class QualificationController extends AbstractController
         return $this->render('qualify/resultats.html.twig',
             [
                 'ville_id' => $request->get('ville_id', null),
-                'abf' => $request->get('abf', null),
                 'projet' => $request->get('projet', null),
             ]
         );
@@ -61,28 +60,29 @@ class QualificationController extends AbstractController
         return $this->redirect($this->generateUrl('route_pas_de_demarche'));
     }
 
-    private function getDSRedirectionUrl(Request $request)
+    private function getDSRedirectionUrl(Request $request): ?string
     {
-        /* @var Ville $ville */
         $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
             $request->get('ville_id', null)
         );
 
-        $abf = $request->get('abf', null);
-        $projet = $request->get('projet', null);
         $url = null;
+        if (null !== $ville) {
+            /* @var Ville $ville */
+            $projet = $request->get('projet', null);
 
-        if ('extension' == $projet) {
-            $url = $ville->getUrlExtension();
-        }
-        if ('modification_exterieur' == $projet) {
-            $url = $ville->getUrlModificationExterieur();
-        }
-        if ('annexe' == $projet) {
-            $url = $ville->getUrlAnnexe();
-        }
-        if ('cloture' == $projet) {
-            $url = $ville->getUrlCloture();
+            if ('extension' == $projet) {
+                $url = $ville->getUrlExtension();
+            }
+            if ('modification_exterieur' == $projet) {
+                $url = $ville->getUrlModificationExterieur();
+            }
+            if ('annexe' == $projet) {
+                $url = $ville->getUrlAnnexe();
+            }
+            if ('cloture' == $projet) {
+                $url = $ville->getUrlCloture();
+            }
         }
 
         return $url;
