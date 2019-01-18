@@ -25,7 +25,7 @@ class LoginSuccessHandler implements AuthenticationSuccessHandlerInterface
         $redirectionUrl = $this->router->generate('easyadmin');
         foreach ($token_name->getRoles() as $role){
             if ($role->getRole() == 'ROLE_VILLE'){
-                $redirectionUrl = $this->router->generate('route_backoffice_ville_dashboard');
+                $redirectionUrl = $this->router->generate('route_backoffice_ville_tableauDeBord');
             }
         }
 

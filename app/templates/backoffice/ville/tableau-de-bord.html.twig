@@ -7,6 +7,11 @@
         <section class="section-color">
             <h4>{{ app.user.ville.nom}}</h4>
 
+            {{ form_start(form) }}
+            {{ form_widget(form.demande_id) }}
+            {{ form_rest(form) }}
+            <input type="submit" value="Télécharger">
+            {{ form_end(form) }}
 
         </section>
     </main>

@@ -22,9 +22,13 @@ route_pas_de_demarche:
     path: /qualification/pas-de-resultats/
     controller: App\Controller\QualificationController::pasdedemarche
 
-route_backoffice_ville_dashboard:
+route_backoffice_ville_tableauDeBord:
     path: /backoffice/ville/
-    controller: App\Controller\BackofficeVilleController::dashboard
+    controller: App\Controller\BackofficeVilleController::tableauDeBord
+
+route_backoffice_ville_telechargerDemande:
+    path: /backoffice/ville/telecharger-demande
+    controller: App\Controller\BackofficeVilleController::telechargerDemande
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
