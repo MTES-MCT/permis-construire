@@ -5,6 +5,9 @@
 {% block content %}
     <main>
         <section class="section-color">
+            <p class="right">
+                <a class="btn right" href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
+            </p>
             <h4>{{ app.user.ville.nom}}</h4>
 
             {{ form_start(form) }}
