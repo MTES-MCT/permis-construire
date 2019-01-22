@@ -1,0 +1,542 @@
+{
+  "dossier": {
+    "id": 299282,
+    "created_at": "2019-01-21T10:44:09.955Z",
+    "updated_at": "2019-01-21T10:48:06.184Z",
+    "archived": false,
+    "email": "clement.camin@beta.gouv.fr",
+    "state": "initiated",
+    "simplified_state": "En construction",
+    "initiated_at": "2019-01-21T10:48:02.696Z",
+    "received_at": null,
+    "processed_at": null,
+    "motivation": null,
+    "instructeurs": [],
+    "individual": {
+      "civilite": "M.",
+      "nom": "Camin",
+      "prenom": "Clément"
+    },
+    "entreprise": null,
+    "etablissement": null,
+    "cerfa": [],
+    "commentaires": [
+      {
+        "email": "contact@demarches-simplifiees.fr",
+        "body": "[Votre dossier demarches-simplifiees.fr nº 299282 a bien été reçu]<br><br><p>\nBonjour,\n</p>\n<p>\nVotre administration vous confirme la bonne réception de votre dossier nº 299282.\n</p>\n<p>\nÀ tout moment, vous pouvez consulter votre dossier et les éventuels messages de l'administration à cette adresse : <a target=\"_blank\" rel=\"noopener\" href=\"https://www.demarches-simplifiees.fr/dossiers/299282\">https://www.demarches-simplifiees.fr/dossiers/299282</a>\n</p>\n<p>\nBonne journée,\n</p>\n<p>\nL'équipe demarches-simplifiees.fr\n</p>\n\n",
+        "created_at": "2019-01-21T10:48:06.181Z",
+        "attachment": null
+      }
+    ],
+    "champs_private": [],
+    "pieces_justificatives": [],
+    "types_de_piece_justificative": [],
+    "champs": [
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376565,
+          "libelle": "Identité du déclarant",
+          "type_champ": "header_section",
+          "order_place": 0,
+          "description": ""
+        }
+      },
+      {
+        "value": "M.",
+        "type_de_champ": {
+          "id": 376566,
+          "libelle": "B17: Civilité",
+          "type_champ": "civilite",
+          "order_place": 1,
+          "description": ""
+        }
+      },
+      {
+        "value": "Camin",
+        "type_de_champ": {
+          "id": 376567,
+          "libelle": "B18: Nom",
+          "type_champ": "text",
+          "order_place": 2,
+          "description": ""
+        }
+      },
+      {
+        "value": "Clément",
+        "type_de_champ": {
+          "id": 376568,
+          "libelle": "B19: Prénom",
+          "type_champ": "text",
+          "order_place": 3,
+          "description": ""
+        }
+      },
+      {
+        "value": "1987-05-03",
+        "type_de_champ": {
+          "id": 376569,
+          "libelle": "Date de naissance",
+          "type_champ": "date",
+          "order_place": 4,
+          "description": ""
+        }
+      },
+      {
+        "value": "asnières sur seine",
+        "type_de_champ": {
+          "id": 376570,
+          "libelle": "Commune",
+          "type_champ": "text",
+          "order_place": 5,
+          "description": ""
+        }
+      },
+      {
+        "value": "92 - Hauts-de-Seine",
+        "type_de_champ": {
+          "id": 376572,
+          "libelle": "Département",
+          "type_champ": "departements",
+          "order_place": 6,
+          "description": ""
+        }
+      },
+      {
+        "value": "FRANCE",
+        "type_de_champ": {
+          "id": 376573,
+          "libelle": "Pays",
+          "type_champ": "pays",
+          "order_place": 7,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376613,
+          "libelle": "Le terrain",
+          "type_champ": "header_section",
+          "order_place": 8,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 427448,
+          "libelle": "Adresse",
+          "type_champ": "carte",
+          "order_place": 9,
+          "description": ""
+        },
+        "geo_areas": []
+      },
+      {
+        "value": "Non",
+        "type_de_champ": {
+          "id": 376621,
+          "libelle": "Ce terrain est-il situé dans un lotissement ?",
+          "type_champ": "yes_no",
+          "order_place": 10,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376616,
+          "libelle": "Référence cadastrale",
+          "type_champ": "header_section",
+          "order_place": 11,
+          "description": ""
+        }
+      },
+      {
+        "value": "{\"type\":\"MultiPolygon\",\"coordinates\":[[[[2.2802370786666875,48.910136092137094],[2.2802424430847172,48.91007615485388],[2.280220985412598,48.91006205195327],[2.280199527740479,48.91013256641656],[2.2802048921585087,48.910146669297255],[2.2802370786666875,48.910136092137094]]],[[[2.2803658246994023,48.910178400764295],[2.2803175449371342,48.910146669297255],[2.2803121805191044,48.91016782361088],[2.280322909355164,48.91018192648163],[2.280349731445313,48.9101854521987],[2.2803658246994023,48.910178400764295]]]]}",
+        "type_de_champ": {
+          "id": 427549,
+          "libelle": "Détermination des parcelles cadastrales",
+          "type_champ": "carte",
+          "order_place": 12,
+          "description": ""
+        },
+        "geo_areas": [
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      2.2803541,
+                      48.9102542
+                    ],
+                    [
+                      2.2803777,
+                      48.9102252
+                    ],
+                    [
+                      2.2804031,
+                      48.910194
+                    ],
+                    [
+                      2.2804528,
+                      48.9101325
+                    ],
+                    [
+                      2.280469,
+                      48.9101128
+                    ],
+                    [
+                      2.2803332,
+                      48.9100636
+                    ],
+                    [
+                      2.2803167,
+                      48.9100829
+                    ],
+                    [
+                      2.2803079,
+                      48.9100936
+                    ],
+                    [
+                      2.2802971,
+                      48.9101065
+                    ],
+                    [
+                      2.2802949,
+                      48.9101059
+                    ],
+                    [
+                      2.2802784,
+                      48.9101259
+                    ],
+                    [
+                      2.2802734,
+                      48.9101239
+                    ],
+                    [
+                      2.2802497,
+                      48.9101515
+                    ],
+                    [
+                      2.2802298,
+                      48.9101747
+                    ],
+                    [
+                      2.2802071,
+                      48.910201
+                    ],
+                    [
+                      2.2803541,
+                      48.9102542
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0008",
+            "surface_parcelle": 211.36123464646028,
+            "numero": "0150",
+            "feuille": 1,
+            "section": "AF",
+            "code_dep": "92",
+            "nom_com": "Asnières-sur-Seine",
+            "code_com": "004",
+            "code_arr": "000"
+          },
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      2.2802071,
+                      48.910201
+                    ],
+                    [
+                      2.2802298,
+                      48.9101747
+                    ],
+                    [
+                      2.2802497,
+                      48.9101515
+                    ],
+                    [
+                      2.2802734,
+                      48.9101239
+                    ],
+                    [
+                      2.2802784,
+                      48.9101259
+                    ],
+                    [
+                      2.2802949,
+                      48.9101059
+                    ],
+                    [
+                      2.2802971,
+                      48.9101065
+                    ],
+                    [
+                      2.2803079,
+                      48.9100936
+                    ],
+                    [
+                      2.2803167,
+                      48.9100829
+                    ],
+                    [
+                      2.2803332,
+                      48.9100636
+                    ],
+                    [
+                      2.2802381,
+                      48.9100291
+                    ],
+                    [
+                      2.2802024,
+                      48.9100719
+                    ],
+                    [
+                      2.280171,
+                      48.9101098
+                    ],
+                    [
+                      2.280151,
+                      48.9101339
+                    ],
+                    [
+                      2.2801211,
+                      48.9101698
+                    ],
+                    [
+                      2.2802071,
+                      48.910201
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0019",
+            "surface_parcelle": 134.4935582583419,
+            "numero": "0149",
+            "feuille": 1,
+            "section": "AF",
+            "code_dep": "92",
+            "nom_com": "Asnières-sur-Seine",
+            "code_com": "004",
+            "code_arr": "000"
+          }
+        ]
+      },
+      {
+        "value": "92",
+        "type_de_champ": {
+          "id": 376617,
+          "libelle": "préfixe",
+          "type_champ": "text",
+          "order_place": 13,
+          "description": ""
+        }
+      },
+      {
+        "value": "23",
+        "type_de_champ": {
+          "id": 376618,
+          "libelle": "section",
+          "type_champ": "text",
+          "order_place": 14,
+          "description": ""
+        }
+      },
+      {
+        "value": "123",
+        "type_de_champ": {
+          "id": 376619,
+          "libelle": "numéro",
+          "type_champ": "text",
+          "order_place": 15,
+          "description": ""
+        }
+      },
+      {
+        "value": "42",
+        "type_de_champ": {
+          "id": 376620,
+          "libelle": "superficie de la parcelle cadastrale (en m^2)",
+          "type_champ": "number",
+          "order_place": 16,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 377152,
+          "libelle": "Nature de votre projet",
+          "type_champ": "header_section",
+          "order_place": 17,
+          "description": ""
+        }
+      },
+      {
+        "value": "votre résidence principale",
+        "type_de_champ": {
+          "id": 377177,
+          "libelle": "Votre projet concerne...",
+          "type_champ": "drop_down_list",
+          "order_place": 18,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 377530,
+          "libelle": "Informations complémentaires",
+          "type_champ": "header_section",
+          "order_place": 19,
+          "description": ""
+        }
+      },
+      {
+        "value": "pas d'infos complémentaires",
+        "type_de_champ": {
+          "id": 377531,
+          "libelle": "Informations complémentaires",
+          "type_champ": "text",
+          "order_place": 20,
+          "description": ""
+        }
+      },
+      {
+        "value": "Oui",
+        "type_de_champ": {
+          "id": 427548,
+          "libelle": "Vos travaux ne génèrent pas de surface, et notamment de surface taxable",
+          "type_champ": "yes_no",
+          "order_place": 21,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 433812,
+          "libelle": "Pièces justificatives",
+          "type_champ": "header_section",
+          "order_place": 22,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 436574,
+          "libelle": "Précisions concernant les pièces à fournir",
+          "type_champ": "explication",
+          "order_place": 23,
+          "description": "Pour vous assurer d'obtenir votre attestation dans les meilleurs délais, lorsque vous allez remplir votre formulaire soyez attentifs à bien respecter les préconisations suivantes :\r\n\r\nPour les plans qu'il vous sera demandé de fournir, vérifiez bien :\r\n  ☑ la qualité globale du plan et sa lisibilité\r\n  ☑ la présence des côtes\r\n  ☑ la présence de l'échelle\r\n  ☑ la présence du nord\r\n \r\nPour les autres types de documents :\r\n  ☑ Fournissez des photos nettes et lisibles\r\n  ☑ Vérifiez bien qu'il n'y a pas d'erreur dans les références cadastrales (une faute d'orthographe est vite arrivée)\r\n  ☑ matérialisation unité foncière vs emprise projet"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 433939,
+          "libelle": "Documents justificatifs commun à tous les demandeurs",
+          "type_champ": "explication",
+          "order_place": 24,
+          "description": "Merci de fournir les documents suivants avant de finaliser le dépot de votre dossier.\r\nPour éviter toute erreur, nous vous conseillons de limiter la taille de chaque pièce jointe à 20 Mo. "
+        }
+      },
+      {
+        "value": "https://www.demarches-simplifiees.fr/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcE5mIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91928e47a1b1bc9cc2092d4ecdb19374c359ab8f/2018-749-primality-in-adversial-conditions.pdf",
+        "type_de_champ": {
+          "id": 433813,
+          "libelle": "DP1. Un plan de situation du terrain",
+          "type_champ": "piece_justificative",
+          "order_place": 25,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 435621,
+          "libelle": "DP2. Un plan de masse coté dans les 3 dimensions",
+          "type_champ": "piece_justificative",
+          "order_place": 26,
+          "description": "A fournir si votre projet crée une construction ou modifie le volume d’une construction existante\r\n(exemples : véranda, abri de jardin...)"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 435618,
+          "libelle": "DP3. Un plan en coupe",
+          "type_champ": "piece_justificative",
+          "order_place": 27,
+          "description": "Ce plan précise l’implantation de la construction par rapport au profil du terrain"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434419,
+          "libelle": "Documents justificatifs lorsque le projet est en zone ABF ou visible depuis l'espace public",
+          "type_champ": "explication",
+          "order_place": 28,
+          "description": "Merci de fournir les documents justificatifs suivants lorsque le projet est en zone ABF (Architectes des batiments de France) ou qu'il est visible depuis l'espace public."
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434421,
+          "libelle": "DP6. Un document graphique permettant d’apprécier l’insertion du projet de construction dans son environnement ",
+          "type_champ": "piece_justificative",
+          "order_place": 29,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434422,
+          "libelle": "DP7. Une photographie permettant de situer le terrain dans l’environnement proche ",
+          "type_champ": "piece_justificative",
+          "order_place": 30,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434423,
+          "libelle": "DP8. Une photographie permettant de situer le terrain dans le paysage lointain ",
+          "type_champ": "piece_justificative",
+          "order_place": 31,
+          "description": "Sauf si vous justifiez qu’aucune photographie de loin n’est possible."
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434970,
+          "libelle": "DP11. Une notice faisant apparaître les matériaux utilisés et les modalités d’exécution des travaux ",
+          "type_champ": "piece_justificative",
+          "order_place": 32,
+          "description": "Si votre projet porte sur des travaux nécessaires à la réalisation d’une opération de restauration immobilière ou sur un immeuble inscrit au titre des monuments historiques, sur un immeuble situé dans le périmètre d’un site patrimo- nial remarquable ou abords des monuments historiques ou dans un coeur de parc national"
+        }
+      }
+    ]
+  }
+}

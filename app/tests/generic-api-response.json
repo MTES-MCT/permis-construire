@@ -1,0 +1,740 @@
+{
+  "dossier": {
+    "id": 283301,
+    "created_at": "2019-01-09T18:09:13.679Z",
+    "updated_at": "2019-01-10T08:05:36.918Z",
+    "archived": false,
+    "email": "jean-michel.coste@developpement-durable.gouv.fr",
+    "state": "initiated",
+    "simplified_state": "En construction",
+    "initiated_at": "2019-01-09T18:24:40.794Z",
+    "received_at": null,
+    "processed_at": null,
+    "motivation": null,
+    "instructeurs": [
+      "clement.camin@beta.gouv.fr"
+    ],
+    "individual": {
+      "civilite": "M.",
+      "nom": "COSTE",
+      "prenom": "Jean Michel"
+    },
+    "entreprise": null,
+    "etablissement": null,
+    "cerfa": [],
+    "commentaires": [
+      {
+        "email": "contact@demarches-simplifiees.fr",
+        "body": "[Votre dossier demarches-simplifiees.fr nº 283301 a bien été reçu]<br><br><p>\nBonjour,\n</p>\n<p>\nVotre administration vous confirme la bonne réception de votre dossier nº 283301.\n</p>\n<p>\nÀ tout moment, vous pouvez consulter votre dossier et les éventuels messages de l'administration à cette adresse : <a target=\"_blank\" rel=\"noopener\" href=\"https://www.demarches-simplifiees.fr/dossiers/283301\">https://www.demarches-simplifiees.fr/dossiers/283301</a>\n</p>\n<p>\nBonne journée,\n</p>\n<p>\nL'équipe demarches-simplifiees.fr\n</p>\n\n",
+        "created_at": "2019-01-09T18:24:43.757Z",
+        "attachment": null
+      }
+    ],
+    "champs_private": [],
+    "pieces_justificatives": [
+      {
+        "created_at": "2019-01-09T18:24:40.029Z",
+        "type_de_piece_justificative_id": 61617,
+        "content_url": "https://static.demarches-simplifiees.fr/tps/piece_justificative-f00d95ae-8052-4ebf-a1a5-429e19221fb2.jpg",
+        "user": {
+          "email": "jean-michel.coste@developpement-durable.gouv.fr"
+        }
+      }
+    ],
+    "types_de_piece_justificative": [
+      {
+        "id": 61617,
+        "libelle": "DP1. Un plan de situation du terrain",
+        "description": "",
+        "order_place": 0,
+        "lien_demarche": ""
+      },
+      {
+        "id": 61618,
+        "libelle": "DP2. Un plan de masse coté dans les 3 dimensions",
+        "description": "A fournir si votre projet crée une construction ou modifie le volume d’une construction existante\n(exemples : véranda, abri de jardin...)",
+        "order_place": 1,
+        "lien_demarche": ""
+      },
+      {
+        "id": 61645,
+        "libelle": "DP5. Une représentation de l’aspect extérieur de la construction faisant apparaître les modifications projetées",
+        "description": "",
+        "order_place": 2,
+        "lien_demarche": ""
+      },
+      {
+        "id": 61621,
+        "libelle": "DP6. Un document graphique permettant d’apprécier l’insertion du projet de construction dans son environnement",
+        "description": "",
+        "order_place": 3,
+        "lien_demarche": ""
+      },
+      {
+        "id": 61622,
+        "libelle": "DP7. Une photographie permettant de situer le terrain dans l’environnement proche",
+        "description": "",
+        "order_place": 4,
+        "lien_demarche": ""
+      },
+      {
+        "id": 61623,
+        "libelle": "DP8. Une photographie permettant de situer le terrain dans le paysage lointain",
+        "description": "Sauf si vous justifiez qu’aucune photographie de loin n’est possible.",
+        "order_place": 5,
+        "lien_demarche": ""
+      },
+      {
+        "id": 61624,
+        "libelle": "DP8.1 Une note précisant la nature de la ou des dérogations demandées",
+        "description": "Cette note doit justifier également du respect objectifs et des conditions fixées aux articles L. 151-29-1 et L. 152-6 du code de l’urbanisme des pour chacune des dérogations demandées",
+        "order_place": 6,
+        "lien_demarche": ""
+      },
+      {
+        "id": 61625,
+        "libelle": "DP11. Une notice faisant apparaître les matériaux utilisés et les modalités d’exécution des travaux",
+        "description": "Si votre projet porte sur des travaux nécessaires à la réalisation d’une opération de restauration immobilière ou sur\nun immeuble inscrit au titre des monuments historiques, sur un immeuble situé dans le périmètre d’un site patrimo-\nnial remarquable ou abords des monuments historiques ou dans un coeur de parc national",
+        "order_place": 7,
+        "lien_demarche": ""
+      }
+    ],
+    "champs": [
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376565,
+          "libelle": "Identité du déclarant",
+          "type_champ": "header_section",
+          "order_place": 0,
+          "description": ""
+        }
+      },
+      {
+        "value": "M.",
+        "type_de_champ": {
+          "id": 376566,
+          "libelle": "Civilité",
+          "type_champ": "civilite",
+          "order_place": 1,
+          "description": ""
+        }
+      },
+      {
+        "value": "COSTE",
+        "type_de_champ": {
+          "id": 376567,
+          "libelle": "Nom",
+          "type_champ": "text",
+          "order_place": 2,
+          "description": ""
+        }
+      },
+      {
+        "value": "Jean Michel",
+        "type_de_champ": {
+          "id": 376568,
+          "libelle": "Prénom",
+          "type_champ": "text",
+          "order_place": 3,
+          "description": ""
+        }
+      },
+      {
+        "value": "1978-11-10",
+        "type_de_champ": {
+          "id": 376569,
+          "libelle": "Date de naissance",
+          "type_champ": "date",
+          "order_place": 4,
+          "description": ""
+        }
+      },
+      {
+        "value": "Saint Victoret",
+        "type_de_champ": {
+          "id": 376570,
+          "libelle": "Commune",
+          "type_champ": "text",
+          "order_place": 5,
+          "description": ""
+        }
+      },
+      {
+        "value": "13 - Bouches-du-Rhône",
+        "type_de_champ": {
+          "id": 376572,
+          "libelle": "Département",
+          "type_champ": "departements",
+          "order_place": 6,
+          "description": ""
+        }
+      },
+      {
+        "value": "FRANCE",
+        "type_de_champ": {
+          "id": 376573,
+          "libelle": "Pays",
+          "type_champ": "pays",
+          "order_place": 7,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376613,
+          "libelle": "Le terrain",
+          "type_champ": "header_section",
+          "order_place": 8,
+          "description": ""
+        }
+      },
+      {
+        "value": "{\"type\":\"MultiPolygon\",\"coordinates\":[[[[5.255498886108399,43.41596680974808],[5.255525708198548,43.415920050254364],[5.255498886108399,43.4158109446286],[5.25548279285431,43.41579925472846],[5.255187749862672,43.41578366819145],[5.255150198936463,43.415826531158615],[5.255112648010255,43.41590446374842],[5.255107283592225,43.41594343000573],[5.255080461502076,43.41601356920569],[5.255177021026612,43.416025259064455],[5.2554184198379525,43.416033052302375],[5.255498886108399,43.41596680974808]]]]}",
+        "type_de_champ": {
+          "id": 427448,
+          "libelle": "Adresse",
+          "type_champ": "carte",
+          "order_place": 9,
+          "description": ""
+        },
+        "geo_areas": []
+      },
+      {
+        "value": "Non",
+        "type_de_champ": {
+          "id": 376621,
+          "libelle": "Ce terrain est-il situé dans un lotissement ?",
+          "type_champ": "yes_no",
+          "order_place": 10,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376616,
+          "libelle": "Référence cadastrale",
+          "type_champ": "header_section",
+          "order_place": 11,
+          "description": ""
+        }
+      },
+      {
+        "value": "{\"type\":\"MultiPolygon\",\"coordinates\":[[[[5.255193114280702,43.4158109446286],[5.255139470100404,43.41582263452648],[5.25524139404297,43.415826531158615],[5.255193114280702,43.4158109446286]]],[[[5.255396962165833,43.41583822105346],[5.255343317985536,43.415826531158615],[5.25524139404297,43.415826531158615],[5.255364775657655,43.41585770420656],[5.255396962165833,43.41583822105346]]],[[[5.25547742843628,43.415826531158615],[5.255541801452638,43.415826531158615],[5.25548279285431,43.41579925472846],[5.255396962165833,43.41583822105346],[5.255423784255982,43.41586549746606],[5.255461335182191,43.41588498061038],[5.25547742843628,43.415826531158615]]],[[[5.25548279285431,43.41581484126148],[5.255525708198548,43.41569014888505],[5.255606174468995,43.415616112665084],[5.255606174468995,43.41555766295376],[5.255579352378846,43.41554207635456],[5.255552530288697,43.41553817970412],[5.255541801452638,43.41556155960295],[5.255364775657655,43.4156083193735],[5.255321860313416,43.41563949253378],[5.255085825920106,43.41572132200322],[5.255134105682374,43.41572911528028],[5.255214571952821,43.41569014888505],[5.255332589149476,43.415725218641875],[5.255423784255982,43.41584211768458],[5.2554452419281015,43.415846014315456],[5.25548279285431,43.41581484126148]]]]}",
+        "type_de_champ": {
+          "id": 427549,
+          "libelle": "Détermination des parcelles cadastrales",
+          "type_champ": "carte",
+          "order_place": 12,
+          "description": ""
+        },
+        "geo_areas": [
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      5.25572285,
+                      43.41528046
+                    ],
+                    [
+                      5.25571203,
+                      43.41527861
+                    ],
+                    [
+                      5.25547947,
+                      43.41525124
+                    ],
+                    [
+                      5.25538232,
+                      43.41523904
+                    ],
+                    [
+                      5.25531932,
+                      43.4152318
+                    ],
+                    [
+                      5.25529983,
+                      43.41522924
+                    ],
+                    [
+                      5.25522202,
+                      43.41521898
+                    ],
+                    [
+                      5.25516579,
+                      43.41521106
+                    ],
+                    [
+                      5.25514371,
+                      43.41520846
+                    ],
+                    [
+                      5.25502485,
+                      43.41572952
+                    ],
+                    [
+                      5.25505226,
+                      43.41573246
+                    ],
+                    [
+                      5.25510731,
+                      43.41573842
+                    ],
+                    [
+                      5.2555414,
+                      43.41578546
+                    ],
+                    [
+                      5.25558529,
+                      43.41579021
+                    ],
+                    [
+                      5.25566045,
+                      43.41551225
+                    ],
+                    [
+                      5.25572285,
+                      43.41528046
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0445",
+            "surface_parcelle": 2717.087693085249,
+            "numero": "0190",
+            "feuille": 1,
+            "section": "AH",
+            "code_dep": "13",
+            "nom_com": "Saint-Victoret",
+            "code_com": "102",
+            "code_arr": "000"
+          },
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      5.25553351,
+                      43.41597795
+                    ],
+                    [
+                      5.25553519,
+                      43.41597053
+                    ],
+                    [
+                      5.25554851,
+                      43.41592589
+                    ],
+                    [
+                      5.25555303,
+                      43.41590897
+                    ],
+                    [
+                      5.25558529,
+                      43.41579021
+                    ],
+                    [
+                      5.2555414,
+                      43.41578546
+                    ],
+                    [
+                      5.25510731,
+                      43.41573842
+                    ],
+                    [
+                      5.25505226,
+                      43.41573246
+                    ],
+                    [
+                      5.25502485,
+                      43.41572952
+                    ],
+                    [
+                      5.2549797,
+                      43.41591623
+                    ],
+                    [
+                      5.25522436,
+                      43.41594354
+                    ],
+                    [
+                      5.25529443,
+                      43.41595134
+                    ],
+                    [
+                      5.25553351,
+                      43.41597795
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0052",
+            "surface_parcelle": 966.1874507836484,
+            "numero": "0325",
+            "feuille": 1,
+            "section": "AH",
+            "code_dep": "13",
+            "nom_com": "Saint-Victoret",
+            "code_com": "102",
+            "code_arr": "000"
+          },
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      5.25553351,
+                      43.41597795
+                    ],
+                    [
+                      5.25553519,
+                      43.41597053
+                    ],
+                    [
+                      5.25554851,
+                      43.41592589
+                    ],
+                    [
+                      5.25555303,
+                      43.41590897
+                    ],
+                    [
+                      5.25558529,
+                      43.41579021
+                    ],
+                    [
+                      5.2555414,
+                      43.41578546
+                    ],
+                    [
+                      5.25510731,
+                      43.41573842
+                    ],
+                    [
+                      5.25505226,
+                      43.41573246
+                    ],
+                    [
+                      5.25502485,
+                      43.41572952
+                    ],
+                    [
+                      5.2549797,
+                      43.41591623
+                    ],
+                    [
+                      5.25522436,
+                      43.41594354
+                    ],
+                    [
+                      5.25529443,
+                      43.41595134
+                    ],
+                    [
+                      5.25553351,
+                      43.41597795
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0040",
+            "surface_parcelle": 966.1874507836484,
+            "numero": "0325",
+            "feuille": 1,
+            "section": "AH",
+            "code_dep": "13",
+            "nom_com": "Saint-Victoret",
+            "code_com": "102",
+            "code_arr": "000"
+          },
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      5.25553351,
+                      43.41597795
+                    ],
+                    [
+                      5.25553519,
+                      43.41597053
+                    ],
+                    [
+                      5.25554851,
+                      43.41592589
+                    ],
+                    [
+                      5.25555303,
+                      43.41590897
+                    ],
+                    [
+                      5.25558529,
+                      43.41579021
+                    ],
+                    [
+                      5.2555414,
+                      43.41578546
+                    ],
+                    [
+                      5.25510731,
+                      43.41573842
+                    ],
+                    [
+                      5.25505226,
+                      43.41573246
+                    ],
+                    [
+                      5.25502485,
+                      43.41572952
+                    ],
+                    [
+                      5.2549797,
+                      43.41591623
+                    ],
+                    [
+                      5.25522436,
+                      43.41594354
+                    ],
+                    [
+                      5.25529443,
+                      43.41595134
+                    ],
+                    [
+                      5.25553351,
+                      43.41597795
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0021",
+            "surface_parcelle": 966.1874507836484,
+            "numero": "0325",
+            "feuille": 1,
+            "section": "AH",
+            "code_dep": "13",
+            "nom_com": "Saint-Victoret",
+            "code_com": "102",
+            "code_arr": "000"
+          },
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      5.25553351,
+                      43.41597795
+                    ],
+                    [
+                      5.25553519,
+                      43.41597053
+                    ],
+                    [
+                      5.25554851,
+                      43.41592589
+                    ],
+                    [
+                      5.25555303,
+                      43.41590897
+                    ],
+                    [
+                      5.25558529,
+                      43.41579021
+                    ],
+                    [
+                      5.2555414,
+                      43.41578546
+                    ],
+                    [
+                      5.25510731,
+                      43.41573842
+                    ],
+                    [
+                      5.25505226,
+                      43.41573246
+                    ],
+                    [
+                      5.25502485,
+                      43.41572952
+                    ],
+                    [
+                      5.2549797,
+                      43.41591623
+                    ],
+                    [
+                      5.25522436,
+                      43.41594354
+                    ],
+                    [
+                      5.25529443,
+                      43.41595134
+                    ],
+                    [
+                      5.25553351,
+                      43.41597795
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0006",
+            "surface_parcelle": 966.1874507836484,
+            "numero": "0325",
+            "feuille": 1,
+            "section": "AH",
+            "code_dep": "13",
+            "nom_com": "Saint-Victoret",
+            "code_com": "102",
+            "code_arr": "000"
+          }
+        ]
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376617,
+          "libelle": "préfixe",
+          "type_champ": "text",
+          "order_place": 13,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376618,
+          "libelle": "section",
+          "type_champ": "text",
+          "order_place": 14,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376619,
+          "libelle": "numéro",
+          "type_champ": "text",
+          "order_place": 15,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376620,
+          "libelle": "superficie de la parcelle cadastrale (en m^2)",
+          "type_champ": "number",
+          "order_place": 16,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 377152,
+          "libelle": "Nature de votre projet",
+          "type_champ": "header_section",
+          "order_place": 17,
+          "description": ""
+        }
+      },
+      {
+        "value": "votre résidence principale",
+        "type_de_champ": {
+          "id": 377177,
+          "libelle": "Votre projet concerne...",
+          "type_champ": "drop_down_list",
+          "order_place": 18,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 377270,
+          "libelle": "Application d'une législation connexe",
+          "type_champ": "header_section",
+          "order_place": 19,
+          "description": ""
+        }
+      },
+      {
+        "value": "Non",
+        "type_de_champ": {
+          "id": 377271,
+          "libelle": "Votre projet se situe dans le périmètre d’un site patrimonial remarquable ?",
+          "type_champ": "yes_no",
+          "order_place": 20,
+          "description": ""
+        }
+      },
+      {
+        "value": "Non",
+        "type_de_champ": {
+          "id": 377272,
+          "libelle": "Votre projet se situe dans les abords d’un monument historique ?",
+          "type_champ": "yes_no",
+          "order_place": 21,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 377530,
+          "libelle": "Informations complémentaires",
+          "type_champ": "header_section",
+          "order_place": 22,
+          "description": ""
+        }
+      },
+      {
+        "value": "Ce sont de belles fenetres !",
+        "type_de_champ": {
+          "id": 377531,
+          "libelle": "Informations complémentaires et justificatifs éventuels (notamment l’attestation bancaire au prêt à taux zéro +, si la collectivité a délibéré l’exonération facultative correspondante) pouvant vous permettre de bénéficier d’impositions plus favorables",
+          "type_champ": "text",
+          "order_place": 23,
+          "description": ""
+        }
+      },
+      {
+        "value": "Oui",
+        "type_de_champ": {
+          "id": 427548,
+          "libelle": "Vos travaux ne génèrent pas de surface, et notamment de surface taxable",
+          "type_champ": "yes_no",
+          "order_place": 24,
+          "description": ""
+        }
+      }
+    ]
+  }
+}

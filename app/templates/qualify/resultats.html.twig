@@ -6,7 +6,7 @@
 
     <main id="skip-to-main">
         <section class="section-color">
-            <a href="{{ path("route_qualify3", {ville_id: ville_id, abf:abf}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
+            <a href="{{ path("route_qualify2", {ville_id: ville_id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
 
             <h3>Dépot de votre déclaration préalable de travaux</h3>
             <div class="aerate-content">
@@ -51,7 +51,7 @@
                 <br>
 
                 <p class="center">
-                    <a id="button_redirect_ds" class="btn" href="{{  path("route_gotods", {ville_id: ville_id, abf:abf, projet:projet}) }}">Poursuivre votre demande sur <b>Démarches simplifiées</b></a>
+                    <a id="button_redirect_ds" class="btn" href="{{  path("route_gotods", {ville_id: ville_id, projet:projet}) }}">Poursuivre votre demande sur <b>Démarches simplifiées</b></a>
                 </p>
             </div>
         </section>

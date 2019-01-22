@@ -17,9 +17,7 @@
             <h4>Déclaration préalable de travaux (2/2)</h4>
             <h5>Typologie de travaux</h5>
                 {% if ville.urlExtension is not null
-                and ville.urlExtension is not null
-                and ville.urlExtension is not null
-                and ville.urlExtension is not null
+                or ville.urlCloture is not null
                 %}
                 <p>
                     Quel type de travaux souhaitez-vous réaliser ?
@@ -31,28 +29,32 @@
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
                     </p>
                 </li>
-                {% else %}
-                    <li class="steps-item">
-                        <p>
-                            <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
-                        </p>
-                    </li>
                 {% endif %}
+
+                {% if ville.urlExtension is not null %}
                 <li class="steps-item">
                     <p>
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
                     </p>
                 </li>
+                {% endif %}
+
+                {% if ville.urlExtension is not null %}
                 <li class="steps-item">
                     <p>
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">Annexe de moins de 20m2</a>
                     </p>
                 </li>
+                {% endif %}
+
+                {% if ville.urlCloture is not null %}
                 <li class="steps-item">
                     <p>
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">Clôture</a>
                     </p>
                 </li>
+                {% endif %}
+
             </ul>
             {% else %}
                 <p>Aucune démarche dématérialisée n'est possible actuellement. Contactez votre ville pour la mettre à jour !</p>

@@ -5,7 +5,7 @@ namespace App\Domain;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\DossierRepository")
+ * @ORM\Entity(repositoryClass="App\ApiParser\DossierRepository")
  * @ORM\Table(name="dossier")
  */
 class Dossier

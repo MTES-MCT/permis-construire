@@ -5,7 +5,7 @@ namespace App\Domain;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ReferenceCadastraleRepository")
+ * @ORM\Entity(repositoryClass="App\ApiParser\ReferenceCadastraleRepository")
  * @ORM\Table(name="reference_cadastrale")
  */
 class ReferenceCadastrale
