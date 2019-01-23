@@ -10,52 +10,23 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Adresse
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $numero;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $voie;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $lieudit;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $localite;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $codePostal;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    private $departement;
+
+    private $pays;
+
     private $boitePostale;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $cedex;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getNumero(): ?string
     {
@@ -139,5 +110,37 @@ class Adresse
         $this->codePostal = $codePostal;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDepartement()
+    {
+        return $this->departement;
+    }
+
+    /**
+     * @param mixed $departement
+     */
+    public function setDepartement($departement): void
+    {
+        $this->departement = $departement;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
+    /**
+     * @param mixed $pays
+     */
+    public function setPays($pays): void
+    {
+        $this->pays = $pays;
     }
 }

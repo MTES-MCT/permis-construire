@@ -10,110 +10,47 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Projet
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
     /** @var Demandeur */
     private $demandeur;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
+    /** @var Taxation */
+    private $taxation;
+
     private $estNouvelleConstruction;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estNouvelleConstructionPiscine;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estNouvelleConstructionGarage;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estNouvelleConstructionVeranda;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estNouvelleConstructionAbriJardin;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $nouvelleConstructionAutres;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estTravauxSurExistant;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estTravauxSurExistantExtension;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estTravauxSurExistantSurrelevation;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estTravauxSurExistantCreationNiveaux;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $travauxSurExistantAutres;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estCloture;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $courteDescription;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estPourResidencePrincipale;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
     private $estPourResidenceSecondaire;
 
-    /**
-     * @ORM\Column(type="float", nullable=true)
-     */
     private $surfacePlancherExistante;
 
-    /**
-     * @ORM\Column(type="float", nullable=true)
-     */
     private $surfacePlancherCreee;
 
-    /**
-     * @ORM\Column(type="float", nullable=true)
-     */
     private $surfacePlancherSupprimee;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function __construct()
     {
@@ -124,6 +61,9 @@ class Projet
         $this->setEstNouvelleConstructionVeranda(false);
         $this->setNouvelleConstructionAutres('');
 
+        $this->setEstPourResidencePrincipale(false);
+        $this->setEstPourResidenceSecondaire(false);
+
         $this->setEstTravauxSurExistant(false);
         $this->setEstTravauxSurExistantCreationNiveaux(false);
         $this->setEstTravauxSurExistantExtension(false);
@@ -131,10 +71,10 @@ class Projet
 
         $this->setEstCloture(false);
 
-        $this->setCourteDescription('');
         $this->setSurfacePlancherExistante(0);
         $this->setSurfacePlancherCreee(0);
         $this->setSurfacePlancherSupprimee(0);
+        $this->setCourteDescription('');
     }
 
     public function getEstNouvelleConstruction(): ?bool
@@ -317,6 +257,45 @@ class Projet
         return $this;
     }
 
+    /**
+     * @return Demandeur
+     */
+    public function getDemandeur(): Demandeur
+    {
+        return $this->demandeur;
+    }
+
+    /**
+     * @param Demandeur $demandeur
+     *
+     * @return Projet
+     */
+    public function setDemandeur(Demandeur $demandeur): Projet
+    {
+        $this->demandeur = $demandeur;
+
+        return $this;
+    }
+
+    /**
+     * @return Taxation
+     */
+    public function getTaxation(): Taxation
+    {
+        return $this->taxation;
+    }
+
+    /**
+     * @param Taxation $taxation
+     * @return Projet
+     */
+    public function setTaxation(Taxation $taxation): Projet
+    {
+        $this->taxation = $taxation;
+        return $this;
+    }
+
+
     public function getSurfacePlancherExistante(): ?float
     {
         return $this->surfacePlancherExistante;
@@ -349,26 +328,6 @@ class Projet
     public function setSurfacePlancherSupprimee(?float $surfacePlancherSupprimee): self
     {
         $this->surfacePlancherSupprimee = $surfacePlancherSupprimee;
-
-        return $this;
-    }
-
-    /**
-     * @return Demandeur
-     */
-    public function getDemandeur(): Demandeur
-    {
-        return $this->demandeur;
-    }
-
-    /**
-     * @param Demandeur $demandeur
-     *
-     * @return Projet
-     */
-    public function setDemandeur(Demandeur $demandeur): Projet
-    {
-        $this->demandeur = $demandeur;
 
         return $this;
     }
