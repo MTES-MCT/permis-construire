@@ -2,6 +2,18 @@ route_index:
     path: /
     controller: App\Controller\StaticController::homepage
 
+route_static_cgu:
+    path: /cgu
+    controller: App\Controller\StaticController::cgu
+
+route_static_faq:
+    path: /faq
+    controller: App\Controller\StaticController::faq
+
+route_static_contact:
+    path: /contact
+    controller: App\Controller\StaticController::contact
+
 route_qualify1:
     path: /qualification/etape-1/
     controller: App\Controller\QualificationController::qualification1
