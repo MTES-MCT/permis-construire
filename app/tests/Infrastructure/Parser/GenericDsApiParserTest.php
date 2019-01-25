@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Tests\Infrastructure\Parser;
+
 use App\Infrastructure\ApiParser\GenericDsApiParser;
 use PHPUnit\Framework\TestCase;
 
