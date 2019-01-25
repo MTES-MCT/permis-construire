@@ -18,6 +18,8 @@
             <h5>Typologie de travaux</h5>
                 {% if ville.urlExtension is not null
                 or ville.urlCloture is not null
+                or ville.urlAnnexe is not null
+                or ville.ModificationExterieur is not null
                 %}
                 <p>
                     Quel type de travaux souhaitez-vous réaliser ?
@@ -31,7 +33,7 @@
                 </li>
                 {% endif %}
 
-                {% if ville.urlExtension is not null %}
+                {% if ville.urlModificationExterieur is not null %}
                 <li class="steps-item">
                     <p>
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
@@ -39,7 +41,7 @@
                 </li>
                 {% endif %}
 
-                {% if ville.urlExtension is not null %}
+                {% if ville.urlAnnexe is not null %}
                 <li class="steps-item">
                     <p>
                         <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">Annexe de moins de 20m2</a>
