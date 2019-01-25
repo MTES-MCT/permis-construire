@@ -1,0 +1,122 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} - Votre demande préalable de travaux{% endblock %}
+
+{% block content %}
+
+<div class="banner" role="contentinfo">
+  <div class="banner-content">
+    <h1>Déposez et gérez votre déclaration préalable de travaux en toute simplicité</h1>
+    <p class="buttons-row">
+    <h4 class="center">
+      <a class="btn" href="{{ path("route_qualify1") }}">C'est parti !</a>
+    </h4>
+    </p>
+  </div>
+</div>
+
+<main id="skip-to-main">
+
+  <section class="section-white">
+
+    <h4 class="center">Une déclaration préalable de travaux, comment ça se passe ?</h4>
+
+    <ul class="steps">
+      <li class="steps-item">
+        <a href="{{ path('route_static_faq', {'_fragment': 'etape1'}) }}">
+          <img src="build/static/img/steps/step-faisabilite.png" alt="Étape 1" width="100" height="100">
+        </a>
+        <p>
+          <span>1</span>
+          Je m'informe sur la faisabilité de mon projet
+        </p>
+      </li>
+      <li class="steps-item">
+        <a href="{{ path('route_static_faq', {'_fragment': 'etape2'}) }}">
+          <img src="build/static/img/steps/step-projet.png" alt="Étape 2" width="100" height="100">
+        </a>
+        <p>
+          <span>2</span>
+          Je précise mon projet et ma commune d'habitation
+        </p>
+      </li>
+      <li class="steps-item">
+        <a href="{{ path('route_static_faq', {'_fragment': 'etape3'}) }}">
+          <img src="build/static/img/steps/step-formulaire.png" alt="Étape 3" width="100" height="100">
+        </a>
+        <p>
+          <span>3</span>
+          Je complète le formulaire spécifique et dépose les pièces-jointes obligatoires
+        </p>
+      </li>
+      <li class="steps-item">
+        <a href="{{ path('route_static_faq', {'_fragment': 'etape4'}) }}">
+          <img src="build/static/img/steps/step-validation.png" alt="Étape 4" width="100" height="100">
+        </a>
+        <p>
+          <span>4</span>
+          Je valide le dépôt de mon dossier 100% en ligne
+        </p>
+      </li>
+      <li class="steps-item">
+        <a href="{{ path('route_static_faq', {'_fragment': 'etape5'}) }}">
+          <img src="build/static/img/steps/step-dossier.png" alt="Étape 5" width="100" height="100">
+        </a>
+        <p>
+          <span>5</span>
+          Je suis le traitement de ma demande
+        </p>
+      </li>
+      <li class="steps-item">
+        <a href="{{ path('route_static_faq', {'_fragment': 'etape6'}) }}">
+          <img src="build/static/img/steps/step-telechargement.png" alt="Étape 6" width="100" height="100">
+        </a>
+        <p>
+          <span>6</span>
+          Je récupère la décision à ma demande
+        </p>
+      </li>
+    </ul>
+
+    <section class="center">
+      <p class="buttons-row">
+      <h4>
+        <a class="btn" href="{{ path("route_qualify1") }}">
+          Faites votre déclaration préalable en ligne
+        </a>
+      </h4>
+      </p>
+    </section>
+
+  </section>
+  <section class="section-blue hero">
+
+    <h4 class="center">Permis de construire facile, pourquoi ?</h4>
+
+    <ul class="steps" style="text-align: center;">
+      <li class="steps-item">
+        <p>
+          <i class="fa fa-car" style="font-size: 8rem; color: grey"></i><br>
+          Plus besoin de vous déplacer ou d'envoyer des courriers
+        </p>
+      </li>
+      <li class="steps-item">
+        <p>
+          <i class="fa fa-mail-bulk" style="font-size: 8rem; color: grey"></i>
+          <br>
+          Vous recevez des notifications par e-mail sur l'avancée de votre demande
+        </p>
+      </li>
+      <li class="steps-item">
+        <p>
+          <i class="fa fa-lock" style="font-size: 8rem; color: grey"></i><br>
+          Votre démarche est sécurisée, rapide et c'est gratuit
+        </p>
+      </li>
+    </ul>
+
+  </section>
+
+</main>
+
+{% endblock %}
