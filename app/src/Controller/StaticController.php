@@ -8,7 +8,7 @@ class StaticController extends AbstractController
 {
     public function homepage()
     {
-        return $this->render('homepage.html');
+        return $this->render('static/homepage.html');
     }
 
     public function cgu()
