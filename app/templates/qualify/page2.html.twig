@@ -13,8 +13,11 @@
 
     <main>
         <section class="section-color">
+
             <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
             <h4>Typologie de travaux (2/2)</h4>
+            <div class="questions-container">
+
                 {% if ville.urlExtension is not null
                 or ville.urlCloture is not null
                 or ville.urlAnnexe is not null
@@ -60,6 +63,7 @@
             {% else %}
                 <p>Aucune démarche dématérialisée n'est possible actuellement. Contactez votre ville pour la mettre à jour !</p>
             {% endif %}
+            </div>
         </section>
     </main>
 {% endblock %}
