@@ -14,14 +14,13 @@
     <main>
         <section class="section-color">
             <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
-            <h4>Déclaration préalable de travaux (2/2)</h4>
-            <h5>Typologie de travaux</h5>
+            <h4>Typologie de travaux (2/2)</h4>
                 {% if ville.urlExtension is not null
                 or ville.urlCloture is not null
                 or ville.urlAnnexe is not null
                 or ville.ModificationExterieur is not null
                 %}
-                <p>
+                <p class="step-question">
                     Quel type de travaux souhaitez-vous réaliser ?
                 </p>
                 <ul class="steps">

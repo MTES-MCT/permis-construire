@@ -7,11 +7,11 @@
 
         <section class="section-color">
             <a href="{{ path("route_index") }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
-            <h4>Déclaration préalable de travaux (1/2)</h4>
-            <h5>Localisation du projet</h5>
+            <h4>Localisation du projet (1/2)</h4>
 
+            <section class="section-">
             {% if villes != null %}
-                <p>
+                <p class="step-question">
                     Dans quelle ville allez-vous réaliser des travaux ?
                 </p>
                 <ul>
@@ -29,6 +29,7 @@
                     Il n'y a pas de villes partenaires pour le moment. Revenez dans quelque temps !
                 </p>
             {% endif %}
+            </section>
         </section>
 
     </main>
