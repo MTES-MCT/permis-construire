@@ -9,58 +9,76 @@
             margin: 0 10px;
             max-width: 250px;
         }
+        .projects-container{
+            display: flex;
+            align-items: stretch;
+            justify-content: space-evenly;
+        }
+        .project{
+            width: 200px;
+            height: 100px;
+            background-color: #0081d5;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        .project a{
+            display: inline-block;
+            vertical-align: middle;
+            color: white !important;
+            /*font-weight: bold;*/
+            text-decoration: none;
+        }
     </style>
 
     <main>
         <section class="section-color">
+
             <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
-            <h4>Déclaration préalable de travaux (2/2)</h4>
-            <h5>Typologie de travaux</h5>
+            <h4>Typologie de travaux (2/2)</h4>
+            <div class="questions-container">
+
                 {% if ville.urlExtension is not null
                 or ville.urlCloture is not null
                 or ville.urlAnnexe is not null
                 or ville.ModificationExterieur is not null
                 %}
-                <p>
+                <p class="step-question">
                     Quel type de travaux souhaitez-vous réaliser ?
                 </p>
-                <ul class="steps">
+                <div class="projects-container">
+
                 {% if ville.urlExtension is not null %}
-                <li class="steps-item">
-                    <p>
-                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
-                    </p>
-                </li>
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
+                    </div>
                 {% endif %}
 
                 {% if ville.urlModificationExterieur is not null %}
-                <li class="steps-item">
-                    <p>
-                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
-                    </p>
-                </li>
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
+                    </div>
                 {% endif %}
 
                 {% if ville.urlAnnexe is not null %}
-                <li class="steps-item">
-                    <p>
-                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">Annexe de moins de 20m2</a>
-                    </p>
-                </li>
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">Annexe de moins de 20m<sup>2</sup></a>
+                    </div>
                 {% endif %}
 
                 {% if ville.urlCloture is not null %}
-                <li class="steps-item">
-                    <p>
-                        <a class="btn" href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">Clôture</a>
-                    </p>
-                </li>
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">Clôture</a>
+                    </div>
                 {% endif %}
+                </div>
 
-            </ul>
             {% else %}
                 <p>Aucune démarche dématérialisée n'est possible actuellement. Contactez votre ville pour la mettre à jour !</p>
             {% endif %}
+            </div>
         </section>
     </main>
 {% endblock %}
