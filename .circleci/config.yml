@@ -5,6 +5,7 @@ jobs:
     - image: circleci/php:7.1-browsers
 
     steps:
+    - setup_remote_docker
     - checkout
     - run:
         name: Build service
