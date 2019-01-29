@@ -2,19 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-    # using custom image, see .circleci/images/primary/Dockerfile
-    - image: circleci/cci-demo-docker-primary:0.0.2
+    - image: circleci/php:7.1-browsers
 
     steps:
     - checkout
     - run:
-        name: Install Docker Compose
-        command: |
-          curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-          chmod +x ~/docker-compose
-          sudo mv ~/docker-compose /usr/local/bin/docker-compose
-    - setup_remote_docker
-    - run:
         name: Build service
         command: make build
-    - run: make tests
+    - run:
+        name: Run unit tests
+        command: make tests
