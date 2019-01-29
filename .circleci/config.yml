@@ -12,4 +12,4 @@ jobs:
         command: make build
     - run:
         name: Run unit tests
-        command: make tests
+        command: docker exec -it $(docker ps -qf "name=project_php") bin/phpunit
