@@ -11,5 +11,8 @@ jobs:
         name: Build service
         command: make build
     - run:
+        name: Install dependencies
+        command: make install
+    - run:
         name: Run unit tests
         command: docker exec -it $(docker ps -qf "name=project_php") bin/phpunit
