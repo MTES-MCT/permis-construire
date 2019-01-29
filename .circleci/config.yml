@@ -12,7 +12,7 @@ jobs:
         command: make build
     - run:
         name: Install dependencies
-        command: make install
+        command: docker exec -it $(docker ps -qf "name=project_php") composer install
     - run:
         name: Run unit tests
         command: docker exec -it $(docker ps -qf "name=project_php") bin/phpunit
