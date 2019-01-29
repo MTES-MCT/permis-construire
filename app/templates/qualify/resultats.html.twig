@@ -4,6 +4,11 @@
 
 {% block content %}
 
+    <style>
+        .pj-checklist li{
+            list-style-type: none;
+        }
+    </style>
     <main id="skip-to-main">
         <section class="section-color">
             <a href="{{ path("route_qualify2", {ville_id: ville_id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
@@ -11,28 +16,26 @@
             <h3>Dépot de votre déclaration préalable de travaux</h3>
             <div class="aerate-content">
 
-
-
-                <h5>Attention</h5>
-
-                <p>Pour vous assurer d'obtenir votre attestation dans les meilleurs délais, lorsque vous allez remplir votre formulaire soyez attentifs à bien respecter les préconisations suivantes :</p>
+                <div class="questions-container">
+                <p>Pour vous assurer d'obtenir votre attestation dans les meilleurs délais, soyez attentifs à bien respecter les préconisations suivantes :</p>
 
                 <ul>
                     <li>Pour les plans qu'il vous sera demandé de fournir, vérifiez bien :</li>
-                    <ul>
-                        <li>la qualité globale du plan et sa lisibilité</li>
-                        <li>la présence des côtes</li>
-                        <li>la présence de l'échelle</li>
-                        <li>la présence du nord</li>
+                    <ul class="pj-checklist">
+                        <li><i class="fas fa-check"></i>&nbsp;la qualité globale du plan et sa lisibilité</li>
+                        <li><i class="fas fa-check"></i>&nbsp;la présence des côtes</li>
+                        <li><i class="fas fa-check"></i>&nbsp;la présence de l'échelle</li>
+                        <li><i class="fas fa-check"></i>&nbsp;la présence du nord</li>
                     </ul>
                     <li>Pour les autres types de documents :</li>
-                    <ul>
-                        <li>Fournissez des photos nettes, lisibles et en couleur</li>
-                        <li>Vérifiez bien qu'il n'y a pas d'erreur dans les références cadastrales (une faute d'orthographe est vite arrivée)</li>
-                        <li>matérialisation unité foncière vs emprise projet</li>
+                    <ul class="pj-checklist">
+                        <li><i class="fas fa-check"></i>&nbsp;Fournissez des photos nettes, lisibles et en couleur</li>
+                        <li><i class="fas fa-check"></i>&nbsp;Vérifiez bien qu'il n'y a pas d'erreur dans les références cadastrales (une faute d'orthographe est vite arrivée)</li>
+                        <li><i class="fas fa-check"></i>&nbsp;matérialisation unité foncière vs emprise projet</li>
                     </ul>
                 </ul>
 
+                </div>
             </div>
         </section>
 
