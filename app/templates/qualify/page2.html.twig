@@ -50,25 +50,25 @@
                 </p>
                 <div class="projects-container">
 
-                {% if true or ville.urlExtension is not null %}
+                {% if ville.urlExtension is not null %}
                     <div class="project">
                         <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
                     </div>
                 {% endif %}
 
-                {% if true or ville.urlModificationExterieur is not null %}
+                {% if ville.urlModificationExterieur is not null %}
                     <div class="project">
                         <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
                     </div>
                 {% endif %}
 
-                {% if true or ville.urlAnnexe is not null %}
+                {% if ville.urlAnnexe is not null %}
                     <div class="project">
                         <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">Annexe de moins de 20m<sup>2</sup></a>
                     </div>
                 {% endif %}
 
-                {% if true or ville.urlCloture is not null %}
+                {% if ville.urlCloture is not null %}
                     <div class="project">
                         <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">Clôture</a>
                     </div>
