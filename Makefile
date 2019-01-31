@@ -28,6 +28,9 @@ stan:
 cs-fixer:
 	docker-compose run php ./vendor/bin/php-cs-fixer fix src
 
+cs-check:
+	docker-compose run php ./vendor/bin/php-cs-fixer fix src --dry-run
+
 regenerate-entities:
 	docker-compose run php bin/console make:entity --regenerate App
 

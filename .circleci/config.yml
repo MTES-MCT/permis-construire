@@ -14,3 +14,6 @@ jobs:
     - run:
         name: Run unit tests
         command: make tests
+    - run:
+        name: Check code style
+        command: make cs-check
