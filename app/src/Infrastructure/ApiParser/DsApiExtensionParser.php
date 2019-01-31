@@ -9,7 +9,8 @@ use App\Domain\Taxation;
 
 class DsApiExtensionParser extends DsApiParser
 {
-    public function parseResponse($responseBody): Projet {
+    public function parseResponse($responseBody): Projet
+    {
         $data = json_decode($responseBody, true);
         $champs = $data['dossier']['champs'];
 
@@ -47,11 +48,9 @@ class DsApiExtensionParser extends DsApiParser
             //      Localisation du projet
             // duplicata de l'adresse?
             if ('Adresse' === $champ['type_de_champ']['libelle']) {
-                
                 continue;
             }
             if ('Ce terrain est-il situé dans un lotissement ?' === $champ['type_de_champ']['libelle']) {
-                
                 continue;
             }
 
@@ -69,22 +68,21 @@ class DsApiExtensionParser extends DsApiParser
 //                continue;
 //            }
             if ('superficie de la parcelle cadastrale (en m²)' === $champ['type_de_champ']['libelle']) {
-                
                 continue;
             }
 
             //      Nature de votre projet
             if ('Votre projet concerne...' === $champ['type_de_champ']['libelle']) {
-                if(trim($champ['value']) == 'votre résidence principale') {
+                if ('votre résidence principale' == trim($champ['value'])) {
                     $projet->setEstPourResidencePrincipale(true);
                 }
-                if($champ['value'] == 'votre résidence secondaire') {
+                if ('votre résidence secondaire' == $champ['value']) {
                     $projet->setEstPourResidenceSecondaire(true);
                 }
                 continue;
             }
             if ('Type de travaux sur une construction existante' === $champ['type_de_champ']['libelle']) {
-                if("Extension" == $champ['value']){
+                if ('Extension' == $champ['value']) {
                     $projet->setEstTravauxSurExistantExtension(true);
                 }
 
@@ -109,7 +107,6 @@ class DsApiExtensionParser extends DsApiParser
                 continue;
             }
             if ('Informations complémentaires' === $champ['type_de_champ']['libelle']) {
-                
                 continue;
             }
 
@@ -123,7 +120,7 @@ class DsApiExtensionParser extends DsApiParser
                 continue;
             }
             if ('Pour la réalisation des ces travaux, bénéficiez-vous d’un prêt aidé ' === $champ['type_de_champ']['libelle']) {
-                $taxation->setAPretAide($champ['value'] == 'Oui');
+                $taxation->setAPretAide('Oui' == $champ['value']);
                 continue;
             }
             if ('Si oui, lequel ?' === $champ['type_de_champ']['libelle']) {

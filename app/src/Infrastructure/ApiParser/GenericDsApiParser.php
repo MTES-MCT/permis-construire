@@ -7,7 +7,8 @@ use App\Domain\Projet;
 
 class GenericDsApiParser extends DsApiParser
 {
-    public function parseResponse($responseBody): Projet {
+    public function parseResponse($responseBody): Projet
+    {
         $data = json_decode($responseBody, true);
         $demandeur = new Demandeur();
 

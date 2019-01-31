@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Domain;
-
 
 class Taxation
 {
@@ -34,11 +32,13 @@ class Taxation
 
     /**
      * @param float $surfaceTaxableTotaleCreeeHorsStationnement
+     *
      * @return Taxation
      */
     public function setSurfaceTaxableTotaleCreeeHorsStationnement(float $surfaceTaxableTotaleCreeeHorsStationnement): Taxation
     {
         $this->surfaceTaxableTotaleCreeeHorsStationnement = $surfaceTaxableTotaleCreeeHorsStationnement;
+
         return $this;
     }
 
@@ -52,11 +52,13 @@ class Taxation
 
     /**
      * @param float $surfaceTaxableCreeeLocauxClos
+     *
      * @return Taxation
      */
     public function setSurfaceTaxableCreeeLocauxClos(float $surfaceTaxableCreeeLocauxClos): Taxation
     {
         $this->surfaceTaxableCreeeLocauxClos = $surfaceTaxableCreeeLocauxClos;
+
         return $this;
     }
 
@@ -70,11 +72,13 @@ class Taxation
 
     /**
      * @param bool $aPretAide
+     *
      * @return Taxation
      */
     public function setAPretAide(bool $aPretAide): Taxation
     {
         $this->aPretAide = $aPretAide;
+
         return $this;
     }
 
@@ -88,11 +92,13 @@ class Taxation
 
     /**
      * @param string $nomPretAide
+     *
      * @return Taxation
      */
     public function setNomPretAide(string $nomPretAide): Taxation
     {
         $this->nomPretAide = $nomPretAide;
+
         return $this;
     }
 
@@ -106,11 +112,13 @@ class Taxation
 
     /**
      * @param float $surfaceTaxableExistanteConservee
+     *
      * @return Taxation
      */
     public function setSurfaceTaxableExistanteConservee(float $surfaceTaxableExistanteConservee): Taxation
     {
         $this->surfaceTaxableExistanteConservee = $surfaceTaxableExistanteConservee;
+
         return $this;
     }
 
@@ -124,11 +132,13 @@ class Taxation
 
     /**
      * @param int $nombreLogementsExistants
+     *
      * @return Taxation
      */
     public function setNombreLogementsExistants(int $nombreLogementsExistants): Taxation
     {
         $this->nombreLogementsExistants = $nombreLogementsExistants;
+
         return $this;
     }
 
@@ -142,11 +152,13 @@ class Taxation
 
     /**
      * @param float $surfaceTaxableCreee
+     *
      * @return Taxation
      */
     public function setSurfaceTaxableCreee(float $surfaceTaxableCreee): Taxation
     {
         $this->surfaceTaxableCreee = $surfaceTaxableCreee;
+
         return $this;
     }
 
@@ -160,11 +172,13 @@ class Taxation
 
     /**
      * @param float $profondeurTerrassements
+     *
      * @return Taxation
      */
     public function setProfondeurTerrassements(float $profondeurTerrassements): Taxation
     {
         $this->profondeurTerrassements = $profondeurTerrassements;
+
         return $this;
     }
 }

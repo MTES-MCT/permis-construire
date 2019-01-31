@@ -287,14 +287,15 @@ class Projet
 
     /**
      * @param Taxation $taxation
+     *
      * @return Projet
      */
     public function setTaxation(Taxation $taxation): Projet
     {
         $this->taxation = $taxation;
+
         return $this;
     }
-
 
     public function getSurfacePlancherExistante(): ?float
     {

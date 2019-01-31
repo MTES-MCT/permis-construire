@@ -6,7 +6,7 @@ use App\Domain\Projet;
 
 abstract class DsApiParser
 {
-    public function parseResponse($responseBody): Projet {
-
+    public function parseResponse($responseBody): Projet
+    {
     }
 }
