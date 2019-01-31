@@ -29,7 +29,10 @@ cs-fixer:
 	docker-compose run php ./vendor/bin/php-cs-fixer fix src
 
 regenerate-entities:
-    docker-compose run php bin/console make:entity --regenerate App
+	docker-compose run php bin/console make:entity --regenerate App
+
+composer-install:
+	docker-compose run php composer install
 
 install:
 	docker-compose run php composer install

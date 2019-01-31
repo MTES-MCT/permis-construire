@@ -1,24 +1,16 @@
 version: 2
 jobs:
   build:
-    docker:
-    - image: circleci/php:7.1-browsers
+    machine: true
 
     steps:
-    - setup_remote_docker
     - checkout
     - run:
-        name: Build service
+        name: Build services
         command: make build
     - run:
         name: Install dependencies
-        command: docker exec -it $(docker ps -qf "name=project_php") composer install
-    - run:
-        name: debug
-        command: docker exec -it $(docker ps -qf "name=project_php") ls
-    - run:
-        name: debug 2
-        command: docker exec -it $(docker ps -qf "name=project_php") cat composer.json
+        command: make composer-install
     - run:
         name: Run unit tests
-        command: docker exec -it $(docker ps -qf "name=project_php") bin/phpunit
+        command: make tests
