@@ -14,5 +14,11 @@ jobs:
         name: Install dependencies
         command: docker exec -it $(docker ps -qf "name=project_php") composer install
     - run:
+        name: debug
+        command: docker exec -it $(docker ps -qf "name=project_php") ls
+    - run:
+        name: debug 2
+        command: docker exec -it $(docker ps -qf "name=project_php") cat composer.json
+    - run:
         name: Run unit tests
         command: docker exec -it $(docker ps -qf "name=project_php") bin/phpunit
