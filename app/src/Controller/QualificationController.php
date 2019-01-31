@@ -62,13 +62,13 @@ class QualificationController extends AbstractController
 
     private function getDSRedirectionUrl(Request $request): ?string
     {
+        /** @var Ville */
         $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
             $request->get('ville_id', null)
         );
 
         $url = null;
         if (null !== $ville) {
-            /* @var Ville $ville */
             $projet = $request->get('projet', null);
 
             if ('extension' == $projet) {

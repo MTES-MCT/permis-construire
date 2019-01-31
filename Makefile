@@ -23,7 +23,7 @@ tests:
 	docker-compose run php bin/phpunit ./tests/
 
 stan:
-	docker-compose run php ./vendor/bin/phpstan analyse src tests --level 7
+	docker-compose run php ./vendor/bin/phpstan analyse src --level 7
 
 cs-fixer:
 	docker-compose run php ./vendor/bin/php-cs-fixer fix src
