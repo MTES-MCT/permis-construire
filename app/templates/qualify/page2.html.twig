@@ -34,51 +34,44 @@
 </style>
 
 <main>
-    <section class="section-color">
+    <section class="section-color questions-container">
 
         <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
-        <h4>Typologie de travaux (2/2)</h4>
-        <div class="questions-container">
+        <h4>Quel type de travaux souhaitez-vous réaliser ? (2/2)</h4>
 
             {% if ville.urlExtension is not null
             or ville.urlCloture is not null
             or ville.urlAnnexe is not null
             or ville.ModificationExterieur is not null
             %}
-            <p class="step-question">
-                Quel type de travaux souhaitez-vous réaliser ?
-            </p>
-            <div class="projects-container">
 
-            {% if ville.urlExtension is not null %}
-                <div class="project">
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
-                </div>
-            {% endif %}
+                {% if ville.urlExtension is not null %}
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">Extension</a>
+                    </div>
+                {% endif %}
 
-            {% if ville.urlModificationExterieur is not null %}
-                <div class="project">
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
-                </div>
-            {% endif %}
+                {% if ville.urlModificationExterieur is not null %}
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">Modification d'aspect extérieur</a>
+                    </div>
+                {% endif %}
 
-            {% if ville.urlAnnexe is not null %}
-                <div class="project">
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">Annexe de moins de 20m<sup>2</sup></a>
-                </div>
-            {% endif %}
+                {% if ville.urlAnnexe is not null %}
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">Annexe de moins de 20m<sup>2</sup></a>
+                    </div>
+                {% endif %}
 
-            {% if ville.urlCloture is not null %}
-                <div class="project">
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">Clôture</a>
-                </div>
-            {% endif %}
-            </div>
+                {% if ville.urlCloture is not null %}
+                    <div class="project">
+                        <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">Clôture</a>
+                    </div>
+                {% endif %}
 
         {% else %}
             <p>Aucune démarche dématérialisée n'est possible actuellement. Contactez votre ville pour la mettre à jour !</p>
         {% endif %}
-        </div>
     </section>
 </main>
 {% endblock %}

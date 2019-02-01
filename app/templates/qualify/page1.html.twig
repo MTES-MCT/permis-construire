@@ -5,32 +5,30 @@
 {% block content %}
 <main>
 
-    <section class="section-color">
-        <a href="{{ path("route_index") }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
-        <h4>Localisation du projet (1/2)</h4>
-
+    <section class="section-color questions-container">
+        <h4>Dans quelle ville allez-vous réaliser des travaux ? (1/2)</h4>
 
         {% if villes != null %}
-            <div class="questions-container">
-                <p class="step-question">
-                    Dans quelle ville allez-vous réaliser des travaux ?
-                </p>
                 <ul>
                     {% for ville in villes %}
-                    <li><a href="{{ path("route_qualify2", {ville_id: ville.id}) }}">{{  ville.nom }}</a></li>
+                        <a href="{{ path("route_qualify2", {ville_id: ville.id}) }}">
+                            <li>{{  ville.nom }}</li>
+                        </a>
                     {% endfor %}
                 </ul>
-                <p>
-            </div>
-                <h6>Votre ville n'est pas dans cette liste ?</h6>
-                Alors, elle n'est pas partenaire pour le moment. Vous pouvez utiliser la voie traditionnelle et déposer en mairie votre déclaration d'urbanisme que vous pourrez imprimer depuis
-                <a href="https://www.service-public.fr/particuliers/vosdroits/F17578">service-public.fr</a>.
-                </p>
         {% else %}
             <p>
                 Il n'y a pas de villes partenaires pour le moment. Revenez dans quelque temps !
             </p>
         {% endif %}
+    </section>
+
+    <section>
+        <h6>Votre ville n'est pas dans cette liste ?</h6>
+        Alors, elle n'est pas partenaire pour le moment. Vous pouvez utiliser la voie traditionnelle et déposer en mairie votre déclaration d'urbanisme que vous pourrez imprimer depuis
+        <a href="https://www.service-public.fr/particuliers/vosdroits/F17578">service-public.fr</a>.
+        </p>
+
     </section>
 
 </main>

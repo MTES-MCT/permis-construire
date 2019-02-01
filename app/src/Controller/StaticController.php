@@ -25,4 +25,9 @@ class StaticController extends AbstractController
     {
         return $this->render('static/contact.html.twig');
     }
+
+    public function comment()
+    {
+        return $this->render('static/comment-ca-marche.html.twig');
+    }
 }

@@ -2,6 +2,10 @@ route_index:
     path: /
     controller: App\Controller\StaticController::homepage
 
+route_static_comment_ca_marche:
+    path: /comment-ca-marche
+    controller: App\Controller\StaticController::comment
+
 route_static_cgu:
     path: /cgu
     controller: App\Controller\StaticController::cgu
