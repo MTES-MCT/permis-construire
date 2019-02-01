@@ -12,12 +12,19 @@
         .questions-container{
            font-size: 1.5rem;
         }
+        .banner {
+            background-color: inherit;
+        }
         .banner-content h1 {
             padding-left: 0;
             text-align: center;
         }
         .steps-item a{
             color: #1c1c1c;
+        }
+        main section{
+            padding-top: 60px !important;
+            padding-bottom: 60px !important;
         }
     </style>
 </head>
@@ -32,7 +39,9 @@
     <nav>
         <div class="site-header-logos">
             <img src="/build/static/img/gouv.svg" alt="" width="80">
-            <a class="site-logo" href="/">Permis de construire facile</a>
+            <a class="site-logo" href="{{ path('route_index') }}">
+                Permis de construire facile
+            </a>
         </div>
     </nav>
 </header>
