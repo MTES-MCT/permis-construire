@@ -27,7 +27,8 @@ class StaticController extends AbstractController
         return $this->render('static/contact.html.twig');
     }
 
-    public function infosTravaux(Request $request){
+    public function infosTravaux(Request $request)
+    {
         return $this->render('static/infos-travaux.html.twig');
     }
 
