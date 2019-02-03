@@ -1,3 +1,4 @@
+# Static
 route_index:
     path: /
     controller: App\Controller\StaticController::homepage
@@ -18,6 +19,11 @@ route_static_contact:
     path: /contact
     controller: App\Controller\StaticController::contact
 
+route_static_infosTravaux:
+    path: /travaux/{typeTravaux}
+    controller: App\Controller\StaticController::infosTravaux
+
+# Qualification
 route_qualify1:
     path: /qualification/etape-1/
     controller: App\Controller\QualificationController::qualification1
@@ -38,6 +44,7 @@ route_pas_de_demarche:
     path: /qualification/pas-de-resultats/
     controller: App\Controller\QualificationController::pasdedemarche
 
+# Backoffice
 route_backoffice_ville_tableauDeBord:
     path: /backoffice/ville/
     controller: App\Controller\BackofficeVilleController::tableauDeBord
@@ -46,6 +53,7 @@ route_backoffice_ville_telechargerDemande:
     path: /backoffice/ville/telecharger-demande
     controller: App\Controller\BackofficeVilleController::telechargerDemande
 
+# External bundles
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 

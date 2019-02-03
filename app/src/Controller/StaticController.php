@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 
 class StaticController extends AbstractController
 {
@@ -24,6 +25,10 @@ class StaticController extends AbstractController
     public function contact()
     {
         return $this->render('static/contact.html.twig');
+    }
+
+    public function infosTravaux(Request $request){
+        return $this->render('static/infos-travaux.html.twig');
     }
 
     public function comment()
