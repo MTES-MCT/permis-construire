@@ -9,7 +9,7 @@
         <h4>Dans quelle ville allez-vous réaliser des travaux ? (1/2)</h4>
 
         {% if villes != null %}
-                <ul>
+                <ul class="question-items">
                     {% for ville in villes %}
                         <a href="{{ path("route_qualify2", {ville_id: ville.id}) }}">
                             <li>{{  ville.nom }}</li>

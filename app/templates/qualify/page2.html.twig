@@ -44,24 +44,41 @@
             or ville.urlAnnexe is not null
             or ville.ModificationExterieur is not null
             %}
-                <ul>
+                <ul class="question-items">
 
                 {% if true or ville.urlExtension is not null %}
                     <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">
-                        <li>Extension</li>
+                        <li>Agrandissement</li>
                     </a>
+                    <p>Exemples :</p>
+                    <ul>
+                        <li>extension horizontale</li>
+                        <li>surrélévation (création de niveaux supplémentaires)</li>
+                        <li>aménagement de combles</li>
+                    </ul>
+
                 {% endif %}
 
                 {% if true or ville.urlModificationExterieur is not null %}
                     <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">
                         <li>Modification d'aspect extérieur</li>
                     </a>
+                    <p>Exemples :</p>
+                    <ul>
+                        <li>changement de fenêtre</li>
+                        <li>ravalement de façade</li>
+                    </ul>
                 {% endif %}
 
                 {% if true or ville.urlAnnexe is not null %}
                     <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">
                         <li>Annexe de moins de 20m<sup>2</sup></li>
                     </a>
+                    <ul>
+                        <li>véranda</li>
+                        <li>abri de jardin</li>
+                        <li>piscine</li>
+                    </ul>
                 {% endif %}
 
                 {% if true or ville.urlCloture is not null %}
@@ -69,6 +86,14 @@
                         <li>Clôture</li>
                     </a>
                 {% endif %}
+
+                <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'division_fonciere'}) }}">
+                    <li>Division foncière</li>
+                </a>
+                <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'multitravaux'}) }}">
+                    <li>Multi travaux</li>
+                </a>
+
                 </ul>
 
         {% else %}
