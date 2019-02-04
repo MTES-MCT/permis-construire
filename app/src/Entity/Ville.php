@@ -66,13 +66,14 @@ class Ville
      */
     private $dsApiToken;
 
-    public function hasLinks(): bool {
-        return $this->getUrlAnnexe() !== null
-            or $this->getUrlModificationExterieur() !== null
-            or $this->getUrlAgrandissement() !== null
-            or $this->getUrlCloture() !== null
-            or $this->getUrlDivisionLotissements() !== null
-            or $this->getUrlMultiTravaux() !== null
+    public function hasLinks(): bool
+    {
+        return null !== $this->getUrlAnnexe()
+            or null !== $this->getUrlModificationExterieur()
+            or null !== $this->getUrlAgrandissement()
+            or null !== $this->getUrlCloture()
+            or null !== $this->getUrlDivisionLotissements()
+            or null !== $this->getUrlMultiTravaux()
             ;
     }
 

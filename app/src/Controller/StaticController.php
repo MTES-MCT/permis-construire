@@ -30,9 +30,10 @@ class StaticController extends AbstractController
 
     public function infosTravaux(Request $request, $typeTravaux)
     {
-        if(Travaux::isValidType($typeTravaux))
+        if (Travaux::isValidType($typeTravaux)) {
             return $this->render('static/infos-travaux.html.twig', ['typeTravaux' => $typeTravaux]);
-        throw $this->createNotFoundException("Le type de travaux est inconnu");
+        }
+        throw $this->createNotFoundException('Le type de travaux est inconnu');
     }
 
     public function comment()

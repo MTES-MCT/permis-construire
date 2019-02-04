@@ -20,7 +20,8 @@ class Travaux
         self::TYPE_MULTI,
     ];
 
-    static function isValidType($type) {
+    public static function isValidType($type)
+    {
         return in_array($type, self::TYPES);
     }
 }
