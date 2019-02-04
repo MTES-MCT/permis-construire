@@ -56,6 +56,14 @@ class Ville
      */
     private $dsApiToken;
 
+    public function hasLinks(): bool {
+        return $this->getUrlAnnexe() !== null
+            or $this->getUrlModificationExterieur() !== null
+            or $this->getUrlExtension() !== null
+            or $this->getUrlCloture() !== null
+            ;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

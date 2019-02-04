@@ -39,15 +39,11 @@
         <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
         <h4>Quel type de travaux souhaitez-vous réaliser ? (2/2)</h4>
 
-            {% if ville.urlExtension is not null
-            or ville.urlCloture is not null
-            or ville.urlAnnexe is not null
-            or ville.ModificationExterieur is not null
-            %}
+            {% if ville.hasLinks() %}
                 <ul class="question-items">
 
                 {% if true or ville.urlExtension is not null %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'extension'}) }}">
+                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT') }) }}">
                         <li>Agrandissement</li>
                     </a>
                     <p>Exemples :</p>
@@ -56,7 +52,7 @@
                         <li>surrélévation (création de niveaux supplémentaires)</li>
                         <li>aménagement de combles</li>
                     </ul>
-                    <a href="{{ path('route_static_infosTravaux', {typeTravaux: 'extension'}) }}">En savoir plus</a>
+                    <a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT')}) }}">En savoir plus</a>
                 {% endif %}
 
                 {% if true or ville.urlModificationExterieur is not null %}
@@ -68,6 +64,7 @@
                         <li>changement de fenêtre</li>
                         <li>ravalement de façade</li>
                     </ul>
+                    <a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">En savoir plus</a>
                 {% endif %}
 
                 {% if true or ville.urlAnnexe is not null %}
@@ -80,21 +77,24 @@
                         <li>abri de jardin</li>
                         <li>piscine</li>
                     </ul>
+                    <a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_ANNEXE')}) }}">En savoir plus</a>
                 {% endif %}
 
                 {% if true or ville.urlCloture is not null %}
                     <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">
                         <li>Clôture</li>
                     </a>
+                    <a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_CLOTURE')}) }}">En savoir plus</a>
                 {% endif %}
 
                 <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'division_fonciere'}) }}">
                     <li>Division foncière</li>
                 </a>
+                <a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">En savoir plus</a>
                 <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'multitravaux'}) }}">
                     <li>Multi travaux</li>
                 </a>
-
+                    <a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">En savoir plus</a>
                 </ul>
 
         {% else %}
