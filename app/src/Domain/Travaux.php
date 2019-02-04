@@ -11,14 +11,16 @@ class Travaux
     const TYPE_DIVISION = 'division';
     const TYPE_MULTI = 'multitravaux';
 
+    const TYPES = [
+        self::TYPE_AGRANDISSEMENT,
+        self::TYPE_CHANGEMENT_EXTERIEUR,
+        self::TYPE_ANNEXE,
+        self::TYPE_CLOTURE,
+        self::TYPE_DIVISION,
+        self::TYPE_MULTI,
+    ];
+
     static function isValidType($type) {
-        return in_array($type, [
-            self::TYPE_AGRANDISSEMENT,
-            self::TYPE_CHANGEMENT_EXTERIEUR,
-            self::TYPE_ANNEXE,
-            self::TYPE_CLOTURE,
-            self::TYPE_DIVISION,
-            self::TYPE_MULTI,
-        ]);
+        return in_array($type, self::TYPES);
     }
 }

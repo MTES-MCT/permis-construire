@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Domain\Travaux;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -29,7 +30,9 @@ class StaticController extends AbstractController
 
     public function infosTravaux(Request $request, $typeTravaux)
     {
-        return $this->render('static/infos-travaux.html.twig', ['typeTravaux' => $typeTravaux]);
+        if(Travaux::isValidType($typeTravaux))
+            return $this->render('static/infos-travaux.html.twig', ['typeTravaux' => $typeTravaux]);
+        throw $this->createNotFoundException("Le type de travaux est inconnu");
     }
 
     public function comment()
