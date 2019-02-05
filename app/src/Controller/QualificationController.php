@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Domain\Travaux;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Ville;
 use Symfony\Component\HttpFoundation\Request;
@@ -71,16 +72,16 @@ class QualificationController extends AbstractController
         if (null !== $ville) {
             $projet = $request->get('projet', null);
 
-            if ('extension' == $projet) {
+            if (Travaux::TYPE_AGRANDISSEMENT == $projet) {
                 $url = $ville->getUrlExtension();
             }
-            if ('modification_exterieur' == $projet) {
+            if (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $projet) {
                 $url = $ville->getUrlModificationExterieur();
             }
-            if ('annexe' == $projet) {
+            if (Travaux::TYPE_ANNEXE == $projet) {
                 $url = $ville->getUrlAnnexe();
             }
-            if ('cloture' == $projet) {
+            if (Travaux::TYPE_CLOTURE == $projet) {
                 $url = $ville->getUrlCloture();
             }
         }
