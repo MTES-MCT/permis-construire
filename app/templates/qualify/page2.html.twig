@@ -42,7 +42,7 @@
             {% if ville.hasLinks() %}
                 <ul class="question-items">
 
-                {% if ville.urlAgrandissement is not null %}
+                {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT')) %}
                     <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT') }) }}">
                         <li>Agrandissement</li>
                     </a>
@@ -54,8 +54,8 @@
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT')}) }}">En savoir plus</a>#}
                 {% endif %}
 
-                {% if ville.urlModificationExterieur is not null %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'modification_exterieur'}) }}">
+                {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')) %}
+                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">
                         <li>Modification d'aspect extérieur</li>
                     </a>
                     <ul>
@@ -65,8 +65,8 @@
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">En savoir plus</a>#}
                 {% endif %}
 
-                {% if ville.urlAnnexe is not null %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'annexe'}) }}">
+                {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_ANNEXE')) %}
+                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_ANNEXE')}) }}">
                         <li>Annexe</li>
                     </a>
                     <ul>
@@ -77,21 +77,21 @@
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_ANNEXE')}) }}">En savoir plus</a>#}
                 {% endif %}
 
-                {% if ville.urlCloture is not null %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'cloture'}) }}">
+                {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_CLOTURE')) %}
+                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CLOTURE')}) }}">
                         <li>Clôture</li>
                     </a>
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_CLOTURE')}) }}">En savoir plus</a>#}
                 {% endif %}
 
-                {% if ville.urlDivisionLotissements is not null %}
-                <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'division_fonciere'}) }}">
+                {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_DIVISION')) %}
+                <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">
                     <li>Division foncière</li>
                 </a>
                 {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">En savoir plus</a>#}
                 {% endif %}
-                {% if ville.urlMultiTravaux is not null %}
-                <a href="{{ path("route_resultats", {ville_id: ville.id, projet:'multitravaux'}) }}">
+                {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_MULTI')) %}
+                <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">
                     <li>Multi travaux</li>
                 </a>
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">En savoir plus</a>#}

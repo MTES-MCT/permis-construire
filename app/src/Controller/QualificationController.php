@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Domain\Travaux;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Ville;
 use Symfony\Component\HttpFoundation\Request;
@@ -63,30 +62,18 @@ class QualificationController extends AbstractController
 
     private function getDSRedirectionUrl(Request $request): ?string
     {
-        /** @var Ville */
+        /** @var Ville $ville */
         $ville = $this->getDoctrine()->getRepository(Ville::class)->find(
             $request->get('ville_id', null)
         );
 
-        $url = null;
         if (null !== $ville) {
             $projet = $request->get('projet', null);
 
-            if (Travaux::TYPE_AGRANDISSEMENT == $projet) {
-                $url = $ville->getUrlExtension();
-            }
-            if (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $projet) {
-                $url = $ville->getUrlModificationExterieur();
-            }
-            if (Travaux::TYPE_ANNEXE == $projet) {
-                $url = $ville->getUrlAnnexe();
-            }
-            if (Travaux::TYPE_CLOTURE == $projet) {
-                $url = $ville->getUrlCloture();
-            }
+            return $ville->getRedirectionUrlByType($projet);
         }
 
-        return $url;
+        return null;
     }
 
     public function pasdedemarche(Request $request)

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Domain\Travaux;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -68,13 +69,61 @@ class Ville
 
     public function hasLinks(): bool
     {
-        return null !== $this->getUrlAnnexe()
-            or null !== $this->getUrlModificationExterieur()
-            or null !== $this->getUrlAgrandissement()
+        return null !== $this->getUrlAgrandissement()
+            or null !== $this->getUrlAnnexe()
             or null !== $this->getUrlCloture()
             or null !== $this->getUrlDivisionLotissements()
+            or null !== $this->getUrlModificationExterieur()
             or null !== $this->getUrlMultiTravaux()
             ;
+    }
+
+    public function hasRedirectionUrlByType($type): bool
+    {
+        if (Travaux::TYPE_AGRANDISSEMENT == $type && null !== $this->getUrlAgrandissement()) {
+            return true;
+        }
+        if (Travaux::TYPE_ANNEXE == $type && null !== $this->getUrlAnnexe()) {
+            return true;
+        }
+        if (Travaux::TYPE_CLOTURE == $type && null !== $this->getUrlCloture()) {
+            return true;
+        }
+        if (Travaux::TYPE_DIVISION == $type && null !== $this->getUrlDivisionLotissements()) {
+            return true;
+        }
+        if (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type && null !== $this->getUrlModificationExterieur()) {
+            return true;
+        }
+        if (Travaux::TYPE_MULTI == $type && null !== $this->getUrlMultiTravaux()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function getRedirectionUrlByType($type): ?string
+    {
+        if (Travaux::TYPE_AGRANDISSEMENT == $type && null !== $this->getUrlAgrandissement()) {
+            return $this->getUrlAgrandissement();
+        }
+        if (Travaux::TYPE_ANNEXE == $type && null !== $this->getUrlAnnexe()) {
+            return $this->getUrlAnnexe();
+        }
+        if (Travaux::TYPE_CLOTURE == $type && null !== $this->getUrlCloture()) {
+            return $this->getUrlCloture();
+        }
+        if (Travaux::TYPE_DIVISION == $type && null !== $this->getUrlDivisionLotissements()) {
+            return $this->getUrlDivisionLotissements();
+        }
+        if (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type && null !== $this->getUrlModificationExterieur()) {
+            return $this->getUrlModificationExterieur();
+        }
+        if (Travaux::TYPE_MULTI == $type && null !== $this->getUrlMultiTravaux()) {
+            return $this->getUrlMultiTravaux();
+        }
+
+        return null;
     }
 
     public function getId(): ?int
