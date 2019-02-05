@@ -4,61 +4,59 @@
 
 {% block content %}
 
-    <style>
-        .pj-checklist li{
-            list-style-type: none;
-        }
-    </style>
-    <main id="skip-to-main">
-        <section class="section-color">
-            <a href="{{ path("route_qualify2", {ville_id: ville_id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
+<style>
+    .pj-checklist li{
+        list-style-type: none;
+    }
+</style>
+<main class="questions-container">
+    <section class="section-color">
+        <a href="{{ path("route_qualify2", {ville_id: ville_id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
 
-            <h3>Dépot de votre déclaration préalable de travaux</h3>
-            <div class="aerate-content">
+        <h3>Dépot de votre déclaration préalable de travaux</h3>
+        <div class="">
 
-                <div class="questions-container">
-                <p>Pour vous assurer d'obtenir votre attestation dans les meilleurs délais, soyez attentifs à bien respecter les préconisations suivantes :</p>
+            <p>Pour vous assurer d'obtenir votre attestation dans les meilleurs délais, soyez attentifs à bien respecter les préconisations suivantes :</p>
 
+            <ul class="pj-checklist">
+                <li><i class="fas fa-check"></i>&nbsp;Fournissez des photos nettes, lisibles et en couleur</li>
+                <li><i class="fas fa-check"></i>&nbsp;Vérifiez bien qu'il n'y a pas d'erreur dans les références cadastrales (une faute d'orthographe est vite arrivée)</li>
+                <li><i class="fas fa-check"></i>&nbsp;Privilégiez des formats classiques tels que PDF, JPG et PNG pour les documents graphiques</li>
+            </ul>
+
+            <div class="notification">
+                <div class="warning">
+
+                    <p>Attention aux plans ! Des pièces de mauvaise qualité sont fréquemment la cause d'aller-retours avec les services instructeurs.
+                        <div class="center">
+                            <img src="/build/static/img/plans/exemple-plan-preconisations.jpeg" alt="Un plan doit indiquer le nord, contenir l'échelle et les cotes. Il doit être de bonne qualité et facilement lisible." />
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="aerate-content">
+
+            <div class="notification">
+                <p>En cliquant ci-dessous, vous allez être redirigé vers le site <b>Démarches simplifiées</b> sur lequel vous allez :</p>
                 <ul>
-                    <li>Pour les plans qu'il vous sera demandé de fournir, vérifiez bien :</li>
-                    <ul class="pj-checklist">
-                        <li><i class="fas fa-check"></i>&nbsp;la qualité globale du plan et sa lisibilité</li>
-                        <li><i class="fas fa-check"></i>&nbsp;la présence des côtes</li>
-                        <li><i class="fas fa-check"></i>&nbsp;la présence de l'échelle</li>
-                        <li><i class="fas fa-check"></i>&nbsp;la présence du nord</li>
-                    </ul>
-                    <li>Pour les autres types de documents :</li>
-                    <ul class="pj-checklist">
-                        <li><i class="fas fa-check"></i>&nbsp;Fournissez des photos nettes, lisibles et en couleur</li>
-                        <li><i class="fas fa-check"></i>&nbsp;Vérifiez bien qu'il n'y a pas d'erreur dans les références cadastrales (une faute d'orthographe est vite arrivée)</li>
-                        <li><i class="fas fa-check"></i>&nbsp;matérialisation unité foncière vs emprise projet</li>
-                    </ul>
+                    <li><b>créer un compte</b> qui vous permettra de formuler de nouvelles demandes</li>
+                    <li><b>finaliser votre demande d'autorisation de travaux</b> en y déposant votre demande, accompagnée des documents demandés</li>
                 </ul>
-
-                </div>
+                <p>Extrait des <a href="https://doc.demarches-simplifiees.fr/cgu#realisation-d'une-demarche-en-ligne" target="_blank"><abbr title="Conditions générales d'utilisation">CGU</abbr> de demarches-simplifiees.fr</a> : L'usager remplit en ligne le formulaire et valide celui-ci […]. La confirmation et <b>la transmission du formulaire par l'usager vaut signature de celui-ci</b>. En utilisant le service, l'usager s'engage sur la véracité des informations transmises lors du dépôt de son dossier.</p>
             </div>
-        </section>
 
-        <section class="section-white">
-            <div class="aerate-content">
+            <br>
 
-                <div class="notification">
-                    <p>En cliquant ci-dessous, vous allez être redirigé vers le site <b>Démarches simplifiées</b> sur lequel vous allez :</p>
-                    <ul>
-                        <li>créer un compte qui vous permettra de formuler de nouvelles demandes</li>
-                        <li>finaliser votre demande d'autorisation de travaux en y déposant votre demande, accompagnée des documents demandés</li>
-                    </ul>
-                    <p>Extrait des <a href="https://demarches-simplifiees.gitbook.io/demarches-simplifiees/cgu#realisation-d'une-demarche-en-ligne" target="_blank"><abbr title="Conditions générales d'utilisation">CGU</abbr> de demarches-simplifiees.fr</a> : L'usager remplit en ligne le formulaire et valide celui-ci […]. La confirmation et <b>la transmission du formulaire par l'usager vaut signature de celui-ci</b>. En utilisant le service, l'usager s'engage sur la véracité des informations transmises lors du dépôt de son dossier.</p>
-                </div>
+            <p class="center">
+                <a id="button_redirect_ds" class="btn" href="{{  path("route_gotods", {ville_id: ville_id, projet:projet}) }}">Poursuivre votre demande sur <b>Démarches simplifiées</b></a>
+            </p>
+        </div>
+    </section>
 
-                <br>
-
-                <p class="center">
-                    <a id="button_redirect_ds" class="btn" href="{{  path("route_gotods", {ville_id: ville_id, projet:projet}) }}">Poursuivre votre demande sur <b>Démarches simplifiées</b></a>
-                </p>
-            </div>
-        </section>
-
-    </main>
+</main>
 
 {% endblock %}

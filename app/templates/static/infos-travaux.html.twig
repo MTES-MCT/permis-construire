@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} - Votre demande préalable de travaux{% endblock %}
+
+{% block content %}
+
+
+<main>
+    <section class="section">
+        <div class="aerate-content">
+            <a href="javascript: history.go(-1)">Précédent</a>
+            {% include "static/travaux/" ~ typeTravaux ~ ".html.twig" %}
+        </div>
+    </section>
+</main>
+{% endblock content %}

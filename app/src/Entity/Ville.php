@@ -34,7 +34,7 @@ class Ville
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $urlExtension;
+    private $urlAgrandissement;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -54,7 +54,28 @@ class Ville
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
+    private $urlDivisionLotissements;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $urlMultiTravaux;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $dsApiToken;
+
+    public function hasLinks(): bool
+    {
+        return null !== $this->getUrlAnnexe()
+            or null !== $this->getUrlModificationExterieur()
+            or null !== $this->getUrlAgrandissement()
+            or null !== $this->getUrlCloture()
+            or null !== $this->getUrlDivisionLotissements()
+            or null !== $this->getUrlMultiTravaux()
+            ;
+    }
 
     public function getId(): ?int
     {
@@ -97,14 +118,14 @@ class Ville
         return $this;
     }
 
-    public function getUrlExtension(): ?string
+    public function getUrlAgrandissement(): ?string
     {
-        return $this->urlExtension;
+        return $this->urlAgrandissement;
     }
 
-    public function setUrlExtension(?string $urlExtension): self
+    public function setUrlAgrandissement(?string $urlAgrandissement): self
     {
-        $this->urlExtension = $urlExtension;
+        $this->urlAgrandissement = $urlAgrandissement;
 
         return $this;
     }
@@ -153,6 +174,30 @@ class Ville
     public function setDsApiToken(?string $dsApiToken): self
     {
         $this->dsApiToken = $dsApiToken;
+
+        return $this;
+    }
+
+    public function getUrlDivisionLotissements(): ?string
+    {
+        return $this->urlDivisionLotissements;
+    }
+
+    public function setUrlDivisionLotissements(?string $urlDivisionLotissements): self
+    {
+        $this->urlDivisionLotissements = $urlDivisionLotissements;
+
+        return $this;
+    }
+
+    public function getUrlMultiTravaux(): ?string
+    {
+        return $this->urlMultiTravaux;
+    }
+
+    public function setUrlMultiTravaux(?string $urlMultiTravaux): self
+    {
+        $this->urlMultiTravaux = $urlMultiTravaux;
 
         return $this;
     }
