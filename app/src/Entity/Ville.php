@@ -40,12 +40,7 @@ class Ville
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $urlModificationExterieur;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $urlAnnexe;
+    private $urlAnnexe = null;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -60,12 +55,27 @@ class Ville
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
+    private $urlModificationExterieur;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $urlMultiTravaux;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $dsApiToken;
+
+    public function __construct()
+    {
+        $this->setUrlAgrandissement(null);
+        $this->setUrlAnnexe(null);
+        $this->setUrlCloture(null);
+        $this->setUrlDivisionLotissements(null);
+        $this->setUrlMultiTravaux(null);
+        $this->setUrlModificationExterieur(null);
+    }
 
     public function hasLinks(): bool
     {
@@ -82,20 +92,15 @@ class Ville
     {
         if (Travaux::TYPE_AGRANDISSEMENT == $type && null !== $this->getUrlAgrandissement()) {
             return true;
-        }
-        if (Travaux::TYPE_ANNEXE == $type && null !== $this->getUrlAnnexe()) {
+        } elseif (Travaux::TYPE_ANNEXE == $type && null !== $this->getUrlAnnexe()) {
             return true;
-        }
-        if (Travaux::TYPE_CLOTURE == $type && null !== $this->getUrlCloture()) {
+        } elseif (Travaux::TYPE_CLOTURE == $type && null !== $this->getUrlCloture()) {
             return true;
-        }
-        if (Travaux::TYPE_DIVISION == $type && null !== $this->getUrlDivisionLotissements()) {
+        } elseif (Travaux::TYPE_DIVISION == $type && null !== $this->getUrlDivisionLotissements()) {
             return true;
-        }
-        if (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type && null !== $this->getUrlModificationExterieur()) {
+        } elseif (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type && null !== $this->getUrlModificationExterieur()) {
             return true;
-        }
-        if (Travaux::TYPE_MULTI == $type && null !== $this->getUrlMultiTravaux()) {
+        } elseif (Travaux::TYPE_MULTI == $type && null !== $this->getUrlMultiTravaux()) {
             return true;
         }
 
@@ -106,20 +111,15 @@ class Ville
     {
         if (Travaux::TYPE_AGRANDISSEMENT == $type && null !== $this->getUrlAgrandissement()) {
             return $this->getUrlAgrandissement();
-        }
-        if (Travaux::TYPE_ANNEXE == $type && null !== $this->getUrlAnnexe()) {
+        } elseif (Travaux::TYPE_ANNEXE == $type && null !== $this->getUrlAnnexe()) {
             return $this->getUrlAnnexe();
-        }
-        if (Travaux::TYPE_CLOTURE == $type && null !== $this->getUrlCloture()) {
+        } elseif (Travaux::TYPE_CLOTURE == $type && null !== $this->getUrlCloture()) {
             return $this->getUrlCloture();
-        }
-        if (Travaux::TYPE_DIVISION == $type && null !== $this->getUrlDivisionLotissements()) {
+        } elseif (Travaux::TYPE_DIVISION == $type && null !== $this->getUrlDivisionLotissements()) {
             return $this->getUrlDivisionLotissements();
-        }
-        if (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type && null !== $this->getUrlModificationExterieur()) {
+        } elseif (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type && null !== $this->getUrlModificationExterieur()) {
             return $this->getUrlModificationExterieur();
-        }
-        if (Travaux::TYPE_MULTI == $type && null !== $this->getUrlMultiTravaux()) {
+        } elseif (Travaux::TYPE_MULTI == $type && null !== $this->getUrlMultiTravaux()) {
             return $this->getUrlMultiTravaux();
         }
 
