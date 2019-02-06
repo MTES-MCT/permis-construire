@@ -1,12 +1,10 @@
 <?php
 
-
 use App\Domain\Travaux;
 use PHPUnit\Framework\TestCase;
 
 class TravauxTest extends TestCase
 {
-
     /**
      * @dataProvider validTypesProvider
      */

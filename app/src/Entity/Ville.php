@@ -90,18 +90,18 @@ class Ville
 
     public function hasRedirectionUrlByType($type): bool
     {
-        if (Travaux::TYPE_AGRANDISSEMENT == $type && null !== $this->getUrlAgrandissement()) {
-            return true;
-        } elseif (Travaux::TYPE_ANNEXE == $type && null !== $this->getUrlAnnexe()) {
-            return true;
-        } elseif (Travaux::TYPE_CLOTURE == $type && null !== $this->getUrlCloture()) {
-            return true;
-        } elseif (Travaux::TYPE_DIVISION == $type && null !== $this->getUrlDivisionLotissements()) {
-            return true;
-        } elseif (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type && null !== $this->getUrlModificationExterieur()) {
-            return true;
-        } elseif (Travaux::TYPE_MULTI == $type && null !== $this->getUrlMultiTravaux()) {
-            return true;
+        if (Travaux::TYPE_AGRANDISSEMENT == $type) {
+            return null !== $this->getUrlAgrandissement();
+        } elseif (Travaux::TYPE_ANNEXE == $type) {
+            return null !== $this->getUrlAnnexe();
+        } elseif (Travaux::TYPE_CLOTURE == $type) {
+            return null !== $this->getUrlCloture();
+        } elseif (Travaux::TYPE_DIVISION == $type) {
+            return null !== $this->getUrlDivisionLotissements();
+        } elseif (Travaux::TYPE_CHANGEMENT_EXTERIEUR == $type) {
+            return null !== $this->getUrlModificationExterieur();
+        } elseif (Travaux::TYPE_MULTI == $type) {
+            return null !== $this->getUrlMultiTravaux();
         }
 
         return false;
