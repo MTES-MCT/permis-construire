@@ -88,7 +88,7 @@ class Ville
             ;
     }
 
-    public function hasRedirectionUrlByType($type): bool
+    public function hasRedirectionUrlByType(string $type): bool
     {
         if (Travaux::TYPE_AGRANDISSEMENT == $type) {
             return null !== $this->getUrlAgrandissement();
@@ -107,7 +107,7 @@ class Ville
         return false;
     }
 
-    public function getRedirectionUrlByType($type): ?string
+    public function getRedirectionUrlByType(string $type): ?string
     {
         if (Travaux::TYPE_AGRANDISSEMENT == $type && null !== $this->getUrlAgrandissement()) {
             return $this->getUrlAgrandissement();
