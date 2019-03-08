@@ -1,0 +1,770 @@
+{
+  "dossier": {
+    "id": 336538,
+    "created_at": "2019-02-12T10:36:54.198Z",
+    "updated_at": "2019-02-12T10:44:47.396Z",
+    "archived": false,
+    "email": "permis-de-construire-facile@laposte.net",
+    "state": "initiated",
+    "simplified_state": "En construction",
+    "initiated_at": "2019-02-12T10:44:45.749Z",
+    "received_at": null,
+    "processed_at": null,
+    "motivation": null,
+    "instructeurs": [],
+    "individual": {
+      "civilite": "M.",
+      "nom": "Camin",
+      "prenom": "Clément",
+      "date_naissance": "1987-05-03"
+    },
+    "entreprise": null,
+    "etablissement": null,
+    "cerfa": [],
+    "commentaires": [
+      {
+        "email": "contact@demarches-simplifiees.fr",
+        "body": "[Votre dossier demarches-simplifiees.fr nº 336538 a bien été reçu]<br><br><p>\r\nBonjour M. Camin,\r\n</p>\r\n<p>\r\nLe service instructeur vous confirme la bonne réception de votre dossier nº 336538.\r\n</p>\r\n<p>\r\nÀ tout moment, vous pouvez consulter votre dossier et les éventuels messages de l'administration à cette adresse : <a target=\"_blank\" rel=\"noopener\" href=\"https://www.demarches-simplifiees.fr/dossiers/336538\">https://www.demarches-simplifiees.fr/dossiers/336538</a>\r\n</p>\r\n<p>\r\nBien cordialement,<br></p>\r\n<p>Le service de l'urbanisme <br></p>\r\n\r\n<br><br>",
+        "created_at": "2019-02-12T10:44:47.393Z",
+        "attachment": null
+      }
+    ],
+    "champs_private": [],
+    "pieces_justificatives": [],
+    "types_de_piece_justificative": [],
+    "champs": [
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376565,
+          "libelle": "Coordonnées du déclarant",
+          "type_champ": "header_section",
+          "order_place": 0,
+          "description": ""
+        }
+      },
+      {
+        "value": "10 Place de la République 51000 Châlons-en-Champagne",
+        "type_de_champ": {
+          "id": 447202,
+          "libelle": "Adresse ",
+          "type_champ": "address",
+          "order_place": 1,
+          "description": "Il s'agit de votre adresse de résidence principale"
+        }
+      },
+      {
+        "value": "false",
+        "type_de_champ": {
+          "id": 376621,
+          "libelle": "Ce terrain est-il situé dans un lotissement ?",
+          "type_champ": "yes_no",
+          "order_place": 5,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 376616,
+          "libelle": "Localisation du projet et référence cadastrale de votre projet",
+          "type_champ": "header_section",
+          "order_place": 6,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 452268,
+          "libelle": "Comment sélectionner une ou des parcelles cadastrales",
+          "type_champ": "explication",
+          "order_place": 7,
+          "description": "1. Après avoir renseigné l'adresse, zoomer au maximum\n2. Cliquer sur ajouter une zone\n3. Dessiner l'emprise de votre projet pour sélectionner la ou les parcelles cadastrales concernées."
+        }
+      },
+      {
+        "value": "{\"type\":\"MultiPolygon\",\"coordinates\":[[[[4.3677735328674325,48.95783393107269],[4.367644786834718,48.95773530507925],[4.367558956146241,48.95786210989216],[4.3676233291625985,48.957988914382746],[4.3677735328674325,48.95783393107269]]]]}",
+        "type_de_champ": {
+          "id": 427549,
+          "libelle": "Détermination des parcelles cadastrales",
+          "type_champ": "carte",
+          "order_place": 8,
+          "description": ""
+        },
+        "geo_areas": [
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      4.3674867,
+                      48.95774382
+                    ],
+                    [
+                      4.36743882,
+                      48.95782936
+                    ],
+                    [
+                      4.36741778,
+                      48.95786
+                    ],
+                    [
+                      4.36736132,
+                      48.95793574
+                    ],
+                    [
+                      4.36754138,
+                      48.95798495
+                    ],
+                    [
+                      4.36768936,
+                      48.95778467
+                    ],
+                    [
+                      4.36770972,
+                      48.95775945
+                    ],
+                    [
+                      4.367714,
+                      48.95775597
+                    ],
+                    [
+                      4.36773187,
+                      48.95774463
+                    ],
+                    [
+                      4.36782,
+                      48.95768903
+                    ],
+                    [
+                      4.36772239,
+                      48.95762296
+                    ],
+                    [
+                      4.36769247,
+                      48.95764335
+                    ],
+                    [
+                      4.36760329,
+                      48.95771093
+                    ],
+                    [
+                      4.3675956,
+                      48.95771964
+                    ],
+                    [
+                      4.36756059,
+                      48.95770772
+                    ],
+                    [
+                      4.36752047,
+                      48.95775585
+                    ],
+                    [
+                      4.3674867,
+                      48.95774382
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0084",
+            "surface_parcelle": 526.7735750477108,
+            "numero": "0068",
+            "feuille": 1,
+            "section": "AZ",
+            "code_dep": "51",
+            "nom_com": "Châlons-en-Champagne",
+            "code_com": "108",
+            "code_arr": "000"
+          },
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      4.36768936,
+                      48.95778467
+                    ],
+                    [
+                      4.36754138,
+                      48.95798495
+                    ],
+                    [
+                      4.3676531,
+                      48.95801596
+                    ],
+                    [
+                      4.36773505,
+                      48.95792248
+                    ],
+                    [
+                      4.3677828,
+                      48.9578686
+                    ],
+                    [
+                      4.36782089,
+                      48.95782698
+                    ],
+                    [
+                      4.36777116,
+                      48.95781046
+                    ],
+                    [
+                      4.36768936,
+                      48.95778467
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0133",
+            "surface_parcelle": 238.91865997172687,
+            "numero": "0069",
+            "feuille": 1,
+            "section": "AZ",
+            "code_dep": "51",
+            "nom_com": "Châlons-en-Champagne",
+            "code_com": "108",
+            "code_arr": "000"
+          },
+          {
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      4.36768936,
+                      48.95778467
+                    ],
+                    [
+                      4.36777116,
+                      48.95781046
+                    ],
+                    [
+                      4.36778525,
+                      48.957796
+                    ],
+                    [
+                      4.36777021,
+                      48.95779032
+                    ],
+                    [
+                      4.36777832,
+                      48.9577816
+                    ],
+                    [
+                      4.36776122,
+                      48.95777523
+                    ],
+                    [
+                      4.36777121,
+                      48.95776575
+                    ],
+                    [
+                      4.36773187,
+                      48.95774463
+                    ],
+                    [
+                      4.367714,
+                      48.95775597
+                    ],
+                    [
+                      4.36770972,
+                      48.95775945
+                    ],
+                    [
+                      4.36768936,
+                      48.95778467
+                    ]
+                  ]
+                ]
+              ]
+            },
+            "source": "cadastre",
+            "geo_reference_id": null,
+            "surface_intersection": "0.0002",
+            "surface_parcelle": 26.936520490315697,
+            "numero": "0777",
+            "feuille": 1,
+            "section": "AZ",
+            "code_dep": "51",
+            "nom_com": "Châlons-en-Champagne",
+            "code_com": "108",
+            "code_arr": "000"
+          }
+        ]
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376617,
+          "libelle": "préfixe",
+          "type_champ": "text",
+          "order_place": 9,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376618,
+          "libelle": "section",
+          "type_champ": "text",
+          "order_place": 10,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376619,
+          "libelle": "numéro",
+          "type_champ": "text",
+          "order_place": 11,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 376620,
+          "libelle": "superficie de la parcelle cadastrale (en m²)",
+          "type_champ": "number",
+          "order_place": 12,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 377152,
+          "libelle": "Nature de votre projet",
+          "type_champ": "header_section",
+          "order_place": 13,
+          "description": ""
+        }
+      },
+      {
+        "value": "votre résidence principale",
+        "type_de_champ": {
+          "id": 377177,
+          "libelle": "Votre projet concerne...",
+          "type_champ": "drop_down_list",
+          "order_place": 14,
+          "description": ""
+        }
+      },
+      {
+        "value": "[\"Piscine\"]",
+        "type_de_champ": {
+          "id": 448472,
+          "libelle": "Type d’annexe créée :",
+          "type_champ": "multiple_drop_down_list",
+          "order_place": 15,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 434808,
+          "libelle": "Description de votre projet ou des travaux envisagés",
+          "type_champ": "text",
+          "order_place": 16,
+          "description": "Le cas échéant"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434803,
+          "libelle": "Surfaces de plancher",
+          "type_champ": "header_section",
+          "order_place": 17,
+          "description": ""
+        }
+      },
+      {
+        "value": "12",
+        "type_de_champ": {
+          "id": 434804,
+          "libelle": "la surface de plancher existante",
+          "type_champ": "number",
+          "order_place": 18,
+          "description": "La surface de plancher correspond à la somme des surfaces de tous les niveaux construits, clos et couvert, dont la hauteur de plafond est supérieure à 1,80 m. Elle se mesure au nu intérieur des murs de façades de la construction (c'est-à-dire à l'intérieur de la construction, d'un mur de façade à un autre). "
+        }
+      },
+      {
+        "value": "14",
+        "type_de_champ": {
+          "id": 434805,
+          "libelle": "la surface de plancher créée",
+          "type_champ": "number",
+          "order_place": 19,
+          "description": "Attention : un permis de construire est toujours obligatoire si les travaux portent la surface totale de la construction a plus de 150 m² une fois les travaux achevés (ce qui implique le recours à un architecte)."
+        }
+      },
+      {
+        "value": "12",
+        "type_de_champ": {
+          "id": 434806,
+          "libelle": "la surface de plancher supprimée",
+          "type_champ": "number",
+          "order_place": 20,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 377531,
+          "libelle": "Informations complémentaires",
+          "type_champ": "text",
+          "order_place": 21,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434809,
+          "libelle": "Déclaration des éléments nécessaires au calcul des impositions",
+          "type_champ": "header_section",
+          "order_place": 22,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 450562,
+          "libelle": "Aide aux calculs des surfaces",
+          "type_champ": "piece_justificative",
+          "order_place": 23,
+          "description": "Vous pouvez utiliser le modèle ci-joint pour vous aider à calculer la surface de plancher et taxable et reporter les résultats dans les champs correspondants"
+        }
+      },
+      {
+        "value": "0",
+        "type_de_champ": {
+          "id": 434810,
+          "libelle": "Surface taxable totale créée de la ou des construction(s), hormis les surfaces de stationnement closes et couvertes (m²)",
+          "type_champ": "number",
+          "order_place": 24,
+          "description": "En application de l'article R. 331-7 du code de l'urbanisme, la surface de plancher de la construction est égale à la somme des surfaces de plancher de chaque niveau\nclos et couvert, calculée à partir du nu intérieur des façades après déduction :\na) Des surfaces correspondant à l’épaisseur des murs entourant les embrasures des portes et fenêtres donnant sur l’extérieur\nb) Des vides et des trémies afférents aux escaliers et ascenseurs ;\nc) Des surfaces de plancher sous une hauteur de plafond inférieure ou égale à 1,80m.\n"
+        }
+      },
+      {
+        "value": "0",
+        "type_de_champ": {
+          "id": 434811,
+          "libelle": "Surface taxable créée des locaux clos et couverts (m²) à usage de stationnement",
+          "type_champ": "number",
+          "order_place": 25,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 434816,
+          "libelle": "Quel est le nombre de logements crées ?",
+          "type_champ": "number",
+          "order_place": 26,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434813,
+          "libelle": "Pour la réalisation des ces travaux, bénéficiez-vous d’un prêt aidé ",
+          "type_champ": "yes_no",
+          "order_place": 27,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434814,
+          "libelle": "Si oui, lequel ?",
+          "type_champ": "multiple_drop_down_list",
+          "order_place": 28,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 450724,
+          "libelle": "Le local crée est à usage d’habitation",
+          "type_champ": "drop_down_list",
+          "order_place": 29,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 434815,
+          "libelle": "Quelle est la surface taxable existante conservée (m²) ?",
+          "type_champ": "number",
+          "order_place": 30,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 455597,
+          "libelle": "Quelle est la surface taxable créée en m² ?",
+          "type_champ": "number",
+          "order_place": 31,
+          "description": "Création d’abris de jardin, de pigeonniers et colombiers"
+        }
+      },
+      {
+        "value": "0",
+        "type_de_champ": {
+          "id": 448605,
+          "libelle": "Veuillez préciser la profondeur du(des) terrasement(s) nécessaire(s) à la réalisation de votre projet au titre des locaux",
+          "type_champ": "text",
+          "order_place": 32,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 455598,
+          "libelle": "Veuillez préciser la profondeur du(des) terrasement(s) nécessaire(s) à la réalisation de votre projet au titre de la piscine",
+          "type_champ": "text",
+          "order_place": 33,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 455599,
+          "libelle": "Superficie du bassin intérieur ou extérieur de la piscine, créée par le projet en m²",
+          "type_champ": "number",
+          "order_place": 34,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 448807,
+          "libelle": "Les travaux projetés sont-ils réalisés suite à des prescriptions résultant d’un Plan de Prévention des Risques naturels, technologiques ou miniers ?",
+          "type_champ": "yes_no",
+          "order_place": 35,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 448808,
+          "libelle": "La construction projetée concerne t-elle un immeuble classé parmi les monuments historiques ou inscrit à l’inventaire des monuments historiques ?",
+          "type_champ": "yes_no",
+          "order_place": 36,
+          "description": ""
+        }
+      },
+      {
+        "value": "",
+        "type_de_champ": {
+          "id": 450625,
+          "libelle": "Informations complémentaires",
+          "type_champ": "text",
+          "order_place": 37,
+          "description": "Informations complémentaires et justificatifs éventuels (notamment l’attestation bancaire au prêt à taux zéro +, si la collectivité a\ndélibéré l’exonération facultative correspondante) pouvant vous permettre de bénéficier d’impositions plus favorables)"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 450636,
+          "libelle": "Justificatifs éventuels ",
+          "type_champ": "piece_justificative",
+          "order_place": 38,
+          "description": "Justificatifs éventuels (notamment l’attestation bancaire au prêt à taux zéro +, si la collectivité a\ndélibéré l’exonération facultative correspondante) pouvant vous permettre de bénéficier d’impositions plus favorables)"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 433812,
+          "libelle": "Pièces justificatives",
+          "type_champ": "header_section",
+          "order_place": 39,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 436614,
+          "libelle": "Précisions concernant les pièces à fournir",
+          "type_champ": "explication",
+          "order_place": 40,
+          "description": "Pour vous assurer d'obtenir votre attestation dans les meilleurs délais, lorsque vous allez remplir votre formulaire soyez attentifs à bien respecter les préconisations suivantes :\n\nPour les plans qu'il vous sera demandé de fournir, vérifiez bien :\n  ☑ la qualité globale du plan et sa lisibilité\n  ☑ la présence des côtes\n  ☑ la présence de l'échelle\n  ☑ la présence du nord\n \nPour les autres types de documents :\n  ☑ Fournissez des photos nettes et lisibles\n  ☑ Vérifiez bien qu'il n'y a pas d'erreur dans les références cadastrales (une faute d'orthographe est vite arrivée)\n  ☑ matérialisation unité foncière vs emprise projet"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 433939,
+          "libelle": "Documents justificatifs commun à tous les demandeurs",
+          "type_champ": "explication",
+          "order_place": 41,
+          "description": "Il est important de fournir les documents suivants avant de finaliser le dépot de votre dossier.\nPour éviter toute erreur, nous vous conseillons de limiter la taille de chaque pièce jointe à 20 Mo. "
+        }
+      },
+      {
+        "value": "https://www.demarches-simplifiees.fr/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb3ZLIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--49a7172113ac17ce78afa192ae7fd9244fb0ef34/linux-comics-zine.pdf",
+        "type_de_champ": {
+          "id": 433813,
+          "libelle": "DP1. Un plan de situation du terrain",
+          "type_champ": "piece_justificative",
+          "order_place": 42,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 435593,
+          "libelle": "DP2. Un plan de masse coté dans les 3 dimensions",
+          "type_champ": "piece_justificative",
+          "order_place": 43,
+          "description": "A fournir si votre projet crée une construction ou modifie le volume d’une construction existante\n(exemples : véranda, abri de jardin...)"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 435594,
+          "libelle": "DP3. Un plan en coupe",
+          "type_champ": "piece_justificative",
+          "order_place": 44,
+          "description": "Ce plan précise l’implantation de la construction par rapport au profil du terrain"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434418,
+          "libelle": "DP4. Un plan des façades et des toitures",
+          "type_champ": "piece_justificative",
+          "order_place": 45,
+          "description": "À fournir si votre projet les modifie."
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434419,
+          "libelle": "Documents justificatifs lorsque le projet est en zone ABF ou visible depuis l'espace public",
+          "type_champ": "explication",
+          "order_place": 46,
+          "description": "Merci de fournir les documents justificatifs suivants lorsque le projet est en zone ABF (Architectes des batiments de France) ou qu'il est visible depuis l'espace public."
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434421,
+          "libelle": "DP6. Un document graphique permettant d’apprécier l’insertion du projet de construction dans son environnement ",
+          "type_champ": "piece_justificative",
+          "order_place": 47,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434422,
+          "libelle": "DP7. Une photographie permettant de situer le terrain dans l’environnement proche ",
+          "type_champ": "piece_justificative",
+          "order_place": 48,
+          "description": ""
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434423,
+          "libelle": "DP8. Une photographie permettant de situer le terrain dans le paysage lointain ",
+          "type_champ": "piece_justificative",
+          "order_place": 49,
+          "description": "Sauf si vous justifiez qu’aucune photographie de loin n’est possible."
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 434424,
+          "libelle": "DP11. Une notice faisant apparaître les matériaux utilisés et les modalités d’exécution des travaux ",
+          "type_champ": "piece_justificative",
+          "order_place": 50,
+          "description": "Si votre projet porte sur des travaux nécessaires à la réalisation d’une opération de restauration immobilière ou sur un immeuble inscrit au titre des monuments historiques, sur un immeuble situé dans le périmètre d’un site patrimo- nial remarquable ou abords des monuments historiques ou dans un coeur de parc national"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 450932,
+          "libelle": "Pièces liées à la fiscalité",
+          "type_champ": "explication",
+          "order_place": 51,
+          "description": "Documents pouvant vous permettre de bénéficier d’impositions plus favorables"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 450934,
+          "libelle": "F3. L’attestation de l’aménageur certifiant que ce dernier a réalisé ou réalisera l’intégralité des travaux mis à sa charge (articles R. 331-5 et R. 431-23-1 du code de l’urbanisme)",
+          "type_champ": "piece_justificative",
+          "order_place": 52,
+          "description": "Si votre projet se situe dans une opération d’intérêt national et que vous pensez bénéficier de l’exonération prévue à\nl’article L. 331-7 4° (opération d’intérêt national) du code de l’urbanisme"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 450935,
+          "libelle": "F4. Copie de la convention de projet urbain partenarial (article R. 431-23-2 du code de l’urbanisme)",
+          "type_champ": "piece_justificative",
+          "order_place": 53,
+          "description": "Si votre projet se situe dans un périmètre de projet urbain partenarial et que vous pensez bénéficier de l’exonération prévue\nà l’article L. 331-7 6° (projet urbain partenarial) du code de l’urbanisme"
+        }
+      },
+      {
+        "value": null,
+        "type_de_champ": {
+          "id": 450939,
+          "libelle": "F7. L’attestation de paiement d’une redevance d’archéologie préventive au titre de la réalisation d’un diagnostic suite une demande volontaire de fouilles, ou au titre de la loi du 1er août 2003",
+          "type_champ": "piece_justificative",
+          "order_place": 54,
+          "description": "Si votre projet affecte le sous-sol et que vous pensez bénéficier de l’exonération prévue à l’article L. 524-6 du code du\npatrimoine (19) :"
+        }
+      }
+    ]
+  }
+}
