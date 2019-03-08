@@ -64,6 +64,9 @@
     .block-travaux .choisir a{
         font-size: 1.25rem;
     }
+    .block-travaux img {
+        height: 140px;
+    }
     .block-travaux .choisir{
         position: relative;
         border: 1px solid #0081d5;
@@ -146,6 +149,9 @@
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_DIVISION')) %}
                     <div class ="block-travaux">
                         <h5>Division foncière</h5>
+                        <p>
+                            Division d’un terrain pour en détacher un ou plusieurs lots en vue de construire
+                        </p>
                         <img src="/build/static/img/travaux/division-fonciere.png" alt="" />
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">Choisir</a>
@@ -156,6 +162,9 @@
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_MULTI')) %}
                     <div class ="block-travaux">
                         <h5>Multi travaux</h5>
+                        <p>
+                            Construction d'une annexe (piscine, abri de jardin ...) et l'extension d'une maison individuelle par exemple
+                        </p>
                         <img src="/build/static/img/travaux/multi-travaux.png" alt="" />
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">Choisir</a>
