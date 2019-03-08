@@ -31,6 +31,54 @@
         /*font-weight: bold;*/
         text-decoration: none;
     }
+
+    .block-travaux {
+        width: 30%;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        text-align: center;
+
+        margin-right: 1%;
+        margin-bottom: 1%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block-travaux p {
+        color: gray();
+        font-size: 1rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    h4{
+        margin-bottom: -0.5rem;
+    }
+    .subtitle{
+        font-size: 1.25rem;
+        color: darkgrey;
+    }
+    .block-travaux .choisir a{
+        font-size: 1.25rem;
+    }
+    .block-travaux .choisir{
+        position: relative;
+        border: 1px solid #0081d5;
+        border-radius: 5px;
+        width: 120px;
+        height: 2.5rem;
+        margin: 0 auto;
+        margin-bottom: auto;
+        align-self: flex-end;
+    }
+
+    .containe-travaux {
+        display: flex;
+        flex-wrap: wrap;
+    }
 </style>
 
 <main>
@@ -38,65 +86,90 @@
 
         <a href="{{ path("route_qualify1", {ville_id: ville.id}) }}"><i class="fa fa-arrow-left"></i>&nbsp;Précédent</a>
         <h4>Quel type de travaux souhaitez-vous réaliser ? (2/2)</h4>
-
+        <p class="subtitle">Sélectionnez celui qui vous convient pour commencer les démarches</p>
             {% if ville.hasLinks() %}
-                <ul class="question-items">
+                <div class="containe-travaux">
 
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT')) %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT') }) }}">
-                        <li>Agrandissement</li>
-                    </a>
-                    <ul>
-                        <li>extension horizontale</li>
-                        <li>surrélévation (création de niveaux supplémentaires)</li>
-                        <li>aménagement de combles</li>
-                    </ul>
+                    <div class ="block-travaux">
+                        <h5 >Agrandissement</h5>
+                        <p>
+                            Extension horizontale, surrélévation (création de niveaux supplémentaires), aménagement de combles
+                        </p>
+                        <img src="/build/static/img/travaux/agrandissement.png" alt="" />
+                        <div class="choisir">
+                            <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT') }) }}">Choisir</a>
+                        </div>
+                    </div>
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT')}) }}">En savoir plus</a>#}
                 {% endif %}
 
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')) %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">
-                        <li>Modification d'aspect extérieur</li>
-                    </a>
-                    <ul>
-                        <li>changement de fenêtre</li>
-                        <li>ravalement de façade</li>
-                    </ul>
+                    <div class ="block-travaux">
+                        <h5>Modification d'aspect extérieur</h5>
+                        <p>
+                            Changement de fenêtre, ravalement de façade
+                        </p>
+                        <img src="/build/static/img/travaux/exterieur.png" alt="" />
+                        <div class="choisir">
+                            <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">Choisir</a>
+                        </div>
+                    </div>
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">En savoir plus</a>#}
                 {% endif %}
 
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_ANNEXE')) %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_ANNEXE')}) }}">
-                        <li>Annexe</li>
-                    </a>
-                    <ul>
-                        <li>véranda</li>
-                        <li>abri de jardin</li>
-                        <li>piscine</li>
-                    </ul>
+                    <div class ="block-travaux">
+                        <h5>Annexe</h5>
+                        <p>
+                            Abri de jardin, piscine
+                        </p>
+                        <img src="/build/static/img/travaux/annexe.png" alt="" />
+                        <div class="choisir">
+                            <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_ANNEXE')}) }}">Choisir</a>
+                        </div>
+                    </div>
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_ANNEXE')}) }}">En savoir plus</a>#}
                 {% endif %}
 
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_CLOTURE')) %}
-                    <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CLOTURE')}) }}">
-                        <li>Clôture</li>
-                    </a>
+                    <div class ="block-travaux">
+                        <h5>Clôture</h5>
+                        <img src="/build/static/img/travaux/cloture.png" alt="" />
+                        <div class="choisir">
+                            <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">Choisir</a>
+                        </div>
+                    </div>
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_CLOTURE')}) }}">En savoir plus</a>#}
                 {% endif %}
 
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_DIVISION')) %}
-                <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">
-                    <li>Division foncière</li>
-                </a>
+                    <div class ="block-travaux">
+                        <h5>Division foncière</h5>
+                        <p>
+                            Division d’un terrain pour en détacher un ou plusieurs lots en vue de construire
+                        </p>
+                        <img src="/build/static/img/travaux/division-fonciere.png" alt="" />
+                        <div class="choisir">
+                            <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">Choisir</a>
+                        </div>
+                    </div>
                 {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">En savoir plus</a>#}
                 {% endif %}
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_MULTI')) %}
-                <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">
-                    <li>Multi travaux</li>
-                </a>
+                    <div class ="block-travaux">
+                        <h5>Multi travaux</h5>
+                        <p>
+                            Construction d'une annexe (piscine, abri de jardin ...) et l'extension d'une maison individuelle par exemple
+                        </p>
+                        <img src="/build/static/img/travaux/multi-travaux.png" alt="" />
+                        <div class="choisir">
+                            <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">Choisir</a>
+                        </div>
+                    </div>
                     {#<a href="{{ path('route_static_infosTravaux', {typeTravaux: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">En savoir plus</a>#}
                 {% endif %}
-                </ul>
+                </div>
 
         {% else %}
             <p>Aucune démarche dématérialisée n'est possible actuellement. Contactez votre ville pour la mettre à jour !</p>
