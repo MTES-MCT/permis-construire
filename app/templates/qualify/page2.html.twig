@@ -34,6 +34,7 @@
 
     .block-travaux {
         max-width: 30%;
+        width: 30%;
         border-radius: 5px;
         border: 1px solid lightgrey;
         text-align: center;
@@ -68,6 +69,7 @@
         margin-bottom: 0.5em;
         max-width: 100%;
         max-height: 100%;
+        margin-top: auto;
     }
     .block-travaux .choisir{
         border: 1px solid #0081d5;
@@ -100,7 +102,7 @@
                         <p>
                             Extension horizontale, surrélévation (création de niveaux supplémentaires), aménagement de combles
                         </p>
-                        <img src="/build/static/img/travaux/agrandissement.png" alt="" />
+                        <img src="/build/static/img/travaux/agrandissement.svg" alt="" />
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_AGRANDISSEMENT') }) }}">Choisir</a>
                         </div>
@@ -114,7 +116,7 @@
                         <p>
                             Changement de fenêtre, ravalement de façade
                         </p>
-                        <img src="/build/static/img/travaux/exterieur.png" alt="" />
+                        <img src="/build/static/img/travaux/exterieur.svg" alt="" />
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">Choisir</a>
                         </div>
@@ -128,7 +130,7 @@
                         <p>
                             Abri de jardin, piscine
                         </p>
-                        <img src="/build/static/img/travaux/annexe.png" alt="" />
+                        <img src="/build/static/img/travaux/annexe.svg" alt="" />
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_ANNEXE')}) }}">Choisir</a>
                         </div>
@@ -139,7 +141,7 @@
                 {% if ville.hasRedirectionUrlByType(constant('App\\Domain\\Travaux::TYPE_CLOTURE')) %}
                     <div class ="block-travaux">
                         <h5>Clôture</h5>
-                        <img src="/build/static/img/travaux/cloture.png" alt="" />
+                        <img src="/build/static/img/travaux/cloture.svg" alt="" />
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_CHANGEMENT_EXTERIEUR')}) }}">Choisir</a>
                         </div>
@@ -153,7 +155,7 @@
                         <p>
                             Division d’un terrain pour en détacher un ou plusieurs lots en vue de construire
                         </p>
-                        <img src="/build/static/img/travaux/division-fonciere.png" alt="" max-width="342px" max-height="240px"/>
+                        <img src="/build/static/img/travaux/division-fonciere.svg" alt="" max-width="342px" max-height="240px"/>
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_DIVISION')}) }}">Choisir</a>
                         </div>
@@ -166,7 +168,7 @@
                         <p>
                             Construction d'une annexe (piscine, abri de jardin ...) et l'extension d'une maison individuelle par exemple
                         </p>
-                        <img src="/build/static/img/travaux/multi-travaux.png" alt="" />
+                        <img src="/build/static/img/travaux/multi-travaux.svg" alt="" />
                         <div class="choisir">
                             <a href="{{ path("route_resultats", {ville_id: ville.id, projet: constant('App\\Domain\\Travaux::TYPE_MULTI')}) }}">Choisir</a>
                         </div>
