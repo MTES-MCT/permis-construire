@@ -1,9 +1,5 @@
 easy_admin:
     site_name: 'Permis de construire facile'
     entities:
-        User:
-            class: App\Entity\User
-            list:
-                fields: ['username', 'enabled',  'email', 'lastLogin', 'ville_id']
         Ville:
             class: App\Entity\Ville
