@@ -46,7 +46,6 @@ def enable_project(env_name, deployment_directory):
     
     # warmup cache
     with cd(deployment_directory):
-        #run('yarn')
         run('time composer install --optimize-autoloader')
         run('chmod a+w var/ -R')
         if env_name == "staging":
@@ -61,7 +60,6 @@ def enable_project(env_name, deployment_directory):
 
     # Create symlink
     run('ln -sfn %s /var/www/pc-%s' % (deployment_directory, env_name))
-    #run('ln -sfn /var/www/upload-%s %s/public/build/declarations' % (env_name, deployment_directory))
     # Restart the necessary services
     run('service php7.3-fpm restart')
     run('service nginx restart')
